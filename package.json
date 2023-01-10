@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export":"next export",
+    "preexport":"npm run build",
     "start": "next start",
     "lint": "next lint"
   },
