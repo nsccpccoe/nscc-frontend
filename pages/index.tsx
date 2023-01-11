@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 // import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+
+
+import Header from  "../Components/Header/Header"
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -14,41 +16,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        {/* Header *********************************** */}
-       <div className="Home-page">
-        <div className="header">
-          <div className="leftheader">
-              <div className="logo"></div>
-              <div className="logo-content">
-              <div>NSCC</div>
-              <div>Newton School Coding Club</div> 
-              </div>
-          </div>
-          <div className="right-header">
-            <ul>
-              <li>Opportunnites</li>
-              <li>About</li>
-              <li>Events</li>
-              <li>Contact</li>
-            </ul>
-            <div >
-              <button className='btn'>login</button>
-            </div>
-          </div>
-        </div>
-
-        {/*Content**************************************/}
-        <div className="home-content">
-          <div className="contents">
-               <div className='content-1'>Newton School Coding Club</div> 
-               <div className="content-2">Pimpri Chinchwad College Of Engineering</div>
-               <div className='content-3'>An outcome-oriented coding community that aims to up skill all its members and ultimately make them have successful
-careers.</div>
-          </div>
-        </div>
-       </div>
-
+      <main >
+        <Header/>
        
       </main>
     </>
