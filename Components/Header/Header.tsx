@@ -38,8 +38,7 @@ export default function Home() {
           <div className="contents">
                <div className={styles.content1}>Newton School Coding Club</div> 
                <div className={styles.content2}>Pimpri Chinchwad College Of Engineering</div>
-               <div className={styles.content3}>An outcome-oriented coding community that aims to up skill all its members and ultimately make them have successful
-careers.</div>
+               <div className={styles.content3}>An outcome-oriented coding community that aims to up skill all its members and ultimately make them have successful careers.</div>
           </div>
         </div>
        </div>
