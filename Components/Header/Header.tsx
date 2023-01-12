@@ -17,7 +17,7 @@ export default function Home() {
               <div className={styles.logo}></div>
               <div className={styles.logocontent}>
               <div>NSCC</div>
-              <div>Newton School Coding Club Pccoe</div> 
+              <div>Newton School Coding Club PCCOE</div> 
               </div>
           </div>
           <div className={styles.rightheader}>
