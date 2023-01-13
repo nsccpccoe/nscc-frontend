@@ -3,15 +3,15 @@
 .main {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     margin: 2rem;
     /* border: 1px solid red; */
     color: white;
 }
 
 .about {
-    width: 100%;
-    margin: 2rem;
+    width: 81%;
+    /* margin-left: 2rem; */
     border-radius: 10px;
     padding: 4rem;
     background-color: #192656;
@@ -39,7 +39,7 @@
 
 .pccoe {
     position: absolute;
-    left: 10%;
+    left: 15%;
     font-family: 'Raleway';
     background-color: #7A9CE0;
     height: 450px;
