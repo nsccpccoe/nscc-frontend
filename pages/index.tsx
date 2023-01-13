@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import About from '../Components/AboutNSCC/About'
 import ClubActivities from '../Components/ClubActivites/ClubActivities'
+import { FluidContainer } from '../Components/FluidContainer/FluidContainer'
 import Footer from '../Components/Footer/Footer'
 // import { Inter } from '@next/font/google'
 
@@ -20,7 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-        <Header/>
+        <FluidContainer>
+          <Header/>
+        </FluidContainer>
         <About/>
         <ClubActivities/>
         <Footer/>

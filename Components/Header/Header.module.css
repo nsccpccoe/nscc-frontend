@@ -10,8 +10,8 @@
     left: 0px;
     top: 0px;
   
-    background: #192656;
-    backdrop-filter: blur(10px);
+    /* background: #192656; */
+    /* backdrop-filter: blur(10px); */
   }
   .rightheader {
     display: flex;
@@ -61,7 +61,7 @@
   /* left: 0px; */
   /* top: 75px; */
   
-  background: linear-gradient(180deg, #192656 10.13%, rgba(25, 38, 86, 0)100%);
+  /* background: linear-gradient(180deg, #192656 10.13%, rgba(25, 38, 86, 0)100%); */
   }
   
   
