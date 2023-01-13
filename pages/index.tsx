@@ -35,14 +35,15 @@ export default function Home() {
 
       <main >
         {/* <Header /> */}
-        
 
-          <Landing />
-          <About />
-          <TimelineF />
-          <ClubActivities />
-          <Footer /></main>
 
-      </>
-      )
+        <Landing />
+        <About />
+        <TimelineF />
+        <ClubActivities />
+        <Footer />
+      </main>
+
+    </>
+  )
 }
