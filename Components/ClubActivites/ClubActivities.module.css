@@ -5,6 +5,7 @@
     align-items: center;
     margin: 2rem;
     color: white;
+    position: relative
 }
 
 .activities {
