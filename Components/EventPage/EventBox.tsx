@@ -1,6 +1,6 @@
 import classes from "./EventBox.module.css";
 import eventImage from "../../public/event.png";
-// import Image from "next/image";
+import Image from "next/image";
 import LandingContent from "./LandingContent";
 
 function EventBox() {
@@ -11,7 +11,7 @@ function EventBox() {
       </div>
       <div className={classes.content}>
         <div className={classes.img}>
-          {/* < src={eventImage} alt="Event image" /> */}
+          <Image src={eventImage} alt="Event image" />
         </div>
       </div>
     </div>

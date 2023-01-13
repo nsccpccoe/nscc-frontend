@@ -8,7 +8,7 @@ function Navbar() {
     <div className={classes.container}>
       <div className={classes.header}>
         <div className={classes.logo}>
-          {/* <Image src={logo} alt="NSCC LOGO" /> */}
+          <Image src={logo} alt="NSCC LOGO" />
         </div>
         <div className={classes.title}>
           <div className={classes.head}>NSCC PCCOE</div>

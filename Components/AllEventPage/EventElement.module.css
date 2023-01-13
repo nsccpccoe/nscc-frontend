@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  width: 100%;
+}
+
+.type p {
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  color: #cccccc;
+}
+
+.heading h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.duration p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #cccccc;
+  padding-top: 1rem;
+}
+
+.container button {
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #1c1b4b;
+}

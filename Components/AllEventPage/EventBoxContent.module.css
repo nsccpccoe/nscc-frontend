@@ -1,0 +1,38 @@
+.content {
+  font-family: "Poppins";
+}
+
+.organizer h3 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heading h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.date p {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.descriptiion {
+    margin-top: 0.5rem;
+}
+
+.descriptiion p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
