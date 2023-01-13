@@ -1,9 +1,9 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
-  background: #06060A;
+body {
+  background: #06060a;
   color: white;
 }
