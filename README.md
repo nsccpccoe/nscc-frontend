@@ -1,4 +1,4 @@
-## Getting Started                   
+## Getting Started 
 
 Check This [Issue](https://github.com/nsccpccoe/nscc-frontend/issues/1) to Track Progress
 
