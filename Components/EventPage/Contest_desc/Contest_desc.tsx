@@ -13,7 +13,7 @@ const Contest_desc = () => {
 
                 <p>The problems have been created by top competitive programmers at our institute and cover a range of topics in both basic and advanced data structures and algorithms. This contest is a great opportunity to prepare for the Newton School Grand Coding Contest and the upcoming off-campus placement season.</p>
 
-                <p>After the contest ends, video and text editorials for the problems will be provided. Don't miss this chance to challenge yourself and improve your coding skills. We can't wait to see your solutions!</p>
+                <p>After the contest ends, video and text editorials for the problems will be provided. Dont miss this chance to challenge yourself and improve your coding skills. We cant wait to see your solutions!</p>
 
             </div>
             

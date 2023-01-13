@@ -35,8 +35,6 @@ export default function Home() {
 
       <main >
         {/* <Header /> */}
-
-
         <Landing />
         <About />
         <TimelineF />

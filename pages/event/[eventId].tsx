@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Landing from "../../Components/EventPage/Landing";
 import { FluidContainer } from "../../Components/FluidContainer/FluidContainer";
+import  Eventdescription from  "../../Components/EventPage/Eventdescription"
 
 function Event() {
   return (
@@ -14,6 +15,8 @@ function Event() {
       </Head>
       <FluidContainer />
       <Landing />
+     <Eventdescription/>
+      
     </>
   );
 }
