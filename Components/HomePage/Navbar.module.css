@@ -72,15 +72,20 @@
   color: #ffffff;
 }
 
-.navigators button {
-  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
-  border-radius: 4px;
-  padding: 0.2rem 1rem;
+.navigators .button {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
   display: flex;
-  color: #ffffff;
-  cursor: pointer;
-
-  font-family: "Raleway";
-  font-style: normal;
+  justify-content: center;
+  align-items: center;
+  
+  /* grad 1 */
+  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  border-radius: 4px;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+  color: #FFFFFF;
 }
