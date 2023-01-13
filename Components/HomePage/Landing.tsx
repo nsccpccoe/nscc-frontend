@@ -1,6 +1,6 @@
 import classes from "./Landing.module.css";
 import LandingContent from "./LandingContent";
-import Navbar from "./Navbar";
+import Navbar from "../Header/Header";
 
 function Landing() {
   const crossClass = `${classes.box} ${classes.cross}`;
