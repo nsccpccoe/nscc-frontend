@@ -3,7 +3,7 @@ import styles from "./Fluid.module.scss";
 import { Gradient } from "./FluidLib.js";
 
 interface FluidContainerProps {
-    children: React.ReactNode
+    children?: React.ReactNode
     background?: string
 }
 

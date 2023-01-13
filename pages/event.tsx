@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import Landing from "../Components/EventPage/Landing";
+import { FluidContainer } from "../Components/FluidContainer/FluidContainer";
 
 function Event() {
   return (
@@ -11,6 +12,7 @@ function Event() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FluidContainer />
       <Landing />
     </>
   );
