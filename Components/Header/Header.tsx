@@ -1,50 +1,40 @@
+import classes from "./Header.module.css";
+import Image from "next/image";
+import NSCCLogo from "../../assets/logo.svg";
+import Link from "next/link";
 
-// import styles from '../styles/Home.module.css'
-
-// const inter = Inter({ subsets: ['latin'] })
-
-import styles from "./Header.module.css"
-
-export default function Home() {
+function Navbar() {
   return (
-    <>
-       
-      {/* <main className={styles.main}> */}
-        {/* Header *********************************** */}
-       <div className={styles.Homepage}>
-        <div className={styles.header}>
-          <div className={styles.leftheader}>
-              <div className={styles.logo}></div>
-              <div className={styles.logocontent}>
-              <div>NSCC</div>
-              <div>Newton School Coding Club PCCOE</div> 
-              </div>
-          </div>
-          <div className={styles.rightheader}>
-            <ul>
-              <li>Opportunnites</li>
-              <li>About</li>
-              <li>Events</li>
-              <li>Contact</li>
-            </ul>
-            <div >
-              <button className={styles.btn}>login</button>
-            </div>
-          </div>
+    <div className={classes.container}>
+      <div className={classes.header}>
+        <div className={classes.logo}>
+          <Image src={NSCCLogo} alt="NSCC PCCOE" />
         </div>
-
-        {/*Content**************************************/}
-        <div className={styles.homecontent}>
-          <div className="contents">
-               <div className={styles.content1}>Newton School Coding Club</div> 
-               <div className={styles.content2}>Pimpri Chinchwad College Of Engineering</div>
-               <div className={styles.content3}>An outcome-oriented coding community that aims to up skill all its members and ultimately make them have successful careers.</div>
-          </div>
-        </div>
-       </div>
-
-       
-      {/* </main> */}
-    </>
-  )
+      </div>
+      <div className={classes.navigators}>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          {/* <li>
+            <Link href="/">Opportunities</Link>
+          </li>
+          <li>
+            <Link href="/">Resources</Link>
+          </li> */}
+          <li>
+            <Link href="/event">Events</Link>
+          </li>
+          {/* <li>
+            <Link href="/">Connect</Link>
+          </li> */}
+          <li>
+            <Link className={classes.button} href="/auth">Login</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
+
+export default Navbar;
