@@ -15,6 +15,8 @@ import { FirebaseError } from "firebase/app";
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import {FluidContainer} from "../Components/FluidContainer/FluidContainer"
+
 interface InitialState {
   firstName: string,
   lastName: string,
@@ -96,8 +98,10 @@ const Auth = () => {
   return (
 
     <>
+       <FluidContainer/>
       <ToastContainer />
       <div className={styles.loginsignupform}>
+     
         <div className={` ${styles.containerloginform}  ${isActive ? "" : `${styles.rightpanelactive}`}`} id="containerloginform">
           <div className={`${styles.formcontainerloginform} ${styles.signupcontainerloginform}`}>
             <form onSubmit={handleAuth}>
@@ -132,7 +136,7 @@ const Auth = () => {
                   name="lastName"
                   value={lastName}
                   onChange={handleChange}
-                />
+                  />
               </div>
               <input
                 type="email"
@@ -149,7 +153,7 @@ const Auth = () => {
                 name="password"
                 value={password}
                 onChange={handleChange}
-              />
+                />
               <input
                 type="password"
                 className="formcontrol inputtextbox"
@@ -157,7 +161,7 @@ const Auth = () => {
                 name="confirmPassword"
                 value={confirmPassword}
                 onChange={handleChange}
-              />
+                />
               <button onClick={() => setSignUp(true)}>Sign Up</button>
             </form>
           </div>
