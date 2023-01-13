@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap');
+
+.main {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 2rem;
+    /* border: 1px solid red; */
+    color: white;
+}
+
+.about {
+    width: 100%;
+    margin: 2rem;
+    border-radius: 10px;
+    padding: 4rem;
+    background-color: #192656;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.content {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: justify;
+    text-transform: capitalize;
+    margin-top: 2rem;
+}
+
+.pccoe {
+    position: absolute;
+    left: 10%;
+    font-family: 'Raleway';
+    background-color: #7A9CE0;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 1rem; */
+}
+
+.about_inner_div {
+    position: relative;
+    left: 50%;
+    width: 521px;
+    /* height: 521px; */
+}
+
+.numbers {
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: flex-start; */
+    position: relative;
+    top: 5%;
+    left: -12%;
+    font-size: 30px;
+}
+
+.numbers p {
+    /* margin-top: 10px; */
+    margin-bottom: 2rem;
+}
