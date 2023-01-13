@@ -1,13 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import About from "../Components/AboutNSCC/About";
 import ClubActivities from "../Components/ClubActivites/ClubActivities";
 import Footer from "../Components/Footer/Footer";
-// import { Inter } from '@next/font/google'
 
 import Landing from "../Components/HomePage/Landing";
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (

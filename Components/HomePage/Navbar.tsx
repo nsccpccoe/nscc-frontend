@@ -24,7 +24,7 @@ function Navbar() {
             <Link href="/">Resources</Link>
           </li>
           <li>
-            <Link href="/">Events</Link>
+            <Link href="/event">Events</Link>
           </li>
           <li>
             <Link href="/">Connect</Link>
