@@ -1,6 +1,6 @@
 .loginsignupform {
     font-family: 'Montserrat', sans-serif;
-    background: #f6f5f7;
+    /* background: #090917; */
     display: flex;
 
     justify-content: center;
@@ -35,7 +35,7 @@
 }
 
 .containerloginform {
-    background: #fff;
+    /* background: #fff; */
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
     position: relative;
@@ -46,7 +46,7 @@
 }
 
 .form-containerloginform form {
-    background: #fff;
+    /* background: #fff; */
     display: flex;
     flex-direction: column;
     padding:  0 50px;
@@ -83,7 +83,8 @@
 .loginsignupform button {
     border-radius: 20px;
     border: 1px solid #ff4b2b;
-    background: #ff445c;
+    /* background: #ff445c; */
+    background: linear-gradient(189.19deg, #192656 42.16%, rgba(45, 71, 184, 0.1) 91.14%);
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -139,8 +140,9 @@
 }
 
 .overlay {
-    background: #ff416c;
-    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    /* background: #ff416c; */
+    /* background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover; */
+    background: linear-gradient(189.19deg, #192656 42.16%, rgba(45, 71, 184, 0.1) 91.14%);
     color: #fff;
     position: relative;
     left: -100%;
@@ -213,4 +215,5 @@
 	height: 30px;
 	letter-spacing: 15px;
 	align-items: center;
+    color: white;
 }
