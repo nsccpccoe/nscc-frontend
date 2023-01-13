@@ -1,7 +1,7 @@
 
 
 import TimelineF from '../Components/Timeline/Timeline'
-import Header from  "../Components/Header/Header"
+import Header from "../Components/Header/Header"
 
 import Head from "next/head";
 import About from "../Components/AboutNSCC/About";
@@ -14,7 +14,6 @@ import Landing from "../Components/HomePage/Landing";
 // import { Inter } from '@next/font/google'
 import { auth } from "../firebase";
 
-import Header from  "../Components/Header/Header"
 import { useState, useEffect } from "react";
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +23,7 @@ export default function Home() {
   const [user, setUser] = useState(null);
 
 
- 
+
   return (
     <>
       <Head>
@@ -35,17 +34,15 @@ export default function Home() {
       </Head>
 
       <main >
-        <Header/>
-        <TimelineF/>
+        {/* <Header /> */}
+        
 
-      <main>
-        <Landing />
-        <About />
-        <ClubActivities />
-        <Footer />
+          <Landing />
+          <About />
+          <TimelineF />
+          <ClubActivities />
+          <Footer /></main>
 
-      </main>
-   
-    </>
-  );
+      </>
+      )
 }

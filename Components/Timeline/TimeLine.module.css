@@ -3,16 +3,16 @@
     text-align: center;
     font-weight: 500;
 font-size: 40px;
-margin: 3rem;
+margin: 3rem ;
 }
 .timeline {
     margin-bottom: 10rem;
-    position: absolute;
+    /* position: relative; */
 width: 867px;
 height: 516px;
-left: 250px;
-top: 1030px;
 
+top: 1030px;
+margin:9vw 20vw;
 }
 .shape {
     width: 220px;
