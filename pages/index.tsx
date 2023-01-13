@@ -6,8 +6,6 @@ import Footer from "../Components/Footer/Footer";
 
 import Landing from "../Components/HomePage/Landing";
 
-
-import Image from 'next/image'
 // import { Inter } from '@next/font/google'
 import { auth } from "../firebase";
 
