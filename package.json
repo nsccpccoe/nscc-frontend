@@ -11,6 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.4",
     "@firebase/auth": "^0.21.0",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
@@ -25,5 +29,8 @@
     "react-dom": "18.2.0",
     "reactfire": "^4.2.2",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1"
   }
 }
