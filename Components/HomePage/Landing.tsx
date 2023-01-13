@@ -6,7 +6,7 @@ function Landing() {
   const crossClass = `${classes.box} ${classes.cross}`;
   return (
     <div className={classes.container}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={classes.content}>
         <LandingContent />
       </div>

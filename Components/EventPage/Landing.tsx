@@ -5,7 +5,6 @@ import classes from "./Landing.module.css";
 function Landing() {
   return (
     <div className={classes.container}>
-      <Navbar />
       <EventBox />
     </div>
   );
