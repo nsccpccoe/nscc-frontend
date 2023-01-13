@@ -516,5 +516,8 @@ function normalizeColor(hexCode) {
   * Gradient.toggleColor(index)
   * Gradient.updateFrequency(freq)
   */
-//   var gradient = new Gradient();
-//       gradient.initGradient("#gradient-canvas");
+
+export const addFluid = () => {
+    var gradient = new Gradient();
+    gradient.initGradient("#gradient-canvas");
+}

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Fluid.module.scss";
-import { Gradient } from "./FluidLib.js";
+import { addFluid } from "./FluidLib.js";
 
 interface FluidContainerProps {
     children?: React.ReactNode
@@ -11,8 +11,7 @@ export const FluidContainer = (props: FluidContainerProps) => {
 
     useEffect(() => {
         if(typeof window) {
-            var gradient = new Gradient();
-            gradient.initGradient!("#gradient-canvas");
+            addFluid()
         }
     }, [])
     
