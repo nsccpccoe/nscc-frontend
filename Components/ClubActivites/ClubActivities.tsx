@@ -7,6 +7,10 @@ const ClubActivities = () => {
 
             <div className={styles.activities}>
 
+                <div className={styles.content}>
+                    <p>We are always looking for talent hotbeds through our events! We never stop our onboarding process. Participate and perform well in our events to get noticed by our team!!</p>
+                </div>
+
                 <div>
                     <div className={styles.title}>Club Activities</div>
                     <div className={styles.points}>
@@ -26,9 +30,6 @@ const ClubActivities = () => {
 
             </div>
 
-            <div className={styles.content}>
-                <p>We are always looking for talent hotbeds through our events! We never stop our onboarding process. Participate and perform well in our events to get noticed by our team!!</p>
-            </div>
         </div>
     )
 }
