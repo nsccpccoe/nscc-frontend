@@ -1,0 +1,67 @@
+.container {
+  margin-left: 4rem;
+  font-family: "Poppins";
+}
+
+.clubHeading h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height */
+  color: rgba(255, 255, 255, 0.9);  
+}
+
+.title h1 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 120px;
+  /* identical to box height */
+  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;  
+  /* text-fill-color: transparent; */
+}
+
+.college h3 {
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  color: #D9D9D9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.clubInfo h2 {
+  font-size: 20px;
+  line-height: 30px;
+  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 32px;
+}
+
+.clubInfo p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+  color: rgba(255, 255, 255, 0.9);  
+}
+
+.container button {
+  margin-top: 48px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #193655;
+}

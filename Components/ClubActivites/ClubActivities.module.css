@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap');
+
+.main {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    color: white;
+    position: relative
+}
+
+.activities {
+    width: 100%;
+    margin: 5rem;
+    border-radius: 10px;
+    padding: 4rem;
+    background-color: #192656;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.points {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: justify;
+    text-transform: capitalize;
+    list-style: disc;
+    margin-top: 2rem;
+    position: relative;
+    left: 2%;
+    z-index: -1;
+}
+
+.content {
+    background-color: #7A9CE0;
+    border-radius: 10px;
+    width: 461px;
+    height: 330px;
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 461px/2 + 294.5px);
+}
+
+.content p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 2rem;
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    .main{
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+        padding: 2rem;
+        margin: 2rem;
+    }
+
+    .content{
+        /* position: static; */
+    }
+}

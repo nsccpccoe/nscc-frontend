@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    padding-top: 4rem;
+}
+
+.main h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.content {
+    text-align: center;
+    margin: 2rem;
+}
+
+.content p{
+    margin-bottom: 2rem;
+}
