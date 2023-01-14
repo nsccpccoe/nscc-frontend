@@ -60,7 +60,11 @@ margin:9vw 20vw;
     border-bottom: 7px solid transparent;
     
   }
+
   .text {
-    margin-top: 2rem;
-    color: grey;
+    margin: 2rem;
+    color: rgb(203 72 227);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
   }
