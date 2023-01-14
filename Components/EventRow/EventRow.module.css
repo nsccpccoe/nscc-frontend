@@ -1,0 +1,13 @@
+.row{
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 2px solid #3158a5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row p {
+    font-size: calc(12px + 1vw);
+}
