@@ -256,7 +256,7 @@ const Auth = () => {
     setIsActive(current => !current);
   };
   const forgetpassword =()=>{
-    router.push('http://localhost:3000/forgetpassword')
+    router.push(`${location.origin}/auth`)
   }
 
   return (
