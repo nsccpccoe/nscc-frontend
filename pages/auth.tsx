@@ -45,34 +45,105 @@ const Auth = () => {
   const [signUp, setSignUp] = useState(false);
   const [isActive, setIsActive] = useState(true);
   const [googleuser, setgogleuser] = useAuthState(auth);
+  const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
-
-
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
-    console.log("hello")
-    const result = await signInWithPopup(auth, googleauth);
-    toast.success("login successfull");
+    try {
+      // console.log("hello")
+      const result = await signInWithPopup(auth, googleauth);
+
+      toast("login successfull", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+    } catch (err) {
+      if (err instanceof FirebaseError) toast(err.code, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      )
+    }
   }
   const googlesignOut = async () => {
     await auth.signOut();
-    toast.success("signout successfull");
+
+    toast("signout successfull", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+    );
   }
 
   const githubauth = new GithubAuthProvider();
+
   const githubSignin = async () => {
-    console.log("hello")
-    const result = await signInWithPopup(auth, githubauth);
-    toast.success("login successfull");
+    try {
+      // console.log("hello")
+      const result = await signInWithPopup(auth, githubauth);
+
+      toast("login successfull", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+
+    } catch (err) {
+      if (err instanceof FirebaseError) toast(err.code, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+    }
   }
   const githubSignout = async () => {
     await auth.signOut();
-    toast.success("signout successfull");
+
+    toast("signout successfull", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+    );
   }
 
-  //  useEffect(()=>{
-  //     console.log(googleuser)
-  //  },[googleuser])
+ 
 
   const { email, password, firstName, lastName, confirmPassword } = state;
 
@@ -92,17 +163,37 @@ const Auth = () => {
             email,
             password
           );
+
           toast.success("signin successfull");
         }
         catch (err) {
-          if (err instanceof FirebaseError) toast.error(err.code)
+          if (err instanceof FirebaseError) toast(err.code, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+          )
 
         }
-        // setUser(user);
-        // setActive("home");
-      } else {
 
-        toast.error("All fields are mandatory to fill");
+      } else {
+        toast("All fields are mandatory to fill", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        }
+
+        );
       }
     } else {
       if (password !== confirmPassword) {
@@ -115,21 +206,42 @@ const Auth = () => {
             email,
             password
           );
-          toast.success("signup successfull");
+
+          toast("signup successfull", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+          );
         } catch (err) {
-          console.error(err);
+          // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
         }
-        // await updateProfile(user, { displayName: `${firstName} ${lastName}` });
-        // setActive("home");
+
       } else {
-        toast.error("All fields are mandatory to fill");
+        toast("All fields are mandatory to fill", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        }
+        );
       }
     }
     // navigate("/");
 
   };
   const handleaddclassName = () => {
+    setState(initialState)
     setIsActive(current => !current);
   };
 
@@ -140,6 +252,7 @@ const Auth = () => {
       <FluidContainer />
       <ToastContainer />
 
+
       <div className={styles.loginsignupform}>
 
 
@@ -149,14 +262,13 @@ const Auth = () => {
               <h1 className={styles.Loginsignupheader}>Create Account</h1>
               <div className={styles.socialcontainerloginform}>
                 <div className={styles.social}>
-                  {/* <i className="fab fafacebook"></i> */}
+
                   <GoogleIcon onClick={googleSignin} />
-                  {/* <GoogleIcon onClick={googlesignOut} /> */}
+        
                 </div>
                 <div className={styles.social}>
                   <GitHubIcon onClick={githubSignin} />
-                  {/* <GitHubIcon  onClick={githubSignout} /> */}
-                  {/* <i className="fab falinkedinin"></i> */}
+
                 </div>
               </div>
               <span className={styles.loginspan}>or use your email for registration</span>

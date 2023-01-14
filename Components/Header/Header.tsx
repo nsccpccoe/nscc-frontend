@@ -2,8 +2,35 @@ import classes from "./Header.module.css";
 import Image from "next/image";
 import NSCCLogo from "../../assets/logo.svg";
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase";
+import { onAuthStateChanged ,} from "firebase/auth"
 function Navbar() {
+
+  const [active,setactive] =useState(false);
+  useEffect(() => {
+    return onAuthStateChanged(auth, (user) => {
+      if(user) {
+        // console.log(user)
+        
+        // localStorage.setItem("accessToken",`${user.accessToken}`)
+        setactive(true)
+      }
+      else {
+        // localStorage.removeItem("accessToken")
+        setactive(false)
+      }
+    })
+  },[])
+
+  const handlelogout=()=>{
+    if(active){
+      auth.signOut();
+      localStorage.removeItem("login")
+    }
+  }
+  
+
   return (
     <div className={classes.container}>
       <div className={classes.header}>
@@ -29,7 +56,7 @@ function Navbar() {
             <Link href="/">Connect</Link>
           </li> */}
           <li>
-            <Link className={classes.button} href="/auth">Login</Link>
+            <Link  onClick={handlelogout} className={classes.button} href="/auth">{active?"logout":"login"}</Link>
           </li>
         </ul>
       </div>
