@@ -18,7 +18,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 
@@ -48,6 +48,11 @@ const Auth = () => {
   const [googleuser, setgogleuser] = useAuthState(auth);
   const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
+
+
+   
+   
+
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
     try {
@@ -250,7 +255,9 @@ const Auth = () => {
     setState(initialState)
     setIsActive(current => !current);
   };
-
+  const forgetpassword =()=>{
+    router.push('http://localhost:3000/forgetpassword')
+  }
 
   return (
 
@@ -355,7 +362,7 @@ const Auth = () => {
                   name="password"
                   value={password}
                   onChange={handleChange} />
-                <div style={{ margin: "2vh 0vw" }} >Forgot  password?</div>
+                <div   onClick={forgetpassword} style={{ margin: "2vh 0vw" ,cursor:"pointer"}} >Forgot  password?</div>
                 <button style={{ width: "10vw", margin: "2vh 8vw" }} onClick={() => setSignUp(false)}>Sign In</button>
               </div>
             </form>

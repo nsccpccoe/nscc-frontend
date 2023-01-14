@@ -1,40 +1,40 @@
-[debug] [2023-01-14T13:50:32.317Z] ----------------------------------------------------------------------
-[debug] [2023-01-14T13:50:32.318Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dronr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2023-01-14T13:50:32.318Z] CLI Version:   11.20.0
-[debug] [2023-01-14T13:50:32.319Z] Platform:      win32
-[debug] [2023-01-14T13:50:32.319Z] Node Version:  v18.13.0
-[debug] [2023-01-14T13:50:32.319Z] Time:          Sat Jan 14 2023 19:20:32 GMT+0530 (India Standard Time)
-[debug] [2023-01-14T13:50:32.319Z] ----------------------------------------------------------------------
+[debug] [2023-01-14T16:01:37.207Z] ----------------------------------------------------------------------
+[debug] [2023-01-14T16:01:37.209Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dronr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-01-14T16:01:37.209Z] CLI Version:   11.20.0
+[debug] [2023-01-14T16:01:37.209Z] Platform:      win32
+[debug] [2023-01-14T16:01:37.210Z] Node Version:  v18.13.0
+[debug] [2023-01-14T16:01:37.210Z] Time:          Sat Jan 14 2023 21:31:37 GMT+0530 (India Standard Time)
+[debug] [2023-01-14T16:01:37.210Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-01-14T13:50:32.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-01-14T13:50:32.421Z] > authorizing via signed-in user (dronr19@gmail.com)
-[debug] [2023-01-14T13:50:32.487Z] java version "18.0.2.1" 2022-08-18
-Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)
+[debug] [2023-01-14T16:01:37.297Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-14T16:01:37.298Z] > authorizing via signed-in user (dronr19@gmail.com)
+[debug] [2023-01-14T16:01:37.353Z] java version "18.0.2.1" 2022-08-18
+
+[debug] [2023-01-14T16:01:37.354Z] Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)
 Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)
 
-[debug] [2023-01-14T13:50:32.509Z] Parsed Java major version: 18
+[debug] [2023-01-14T16:01:37.374Z] Parsed Java major version: 18
 [info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
-[debug] [2023-01-14T13:50:32.522Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-14T13:50:32.522Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-14T13:50:32.522Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-14T13:50:32.523Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-01-14T13:50:32.523Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
-[debug] [2023-01-14T13:50:32.524Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-01-14T16:01:37.386Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-14T16:01:37.386Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-14T16:01:37.386Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-14T16:01:37.386Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-14T16:01:37.386Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-14T16:01:37.386Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
 [warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project nsccpccoe. This may result in unexpected behavior. 
-[debug] [2023-01-14T13:50:32.535Z] [hub] writing locator at C:\Users\dronr\AppData\Local\Temp\hub-nsccpccoe.json
+[debug] [2023-01-14T16:01:37.397Z] [hub] writing locator at C:\Users\dronr\AppData\Local\Temp\hub-nsccpccoe.json
 [warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
 [warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
 [warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
-[debug] [2023-01-14T13:50:32.550Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-01-14T13:50:32.550Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-01-14T13:50:32.550Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\dronr\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","nsccpccoe","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\dronr\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"nsccpccoe\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2023-01-14T16:01:37.411Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-01-14T16:01:37.411Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-01-14T16:01:37.411Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\dronr\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","nsccpccoe","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\dronr\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"nsccpccoe\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-01-14T13:50:33.795Z] Jan 14, 2023 7:20:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2023-01-14T16:01:38.800Z] Jan 14, 2023 9:31:38 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2023-01-14T13:50:33.824Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2023-01-14T13:50:33.825Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 9:31:38 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2023-01-14T16:01:38.831Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2023-01-14T16:01:38.832Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -43,47 +43,44 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-01-14T13:50:39.867Z] Jan 14, 2023 7:20:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
-[debug] [2023-01-14T13:50:39.872Z] > refreshing access token with scopes: []
-[debug] [2023-01-14T13:50:39.875Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-01-14T13:50:39.875Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-01-14T13:50:40.067Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-01-14T13:50:40.068Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-01-14T13:50:40.075Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites 
-[debug] [2023-01-14T13:50:41.217Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites 200
-[debug] [2023-01-14T13:50:41.217Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites {"sites":[{"name":"projects/nsccpccoe/sites/nsccpccoe","defaultUrl":"https://nsccpccoe.web.app","appId":"1:248065630737:web:463d54973d707984cb07b0","type":"DEFAULT_SITE"}]}
-[debug] [2023-01-14T13:50:41.218Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config [none]
-[debug] [2023-01-14T13:50:42.618Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config 200
-[debug] [2023-01-14T13:50:42.619Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config {"projectId":"nsccpccoe","appId":"1:248065630737:web:463d54973d707984cb07b0","storageBucket":"nsccpccoe.appspot.com","locationId":"asia-south1","apiKey":"AIzaSyAMpZaQSX1yNmPNv7nwNG45mGpbOOl1vGc","authDomain":"nsccpccoe.firebaseapp.com","messagingSenderId":"248065630737","measurementId":"G-0NRS6Y223J"}
-[debug] [2023-01-14T13:50:42.622Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe [none]
-[debug] [2023-01-14T13:50:43.066Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe 200
-[debug] [2023-01-14T13:50:43.066Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe {"projectId":"nsccpccoe","projectNumber":"248065630737","displayName":"nsccpccoe","name":"projects/nsccpccoe","resources":{"hostingSite":"nsccpccoe","storageBucket":"nsccpccoe.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_6c5874e4-d2a1-4479-a406-b85b3655557f"}
+[debug] [2023-01-14T16:01:44.498Z] > refreshing access token with scopes: []
+[debug] [2023-01-14T16:01:44.500Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-14T16:01:44.500Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-14T16:01:44.700Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-14T16:01:44.700Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-14T16:01:44.708Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites 
+[debug] [2023-01-14T16:01:45.819Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites 200
+[debug] [2023-01-14T16:01:45.820Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nsccpccoe/sites {"sites":[{"name":"projects/nsccpccoe/sites/nsccpccoe","defaultUrl":"https://nsccpccoe.web.app","appId":"1:248065630737:web:463d54973d707984cb07b0","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-14T16:01:45.820Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config [none]
+[debug] [2023-01-14T16:01:47.222Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config 200
+[debug] [2023-01-14T16:01:47.222Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe/webApps/1:248065630737:web:463d54973d707984cb07b0/config {"projectId":"nsccpccoe","appId":"1:248065630737:web:463d54973d707984cb07b0","storageBucket":"nsccpccoe.appspot.com","locationId":"asia-south1","apiKey":"AIzaSyAMpZaQSX1yNmPNv7nwNG45mGpbOOl1vGc","authDomain":"nsccpccoe.firebaseapp.com","messagingSenderId":"248065630737","measurementId":"G-0NRS6Y223J"}
+[debug] [2023-01-14T16:01:47.227Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe [none]
+[debug] [2023-01-14T16:01:47.649Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe 200
+[debug] [2023-01-14T16:01:47.650Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nsccpccoe {"projectId":"nsccpccoe","projectNumber":"248065630737","displayName":"nsccpccoe","name":"projects/nsccpccoe","resources":{"hostingSite":"nsccpccoe","storageBucket":"nsccpccoe.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_6c5874e4-d2a1-4479-a406-b85b3655557f"}
 [info] i  hosting[nsccpccoe]: Serving hosting files from: out {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mout\u001b[22m"}}
 [info] +  hosting[nsccpccoe]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2023-01-14T13:50:43.098Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-01-14T13:50:43.099Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-01-14T13:50:43.099Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\dronr\\.cache\\firebase\\emulators\\ui-v1.11.2\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\dronr\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.2\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2023-01-14T16:01:47.684Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-01-14T16:01:47.685Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-01-14T16:01:47.685Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\dronr\\.cache\\firebase\\emulators\\ui-v1.11.2\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\dronr\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.2\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-01-14T13:50:43.216Z] Web / API server started at 127.0.0.1:4001
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4001\n"}}
-[debug] [2023-01-14T13:50:43.216Z] Web / API server started at ::1:4001
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4001\n"}}
+[debug] [2023-01-14T16:01:47.863Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-01-14T16:01:47.864Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:4001/               │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
 └─────────────────────────────────────────────────────────────┘
 
 ┌────────────────┬──────────────────────────────────┬─────────────────────────────────┐
 │ Emulator       │ Host:Port                        │ View in Emulator UI             │
 ├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
-│ Authentication │ 127.0.0.1:9099                   │ http://127.0.0.1:4001/auth      │
+│ Authentication │ 127.0.0.1:9099                   │ http://127.0.0.1:4000/auth      │
 ├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
 │ Functions      │ Failed to initialize (see above) │                                 │
 ├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
-│ Firestore      │ 127.0.0.1:8080                   │ http://127.0.0.1:4001/firestore │
+│ Firestore      │ 127.0.0.1:8080                   │ http://127.0.0.1:4000/firestore │
 ├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
 │ Hosting        │ 127.0.0.1:5000                   │ n/a                             │
 └────────────────┴──────────────────────────────────┴─────────────────────────────────┘
@@ -92,21 +89,22 @@ INFO: Connected to new websocket client
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2023-01-14T13:50:48.463Z] Jan 14, 2023 7:20:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
-[debug] [2023-01-14T13:50:48.496Z] Jan 14, 2023 7:20:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=intV2pEBOjaZETTwIpa8iPmS2lSyM5L9oJzKQ1fQadhTmom1ezGuuV&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=intV2pEBOjaZETTwIpa8iPmS2lSyM5L9oJzKQ1fQadhTmom1ezGuuV&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=wuW0jC_U9aFgpslHHouCRY7MljUHqlSETo8tV1RoaYMSkY7BYK6KuS&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=wuW0jC_U9aFgpslHHouCRY7MljUHqlSETo8tV1RoaYMSkY7BYK6KuS&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Fy7qomV1t32bl9LKqxlDM2XIdFDRPxgw59omtKqvcUx-yH7DF6xvh8&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Fy7qomV1t32bl9LKqxlDM2XIdFDRPxgw59omtKqvcUx-yH7DF6xvh8&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=QOycmp8eY50rx52M25YjaAAos6dtlpCgY-LAj17P35L9uRmOpTpJDU&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=QOycmp8eY50rx52M25YjaAAos6dtlpCgY-LAj17P35L9uRmOpTpJDU&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=iQO66eD_BJHwYCOwDySs2tCw-BN0iuB09Np8hjftVGpWM_XQ1ix5c3&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=iQO66eD_BJHwYCOwDySs2tCw-BN0iuB09Np8hjftVGpWM_XQ1ix5c3&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=VgBZsI5DlznQkF3REqDMZfpTsZEBDnwg5aFhBVbmhvhfsfoglpVk3E&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=VgBZsI5DlznQkF3REqDMZfpTsZEBDnwg5aFhBVbmhvhfsfoglpVk3E&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Z1-gf8KuOMVS3bB_p81vA-e-2Sa1w0lOkrkCZ2PIx0xzSTk53ieRfm&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Z1-gf8KuOMVS3bB_p81vA-e-2Sa1w0lOkrkCZ2PIx0xzSTk53ieRfm&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=r-k5EKZi_hru3EbTjMw1jEKrihOSCYqGhRl2GVQswVjbl0v7B5HHpU&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=r-k5EKZi_hru3EbTjMw1jEKrihOSCYqGhRl2GVQswVjbl0v7B5HHpU&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=FNFfdcIiqEzuv4F6BHc7cqlk2Bbi992qhsfgfGjljHqhn4XW0U3CNt&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=FNFfdcIiqEzuv4F6BHc7cqlk2Bbi992qhsfgfGjljHqhn4XW0U3CNt&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=m50iI7gEPrHPDnpe5A23cPOITRsX-1_RGLcXqejb7_5YJ4SycHF9me&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for dronr19@gmail.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=m50iI7gEPrHPDnpe5A23cPOITRsX-1_RGLcXqejb7_5YJ4SycHF9me&apiKey=fake-api-key&continueUrl=http%3A%2F%2Flocalhost%3A3000%2Fauth&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-01-14T17:26:37.248Z] Jan 14, 2023 10:56:37 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:48 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
-[debug] [2023-01-14T13:50:49.273Z] Jan 14, 2023 7:20:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 10:56:37 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2023-01-14T17:56:21.236Z] Jan 14, 2023 11:26:21 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
 INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
-[debug] [2023-01-14T13:50:49.471Z] Jan 14, 2023 7:20:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 11:26:21 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
+[debug] [2023-01-14T18:10:40.667Z] Jan 14, 2023 11:40:40 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:20:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
-[debug] [2023-01-14T14:05:49.556Z] Jan 14, 2023 7:35:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:35:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
-[debug] [2023-01-14T14:05:49.728Z] Jan 14, 2023 7:35:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 7:35:49 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 14, 2023 11:40:40 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}

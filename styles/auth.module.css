@@ -238,3 +238,47 @@
     width: 34vw;
     padding: 30px 20px;
 }
+
+.forgetcontainerloginform{
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    /* width: 70vw; */
+    padding: 2rem;
+    width: 30vw;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.forgetcard{
+    margin: 10vw 10vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.formcontainerloginformforget input{
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    /* margin: 8px 0; */
+    width:20vw;
+    outline: none;
+    border-radius: 0.5rem;
+}
+.forgetupheader{
+    font-weight: bold;
+    margin: 2vh 0rem; 
+}
+
+.forgetpasswordbutton{
+    /* padding: 1rem; */
+    padding: 0.6rem 3rem;
+    border-radius: 8px;
+    background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+    color: #FFFFFF;
+    border: none;
+    margin: 3vh 6vh ;
+    cursor: pointer;
+}
