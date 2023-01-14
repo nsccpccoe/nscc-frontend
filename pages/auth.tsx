@@ -3,7 +3,7 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import type { AppProps } from 'next/app'
 import { auth } from "../firebase";
 import styles from "../styles/auth.module.css"
@@ -15,7 +15,12 @@ import { FirebaseError } from "firebase/app";
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import {FluidContainer} from "../Components/FluidContainer/FluidContainer"
+import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 
 interface InitialState {
   firstName: string,
@@ -32,10 +37,42 @@ const initialState: InitialState = {
   confirmPassword: ""
 }
 
+
+
+
 const Auth = () => {
   const [state, setState] = useState<InitialState>(initialState);
   const [signUp, setSignUp] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [googleuser, setgogleuser] = useAuthState(auth);
+  // const [googleuser, setgoogleUser] = useState<any | null>(null);
+
+
+  const googleauth = new GoogleAuthProvider();
+  const googleSignin = async () => {
+    console.log("hello")
+    const result = await signInWithPopup(auth, googleauth);
+    toast.success("login successfull");
+  }
+  const googlesignOut = async () => {
+    await auth.signOut();
+    toast.success("signout successfull");
+  }
+
+  const githubauth = new GithubAuthProvider();
+  const githubSignin = async () => {
+    console.log("hello")
+    const result = await signInWithPopup(auth, githubauth);
+    toast.success("login successfull");
+  }
+  const githubSignout = async () => {
+    await auth.signOut();
+    toast.success("signout successfull");
+  }
+
+  //  useEffect(()=>{
+  //     console.log(googleuser)
+  //  },[googleuser])
 
   const { email, password, firstName, lastName, confirmPassword } = state;
 
@@ -95,30 +132,32 @@ const Auth = () => {
   const handleaddclassName = () => {
     setIsActive(current => !current);
   };
+
+
   return (
 
     <>
-       <FluidContainer/>
+      <FluidContainer />
       <ToastContainer />
+
       <div className={styles.loginsignupform}>
-     
+
+
         <div className={` ${styles.containerloginform}  ${isActive ? "" : `${styles.rightpanelactive}`}`} id="containerloginform">
           <div className={`${styles.formcontainerloginform} ${styles.signupcontainerloginform}`}>
             <form onSubmit={handleAuth}>
               <h1 className={styles.Loginsignupheader}>Create Account</h1>
               <div className={styles.socialcontainerloginform}>
-                <a href="" className={styles.social}>
+                <div className={styles.social}>
                   {/* <i className="fab fafacebook"></i> */}
-                  <GoogleIcon />
-                </a>
-                <a href="" className={styles.social}>
-                  <FacebookIcon />
-                  {/* <i className="fab fagoogleplusg"></i> */}
-                </a>
-                <a href="" className={styles.social}>
-                  <GitHubIcon />
+                  <GoogleIcon onClick={googleSignin} />
+                  {/* <GoogleIcon onClick={googlesignOut} /> */}
+                </div>
+                <div className={styles.social}>
+                  <GitHubIcon onClick={githubSignin} />
+                  {/* <GitHubIcon  onClick={githubSignout} /> */}
                   {/* <i className="fab falinkedinin"></i> */}
-                </a>
+                </div>
               </div>
               <span className={styles.loginspan}>or use your email for registration</span>
               <div className={styles.adjustname}>
@@ -128,6 +167,7 @@ const Auth = () => {
                   name="firstName"
                   value={firstName}
                   onChange={handleChange}
+                  style={{ width: "12vw" }}
                 />
                 <input
                   type="text"
@@ -135,69 +175,71 @@ const Auth = () => {
                   placeholder="Last Name"
                   name="lastName"
                   value={lastName}
+                  style={{ width: "12vw" }}
                   onChange={handleChange}
-                  />
+                />
               </div>
-              <input
-                type="email"
-                className="formcontrol inputtextbox"
-                placeholder="Email"
-                name="email"
-                value={email}
-                onChange={handleChange}
-              />
-              <input
-                type="password"
-                className="formcontrol inputtextbox"
-                placeholder="Password"
-                name="password"
-                value={password}
-                onChange={handleChange}
+              <div className={styles.emailpass}>
+                <input
+                  type="email"
+                  className="formcontrol inputtextbox"
+                  placeholder="Email"
+                  name="email"
+                  value={email}
+                  onChange={handleChange}
                 />
-              <input
-                type="password"
-                className="formcontrol inputtextbox"
-                placeholder="Confirm Password"
-                name="confirmPassword"
-                value={confirmPassword}
-                onChange={handleChange}
+                <input
+                  type="password"
+                  className="formcontrol inputtextbox"
+                  placeholder="Password"
+                  name="password"
+                  value={password}
+                  onChange={handleChange}
                 />
-              <button onClick={() => setSignUp(true)}>Sign Up</button>
+                <input
+                  type="password"
+                  className="formcontrol inputtextbox"
+                  placeholder="Confirm Password"
+                  name="confirmPassword"
+                  value={confirmPassword}
+                  onChange={handleChange}
+                />
+                <button style={{ width: "10vw", margin: "2vh 10vw" }} onClick={() => setSignUp(true)}>Sign Up</button>
+
+              </div>
             </form>
           </div>
           <div className={`${styles.formcontainerloginform} ${styles.signincontainerloginform}`}>
             <form onSubmit={handleAuth}>
-              <h1>Sign in</h1>
+              <h1 style={{ margin: "5vh 8vw" }}>Sign in</h1>
               <div className={styles.socialcontainerloginform}>
 
-                <a href="" className={styles.social}>
-                  {/* <i className="fab fafacebook"></i> */}
-                  <GoogleIcon />
-                </a>
-                <a href="" className={styles.social}>
-                  <FacebookIcon />
-                  {/* <i className="fab fagoogleplusg"></i> */}
-                </a>
-                <a href="" className={styles.social}>
-                  <GitHubIcon />
-                  {/* <i className="fab falinkedinin"></i> */}
-                </a>
+                <div style={{ marginLeft: "-2vw" }} className={styles.social}>
+                  <GoogleIcon onClick={googleSignin} />
+                </div>
+                <div className={styles.social}>
+                  <GitHubIcon onClick={githubSignin} />
+                </div>
               </div>
-              <span className={styles.loginspan}>or use your account</span>
-              <input type="email"
-                className="formcontrol inputtextbox"
-                placeholder="Email"
-                name="email"
-                value={email}
-                onChange={handleChange} />
-              <input type="password"
-                className="formcontrol inputtextbox"
-                placeholder="Password"
-                name="password"
-                value={password}
-                onChange={handleChange} />
-              <a href="">Forgot your password?</a>
-              <button onClick={() => setSignUp(false)}>Sign In</button>
+              <span style={{ margin: "7vw" }} className={styles.loginspan}>or use your account</span>
+              <div className={styles.signinadjust}>
+                <input type="email"
+                  className="formcontrol inputtextbox"
+                  placeholder="Email"
+                  name="email"
+                  value={email}
+                  style={{ width: "24vw" }}
+                  onChange={handleChange} />
+                <input type="password"
+                  className="formcontrol inputtextbox"
+                  placeholder="Password"
+                  style={{ width: "24vw" }}
+                  name="password"
+                  value={password}
+                  onChange={handleChange} />
+                <div style={{ margin: "2vh 0vw" }} >Forgot  password?</div>
+                <button style={{ width: "10vw", margin: "2vh 8vw" }} onClick={() => setSignUp(false)}>Sign In</button>
+              </div>
             </form>
           </div>
           <div className={styles.overlaycontainerloginform}>

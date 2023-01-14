@@ -11,20 +11,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-
-
-
-    "@mui/lab": "^5.0.0-alpha.115",
-
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@firebase/auth": "^0.21.0",
     "@mui/icons-material": "^5.11.0",
-
+    "@mui/lab": "^5.0.0-alpha.115",
     "@mui/material": "^5.11.4",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
@@ -37,6 +28,7 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-toastify": "^9.1.1",
     "reactfire": "^4.2.2",
     "sass": "^1.57.1",

@@ -1,18 +1,15 @@
 .loginsignupform {
     font-family: 'Montserrat', sans-serif;
-    /* background: #090917; */
     display: flex;
-
     justify-content: center;
     align-items: center;
     height: 100vh;
-
     overflow: hidden;
 }
 
 .Loginsignupheader {
     font-weight: bold;
-    margin: 0;
+    margin: 2rem 5rem;
 }
 
 .overlay p {
@@ -23,8 +20,9 @@
     margin: 20px 0 30px;
 }
 
-.loginspan span {
-    font-size: 12px;
+.loginspan {
+    margin: 0rem 4rem;
+    font-size: 18px;
 }
 
 .loginsignupform a {
@@ -40,16 +38,16 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 70vw;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 80vh;
 }
 
+
 .form-containerloginform form {
-    /* background: #fff; */
     display: flex;
     flex-direction: column;
-    padding:  0 50px;
+    /* padding:  2rem; */
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -57,10 +55,10 @@
 }
 
 .socialcontainerloginform {
-    margin: 20px 0;
+    margin: 1rem 10rem;
 }
 
-.socialcontainerloginform a {
+.socialcontainerloginform div {
     border: 1px solid #ddd;
     border-radius: 50%;
     display: inline-flex;
@@ -76,8 +74,9 @@
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
-    width: 100%;
+    width:27vw;
     outline: none;
+    border-radius: 0.5rem;
 }
 
 .loginsignupform button {
@@ -116,13 +115,13 @@
 }
 
 .signincontainerloginform {
-    left: 0;
+    left: 10%;
     width: 50%;
     z-index: 2;
 }
 
 .signupcontainerloginform {
-    left: 0;
+    left: 5%;
     width: 50%;
     z-index: 1;
     opacity: 0;
@@ -140,8 +139,7 @@
 }
 
 .overlay {
-    /* background: #ff416c; */
-    /* background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover; */
+
     background: linear-gradient(189.19deg, #192656 42.16%, rgba(45, 71, 184, 0.1) 91.14%);
     color: #fff;
     position: relative;
@@ -161,7 +159,7 @@
     align-items: center;
     padding: 0 40px;
     height: 100%;
-    width: 50%;
+    width: 40%;
     text-align: center;
     transform: translateY(0);
     transition: transform .6s ease-in-out;
@@ -170,6 +168,7 @@
 .overlayright {
     right: 0;
     transform: translateY(0);
+    margin-top:-5vh ;
 }
 
 .overlayleft {
@@ -216,4 +215,19 @@
 	letter-spacing: 15px;
 	align-items: center;
     color: white;
+}
+.adjustname{
+    display: flex;
+    gap: 1rem;
+}
+.emailpass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* margin-right:6vw; */
+}
+.signinadjust{
+    display: flex;
+    flex-direction: column;
 }
