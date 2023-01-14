@@ -3,25 +3,25 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useEffect, useState } from "react";
-import type { AppProps } from 'next/app'
+import {useState } from "react";
+
 import { auth } from "../firebase";
 import styles from "../styles/auth.module.css"
 import { toast, } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css'
-import { json } from "stream/consumers";
+
 import { FirebaseError } from "firebase/app";
 import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
-import firebase from "firebase/compat/app";
+
 import "firebase/compat/auth";
 import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
-
+import Link from "next/link";
 interface InitialState {
   firstName: string,
   lastName: string,
@@ -255,9 +255,7 @@ const Auth = () => {
     setState(initialState)
     setIsActive(current => !current);
   };
-  const forgetpassword =()=>{
-    router.push(`${location.origin}/auth`)
-  }
+
 
   return (
 
@@ -362,7 +360,8 @@ const Auth = () => {
                   name="password"
                   value={password}
                   onChange={handleChange} />
-                <div   onClick={forgetpassword} style={{ margin: "2vh 0vw" ,cursor:"pointer"}} >Forgot  password?</div>
+                    <Link href="/forgetpassword" style={{ margin: "2vh 0vw" ,cursor:"pointer", color:"white"}}>Forgot password?</Link>
+             
                 <button style={{ width: "10vw", margin: "2vh 8vw" }} onClick={() => setSignUp(false)}>Sign In</button>
               </div>
             </form>
