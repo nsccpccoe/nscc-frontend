@@ -14,7 +14,7 @@ const Forgetpassword = () => {
   const [email, setEmail] = useState("");
 
   const forgetpassword = (email: string) => {
-    return sendPasswordResetEmail(auth, email, { url: 'http://localhost:3000/auth' })
+    return sendPasswordResetEmail(auth, email, { url: `${location.origin}/auth` })
   }
   return (
     <>
