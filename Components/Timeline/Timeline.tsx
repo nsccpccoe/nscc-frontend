@@ -13,9 +13,11 @@ import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import TerminalTwoToneIcon from '@mui/icons-material/TerminalTwoTone';
-
+import styles from "./TimeLine.module.css"
 export default function TimelineF() {
   return (
+    <div>
+    <h3 className={styles.text}>Timeline</h3>
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
@@ -126,5 +128,6 @@ export default function TimelineF() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </div>
   );
 }
