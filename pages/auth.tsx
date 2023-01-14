@@ -20,7 +20,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import { useRouter } from 'next/router'
 
 interface InitialState {
   firstName: string,
@@ -41,6 +41,7 @@ const initialState: InitialState = {
 
 
 const Auth = () => {
+  let router= useRouter()
   const [state, setState] = useState<InitialState>(initialState);
   const [signUp, setSignUp] = useState(false);
   const [isActive, setIsActive] = useState(true);
@@ -64,6 +65,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
+      router.push('/')
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -112,7 +114,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
-
+      router.push('/')
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -165,6 +167,8 @@ const Auth = () => {
           );
 
           toast.success("signin successfull");
+          router.push('/')
+    
         }
         catch (err) {
           if (err instanceof FirebaseError) toast(err.code, {
@@ -218,6 +222,8 @@ const Auth = () => {
             theme: "dark",
           }
           );
+          
+          router.push('/')
         } catch (err) {
           // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
@@ -237,7 +243,7 @@ const Auth = () => {
         );
       }
     }
-    // navigate("/");
+ 
 
   };
   const handleaddclassName = () => {
