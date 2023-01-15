@@ -23,8 +23,6 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 // const analytics = getAnalytics(app);
 
-
-
 // // eslint-disable-next-line no-restricted-globals
 // if (location.hostname === 'localhost') {
 //   connectAuthEmulator(auth, "http://127.0.0.1:9099");
