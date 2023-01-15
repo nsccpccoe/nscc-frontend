@@ -1,0 +1,89 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  // background: linear-gradient(
+  //   189.19deg,
+  //   #192656 42.16%,
+  //   rgba(45, 71, 184, 0.1) 91.14%
+  // );
+  background: #192656;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.heading h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #e6e6e6;
+}
+
+.date p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e6e6e6;
+}
+
+.desc p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #b3b3b3;
+}
+
+.container::before, .container::after {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  content: '';
+  width: 90%;
+  height: 90%;
+  z-index: 0;
+  border: 2px solid #00000000;
+  border-radius: 8px;
+  transform-origin: center center;
+  transform: rotate(0deg);
+  transition: inherit;
+}
+
+.container::after {
+  transition-delay: 50ms;
+}
+
+.container:hover {
+  transform: translateY(-16px);
+}
+.container:hover::before, .container:hover::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #7A9CE0;
+}
+
+.container:hover::before {
+  transform: rotateZ(-5deg) rotateX(-1deg) rotateY(1deg);
+}
+.container:hover:after {
+  transform: rotateZ(-10deg) rotateX(-1deg) rotateY(1deg);
+}
+
+@media (max-width: 1095px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 80%;
+  }
+}
