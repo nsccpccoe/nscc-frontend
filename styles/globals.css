@@ -9,3 +9,19 @@ body{
   background: #06060A;
   color: white;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  border-radius: 10px;
+}
