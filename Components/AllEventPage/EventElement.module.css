@@ -10,6 +10,7 @@
   font-style: normal;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .type p {
@@ -60,29 +61,28 @@
   .container {
     padding: 1.5rem 1rem 1rem 1rem;
   }
-  
+
   .type p {
     font-size: 0.7rem;
     line-height: 1rem;
   }
-  
+
   .heading h1 {
     padding-top: 0.5rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  
+
   .duration p {
     font-size: 0.7rem;
     line-height: 1rem;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
   }
-  
+
   .container button {
     font-size: 0.8rem;
     line-height: 0.8rem;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
   }
-  
 }

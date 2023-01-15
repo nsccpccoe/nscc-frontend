@@ -1,36 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+    justify-content: center; */
+  margin: 4rem;
+  padding: 0 2rem;
 }
 
 .main h1 {
-    font-family: 'Poppins';
-    font-style: normal;
-    background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-family: "Poppins";
+  font-style: normal;
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
 }
 
-.table{
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.row{
-    margin: 0.5rem;
-    padding: 1rem;
-    border: 2px solid #3158a5;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.row {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 2px solid #3158a5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 596px) {
+  .main {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    margin: 0;
+  }
+
+  .main h1 {
+    font-size: 1.7rem;
+  }
 }
