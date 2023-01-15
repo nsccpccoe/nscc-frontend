@@ -4,32 +4,33 @@ import NSCCLogo from "../../assets/logo.svg";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
-import { onAuthStateChanged ,} from "firebase/auth"
-function Navbar() {
+import { onAuthStateChanged } from "firebase/auth";
+import { AiFillHome } from "react-icons/ai";
+import { MdEmojiEvents } from "react-icons/md";
+import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 
-  const [active,setactive] =useState(false);
+function Navbar() {
+  const [active, setactive] = useState(false);
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
-      if(user) {
-        console.log(user)
-        
-        // localStorage.setItem("accessToken",`${user.accessToken}`)
-        setactive(true)
-      }
-      else {
-        // localStorage.removeItem("accessToken")
-        setactive(false)
-      }
-    })
-  },[])
+      if (user) {
+        console.log(user);
 
-  const handlelogout=()=>{
-    if(active){
+        // localStorage.setItem("accessToken",`${user.accessToken}`)
+        setactive(true);
+      } else {
+        // localStorage.removeItem("accessToken")
+        setactive(false);
+      }
+    });
+  }, []);
+
+  const handlelogout = () => {
+    if (active) {
       auth.signOut();
-      localStorage.removeItem("login")
+      localStorage.removeItem("login");
     }
-  }
-  
+  };
 
   return (
     <div className={classes.container}>
@@ -41,7 +42,12 @@ function Navbar() {
       <div className={classes.navigators}>
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <div className={classes.icons}>
+                <AiFillHome />
+              </div>
+              <label>Home</label>
+            </Link>
           </li>
           {/* <li>
             <Link href="/">Opportunities</Link>
@@ -50,13 +56,27 @@ function Navbar() {
             <Link href="/">Resources</Link>
           </li> */}
           <li>
-            <Link href="/event">Events</Link>
+            <Link href="/event">
+              <div className={classes.icons}>
+                <MdEmojiEvents />
+              </div>
+              <label>Events</label>
+            </Link>
           </li>
           {/* <li>
             <Link href="/">Connect</Link>
           </li> */}
           <li>
-            <Link  onClick={handlelogout} className={classes.button} href="/auth">{active?"logout":"login"}</Link>
+            <Link
+              onClick={handlelogout}
+              className={classes.button}
+              href="/auth"
+            >
+              <div className={classes.icons}>
+                {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
+              </div>
+              <label>{active ? "logout" : "login"}</label>
+            </Link>
           </li>
         </ul>
       </div>

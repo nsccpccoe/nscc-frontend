@@ -5,7 +5,8 @@
   font-family: "Poppins";
   font-style: normal;
   color: #ffffff;
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -70,6 +71,12 @@
 .navigators ul li a {
   text-decoration: none;
   color: #ffffff;
+  display: flex;
+}
+
+.icons {
+  align-self: center;
+  display: none;
 }
 
 .navigators .button {
@@ -81,11 +88,70 @@
   align-items: center;
 
   /* grad 1 */
-  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
   border-radius: 4px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   /* identical to box height */
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .container {
+    bottom: 0;
+    top: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(315deg, #fff, #d7e1ec 74%);
+    padding: 1rem;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .navigators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navigators ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navigators ul li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons {
+    align-self: center;
+    display: flex;
+    font-size: 2.5rem;
+    color: black;
+  }
+
+  .navigators ul li a label {
+    display: none;
+  }
+
+  .navigators .button {
+    background: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons {
+    font-size: 2rem;
+  }
 }
