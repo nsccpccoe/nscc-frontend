@@ -29,6 +29,8 @@ interface Event {
 
 interface EventResponse {
   isError: boolean;
+  errorCode: string;
+  errorMessage: string;
   data: Event[];
 }
 
@@ -41,7 +43,9 @@ const ErrorAlert = (props: { errorMessage: string }) => {
   );
 };
 
-const epochToString = (epoch: number) => new Date(epoch).toLocaleString("en-IN");
+const epochToString = (epoch: number) => new Date(epoch)
+  .toLocaleString("en-IN")
+  .toUpperCase();
 
 function EventBox() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -51,13 +55,13 @@ function EventBox() {
     fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/events')
       .then(res => {
         if (!res.ok) {
-          throw res.statusText;
+          throw res.status + " " + res.statusText;
         }
         return res.json();
       })
       .then((eventResponse: EventResponse) => {
         if (eventResponse.isError) {
-          setErrorMessage("Unknown error occured while fetching event details");
+          setErrorMessage(eventResponse.errorCode + " - " + eventResponse.errorMessage);
         } else {
           setEvents(eventResponse.data);
         }
