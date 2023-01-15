@@ -99,8 +99,11 @@
 
 @media (max-width: 640px) {
   .container {
+    position: fixed;
     bottom: 0;
-    top: 93vh;
+    width: 100%;
+    top: auto;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
