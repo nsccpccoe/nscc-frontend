@@ -4,3 +4,12 @@
   gap: 2rem;
   background: #090917;
 }
+
+@media (max-width: 1095px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

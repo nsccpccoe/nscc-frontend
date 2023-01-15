@@ -9,6 +9,7 @@
   font-family: "Poppins";
   font-style: normal;
   width: 100%;
+  text-align: center;
 }
 
 .type p {
@@ -47,4 +48,41 @@
   margin-top: 1rem;
   cursor: pointer;
   color: #1c1b4b;
+}
+
+@media (max-width: 1225px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .type p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+  
+  .heading h1 {
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .duration p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding-top: .5rem;
+  }
+  
+  .container button {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+  
 }

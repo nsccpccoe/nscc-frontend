@@ -30,13 +30,13 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <Header /> */}
+         <Header /> 
         <Landing />
         <CardElements />
-        <About />
+         <About />
         <TimelineF />
         <ClubActivities />
-        <Footer />
+        <Footer /> 
       </main>
     </>
   );
