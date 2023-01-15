@@ -27,7 +27,7 @@
 }
 
 .descriptiion {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .descriptiion p {
@@ -35,4 +35,70 @@
   font-size: 0.8rem;
   line-height: 1.3rem;
   color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1225px) {
+  .organizer h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .heading h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .date p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+
+  .descriptiion p {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .organizer h3 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .date p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .descriptiion p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .organizer h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .date p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .descriptiion p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
 }
