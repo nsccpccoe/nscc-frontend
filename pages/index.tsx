@@ -32,8 +32,8 @@ export default function Home() {
       <main>
         {/* <Header /> */}
         <Landing />
-        {/* <CardElements />
-        <About />
+        <CardElements />
+        {/* <About />
         <TimelineF />
         <ClubActivities />
         <Footer /> */}

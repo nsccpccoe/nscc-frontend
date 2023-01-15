@@ -15,7 +15,7 @@ function Event() {
       </Head>
       <FluidContainer />
       <Landing />
-     {/* <Eventdescription/> */}
+     <Eventdescription/>
       
     </>
   );
