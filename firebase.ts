@@ -20,12 +20,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// connectAuthEmulator(auth, "http://127.0.0.1:9099");
 const db = getFirestore(app);
-// connectFirestoreEmulator(db, 'localhost', 8080);
 const storage = getStorage(app);
-
 // const analytics = getAnalytics(app);
+
+
+// eslint-disable-next-line no-restricted-globals
+if (location.hostname === 'localhost') {
+  connectAuthEmulator(auth, "http://127.0.0.1:9099");
+  connectFirestoreEmulator(db, 'localhost', 8080);
+}
 
 export { auth, db, storage };
 
