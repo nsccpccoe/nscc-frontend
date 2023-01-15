@@ -32,11 +32,11 @@ export default function Home() {
       <main>
         {/* <Header /> */}
         <Landing />
-        <CardElements />
+        {/* <CardElements />
         <About />
         <TimelineF />
         <ClubActivities />
-        <Footer />
+        <Footer /> */}
       </main>
     </>
   );

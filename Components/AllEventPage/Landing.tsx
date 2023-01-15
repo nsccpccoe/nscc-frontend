@@ -14,11 +14,10 @@ function Landing() {
       <FluidContainer>
         <div className={classes.container}>
           <EventBox />
-          
         </div>
-        <OngoingEvents />
+        {/* <OngoingEvents />
           <UpcomingEvents />
-          <PastEvents />
+          <PastEvents /> */}
       </FluidContainer>
     </div>
   );
