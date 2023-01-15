@@ -42,3 +42,15 @@
   transform: rotateY(360deg);
   transition: all 1s ease-in-out;
 }
+
+@media (max-width: 1095px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 80%;
+  }
+}

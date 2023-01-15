@@ -21,15 +21,6 @@
   /* text-fill-color: transparent; */
 }
 
-.college h3 {
-  display: initial;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1rem;
-  color: #d9d9d9;
-  border-bottom: 2px solid #d9d9d9;
-}
-
 .clubInfo h2 {
   padding-top: 2rem;
   font-weight: 500;
@@ -63,4 +54,44 @@
   margin-top: 1rem;
   cursor: pointer;
   color: #1c1b4b;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .clubInfo p {
+    line-height: 1.4rem;
+  }
+}
+
+@media (max-width: 545px) {
+  .clubHeading h3 {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .clubHeading h3 {
+    font-size: 1.2rem;
+    line-height: 1rem;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .clubInfo h2 {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
 }

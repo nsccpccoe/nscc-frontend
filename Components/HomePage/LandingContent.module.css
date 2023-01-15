@@ -8,7 +8,7 @@
   font-size: 36px;
   line-height: 54px;
   /* identical to box height */
-  color: rgba(255, 255, 255, 0.9);  
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .title h1 {
@@ -16,25 +16,28 @@
   font-size: 80px;
   line-height: 120px;
   /* identical to box height */
-  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;  
+  background-clip: text;
   /* text-fill-color: transparent; */
+}
+
+.college {
+  display: inline-block;
 }
 
 .college h3 {
   font-size: 24px;
   line-height: 36px;
-  /* identical to box height */
-  color: #D9D9D9;
+  color: #d9d9d9;
   border-bottom: 2px solid #d9d9d9;
 }
 
 .clubInfo h2 {
   font-size: 20px;
   line-height: 30px;
-  background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 32px;
@@ -45,15 +48,11 @@
   font-size: 14px;
   line-height: 21px;
   /* identical to box height */
-  color: rgba(255, 255, 255, 0.9);  
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .container button {
   margin-top: 48px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height */
   background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -62,6 +61,119 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  /* identical to box height */
   color: #193655;
+}
+
+@media (max-width: 1280px) and (min-width: 1160px) {
+  .container {
+    margin-left: 4rem;
+  }
+
+  .clubHeading h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .title h1 {
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+
+  .college h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1.8px solid #d9d9d9;
+  }
+
+  .clubInfo h2 {
+    padding-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .clubInfo p {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+
+  .container button {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media (max-width: 1160px) {
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .clubHeading h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .title h1 {
+    font-size: 3.5rem;
+    line-height: 5.5rem;
+  }
+
+  .college h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1.8px solid #d9d9d9;
+  }
+
+  .clubInfo h2 {
+    padding-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .clubInfo p {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+
+  .container button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .clubHeading h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
+  .college h3 {
+    border: none;
+    text-decoration: underline;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .clubHeading h3 {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .title h1{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }

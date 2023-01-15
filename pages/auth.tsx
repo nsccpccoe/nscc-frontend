@@ -3,25 +3,25 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useEffect, useState } from "react";
-import type { AppProps } from 'next/app'
+import {useState } from "react";
+
 import { auth } from "../firebase";
 import styles from "../styles/auth.module.css"
 import { toast, } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css'
-import { json } from "stream/consumers";
+
 import { FirebaseError } from "firebase/app";
 import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
-import firebase from "firebase/compat/app";
+
 import "firebase/compat/auth";
-import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-
-
+import { useRouter } from 'next/router'
+import Link from "next/link";
 interface InitialState {
   firstName: string,
   lastName: string,
@@ -41,38 +41,116 @@ const initialState: InitialState = {
 
 
 const Auth = () => {
+  let router= useRouter()
   const [state, setState] = useState<InitialState>(initialState);
   const [signUp, setSignUp] = useState(false);
   const [isActive, setIsActive] = useState(true);
   const [googleuser, setgogleuser] = useAuthState(auth);
+  const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
 
 
+   
+   
+
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
-    console.log("hello")
-    const result = await signInWithPopup(auth, googleauth);
-    toast.success("login successfull");
+    try {
+      // console.log("hello")
+      const result = await signInWithPopup(auth, googleauth);
+
+      toast("login successfull", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+      router.push('/')
+    } catch (err) {
+      if (err instanceof FirebaseError) toast(err.code, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      )
+    }
   }
   const googlesignOut = async () => {
     await auth.signOut();
-    toast.success("signout successfull");
+
+    toast("signout successfull", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+    );
   }
 
   const githubauth = new GithubAuthProvider();
+
   const githubSignin = async () => {
-    console.log("hello")
-    const result = await signInWithPopup(auth, githubauth);
-    toast.success("login successfull");
+    try {
+      // console.log("hello")
+      const result = await signInWithPopup(auth, githubauth);
+
+      toast("login successfull", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+      router.push('/')
+    } catch (err) {
+      if (err instanceof FirebaseError) toast(err.code, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+      );
+    }
   }
   const githubSignout = async () => {
     await auth.signOut();
-    toast.success("signout successfull");
+
+    toast("signout successfull", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+    );
   }
 
-  //  useEffect(()=>{
-  //     console.log(googleuser)
-  //  },[googleuser])
+ 
 
   const { email, password, firstName, lastName, confirmPassword } = state;
 
@@ -92,17 +170,39 @@ const Auth = () => {
             email,
             password
           );
+
           toast.success("signin successfull");
+          router.push('/')
+    
         }
         catch (err) {
-          if (err instanceof FirebaseError) toast.error(err.code)
+          if (err instanceof FirebaseError) toast(err.code, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+          )
 
         }
-        // setUser(user);
-        // setActive("home");
-      } else {
 
-        toast.error("All fields are mandatory to fill");
+      } else {
+        toast("All fields are mandatory to fill", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        }
+
+        );
       }
     } else {
       if (password !== confirmPassword) {
@@ -115,21 +215,44 @@ const Auth = () => {
             email,
             password
           );
-          toast.success("signup successfull");
+
+          toast("signup successfull", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+          );
+          
+          router.push('/')
         } catch (err) {
-          console.error(err);
+          // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
         }
-        // await updateProfile(user, { displayName: `${firstName} ${lastName}` });
-        // setActive("home");
+
       } else {
-        toast.error("All fields are mandatory to fill");
+        toast("All fields are mandatory to fill", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        }
+        );
       }
     }
-    // navigate("/");
+ 
 
   };
   const handleaddclassName = () => {
+    setState(initialState)
     setIsActive(current => !current);
   };
 
@@ -140,6 +263,7 @@ const Auth = () => {
       <FluidContainer />
       <ToastContainer />
 
+
       <div className={styles.loginsignupform}>
 
 
@@ -149,14 +273,13 @@ const Auth = () => {
               <h1 className={styles.Loginsignupheader}>Create Account</h1>
               <div className={styles.socialcontainerloginform}>
                 <div className={styles.social}>
-                  {/* <i className="fab fafacebook"></i> */}
+
                   <GoogleIcon onClick={googleSignin} />
-                  {/* <GoogleIcon onClick={googlesignOut} /> */}
+        
                 </div>
                 <div className={styles.social}>
                   <GitHubIcon onClick={githubSignin} />
-                  {/* <GitHubIcon  onClick={githubSignout} /> */}
-                  {/* <i className="fab falinkedinin"></i> */}
+
                 </div>
               </div>
               <span className={styles.loginspan}>or use your email for registration</span>
@@ -237,7 +360,8 @@ const Auth = () => {
                   name="password"
                   value={password}
                   onChange={handleChange} />
-                <div style={{ margin: "2vh 0vw" }} >Forgot  password?</div>
+                    <Link href="/forgetpassword" style={{ margin: "2vh 0vw" ,cursor:"pointer", color:"white"}}>Forgot password?</Link>
+             
                 <button style={{ width: "10vw", margin: "2vh 8vw" }} onClick={() => setSignUp(false)}>Sign In</button>
               </div>
             </form>

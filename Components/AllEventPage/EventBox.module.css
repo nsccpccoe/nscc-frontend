@@ -17,5 +17,28 @@
   gap: 1rem;
 }
 
+@media (max-width: 1225px) {
+  .container {
+    margin-top: 3rem;
+    width: 70%;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .events {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
+
+@media (max-width: 1225px) {
+  .container {
+    margin-top: 3rem;
+    width: 70%;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .events {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
