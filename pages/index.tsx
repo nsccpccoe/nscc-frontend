@@ -33,10 +33,10 @@ export default function Home() {
         {/* <Header /> */}
         <Landing />
         <CardElements />
-        {/* <About />
+        <About />
         <TimelineF />
         <ClubActivities />
-        <Footer /> */}
+        <Footer />
       </main>
     </>
   );
