@@ -11,6 +11,10 @@ function CardElements() {
     description: string
     endAt: number
     startAt: number
+    eventPage: {
+      link: string
+      type: "onsite" | "offsite",
+    }
   }
    useEffect(() => {
     setLoading(true)
@@ -31,7 +35,7 @@ function CardElements() {
         data ? data.map((e) => {
           return (
             <>
-            <Link className={classes.linkcard} href={`/event/${e.id}`}>
+            <Link className={classes.linkcard} href={e.eventPage.link}>
               <div className={classes.container}>
                 <div className={classes.heading}>
                   <h1>{e.id}</h1>
