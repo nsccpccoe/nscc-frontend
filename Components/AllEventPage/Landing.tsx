@@ -54,8 +54,8 @@ function Landing() {
 
   return (
     <div className={classes.mainContainer}>
-      <FluidContainer>
-        <div className={classes.container}>
+      <FluidContainer />
+      <div className={classes.container}>
           {
             <EventBox events={events} errorMessage={errorMessage} />
           }
@@ -68,7 +68,6 @@ function Landing() {
             <EventList heading="Past Events" events={getPastEvents(events)} />
           </div>
         }
-      </FluidContainer>
     </div>
   );
 }
