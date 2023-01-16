@@ -16,7 +16,7 @@ const RegistrationForm = (props: ElementProps) => {
   }, []);
 
   const fetchDataHandler = useCallback(async () => {
-    // console.log(token);
+    console.log(token);
     try {
       const response = await fetch(
         `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}123/fields`,
@@ -43,18 +43,18 @@ const RegistrationForm = (props: ElementProps) => {
     fetchDataHandler();
   }, [fetchDataHandler]);
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // console.log(formData);
-    // Use formData to send a request to your server or perform other actions
-  };
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   // console.log(formData);
+  //   // Use formData to send a request to your server or perform other actions
+  // };
   return (
     <div className={classes.container}>
       <form>
@@ -65,7 +65,7 @@ const RegistrationForm = (props: ElementProps) => {
           name="email"
           value="abc"
           placeholder="Email"
-          onChange={handleInputChange}
+          // onChange={handleInputChange}
         />
         <button>Submit</button>
       </form>
