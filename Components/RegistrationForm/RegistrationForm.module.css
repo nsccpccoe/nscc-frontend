@@ -6,8 +6,9 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  margin: 10vh 34vw;
-  /* text-align: center; */
+  margin: 100px auto;
+  width: 600px;
+  max-width: 90%;
 }
 
 .regform {
@@ -19,6 +20,7 @@
 .labels {
   font-size: 20px;
 }
+
 .labelcontainer {
   display: flex;
   flex-direction: column;
@@ -27,11 +29,11 @@
   margin: 5vh 0vw;
 }
 
-.container input {
+.container input, .container select {
+  display: block;
   background: #eee;
   border: none;
   padding: 10px 12px;
-  width: 20vw;
   outline: none;
   border-radius: 0.5rem;
 }

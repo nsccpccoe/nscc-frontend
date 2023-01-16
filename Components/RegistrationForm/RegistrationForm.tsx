@@ -38,7 +38,6 @@ export interface SelectField {
 
 export type RegestrationFormRequirement = SelectField | TextField
 
-
 const RegistrationForm = (props: ElementProps) => {
   const [error, setError] = useState<string>("");
   const [data, setData] = useState<Record<string, string>>({});
@@ -151,10 +150,6 @@ const RegistrationForm = (props: ElementProps) => {
     }
   }, [props.eventName, data,token]);
 
-
-
-   console.log(fields);
-
   return (
     <>
       <div className={classes.formcontainer}>
@@ -167,10 +162,11 @@ const RegistrationForm = (props: ElementProps) => {
               return (
 
                 <div key={e.name} className={classes.labelcontainer}>
-                  <label className={classes.labels}>{e.label}</label>
+                  <label className={classes.labels} htmlFor={e.name}>{e.label}</label>
                   {
                     e.type == "options" &&
                     <select
+                      id={e.name}
                       name={e.name}
                       required
                       value={data[e.name]}
@@ -182,6 +178,7 @@ const RegistrationForm = (props: ElementProps) => {
                   }
                   {
                     e.type == "text" && <input
+                      id={e.name}
                       type="text"
                       name={e.name}
                       required

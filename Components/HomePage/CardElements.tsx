@@ -16,6 +16,10 @@ function CardElements() {
       link: string
       type: "onsite" | "offsite",
     }
+    registration: {
+      type: "onsite" | "offsite",
+      link: string,
+    }
   }
   useEffect(() => {
     setLoading(true)
@@ -35,7 +39,12 @@ function CardElements() {
       {
         data ? data.map((e) => {
           return (
-            <Link key={e.id} className={classes.linkcard} href={e.eventPage.link}>
+            <Link
+              key={e.id}
+              className={classes.linkcard}
+              href={e.eventPage.link}
+              target={e.eventPage.type === "offsite" ? "_blank" : "_self"}
+              >
               <div className={classes.container}>
                 <div className={classes.heading}>
                   <h1>{e.displayName}</h1>

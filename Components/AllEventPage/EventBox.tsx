@@ -33,6 +33,7 @@ const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
         {
           errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.map(event => {
             return <EventElement
+              event={event}
               key={event.id}
               type={event.subtitle}
               heading={event.displayName}
