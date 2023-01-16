@@ -36,7 +36,7 @@ const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
               key={event.id}
               type={event.subtitle}
               heading={event.displayName}
-              direct={event.displayName.toLocaleLowerCase()}
+              direct={event.eventPage.link}
               duration={epochToString(event.startAt) + " - " + epochToString(event.endAt)}
             />
           })
