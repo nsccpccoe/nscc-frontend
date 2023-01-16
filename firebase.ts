@@ -31,12 +31,13 @@ const storage = getStorage(app);
 
 // eslint-disable-next-line no-restricted-globals
 
-if (
-  typeof location !== "undefined" &&
-  (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-) {
-  connectAuthEmulator(auth, "http://127.0.0.1:9099");
-  connectFirestoreEmulator(db, "localhost", 8080);
-}
+// if (
+//   typeof location !== "undefined" &&
+//   (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+// ) {
+//   connectAuthEmulator(auth, "http://127.0.0.1:9099");
+//   connectFirestoreEmulator(db, "localhost", 8080);
+// }
+connectFirestoreEmulator(db, "localhost", 8080);
 
 export { auth, db, storage };

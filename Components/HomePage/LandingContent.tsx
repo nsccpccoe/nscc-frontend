@@ -1,7 +1,9 @@
 import classes from "./LandingContent.module.css";
-
+import Link from "next/link";
 function LandingContent() {
   return (
+
+    
     <div className={classes.container}>
       <div className={classes.clubHeading}>
         <h3>Newton School</h3>
@@ -20,7 +22,10 @@ function LandingContent() {
         </p>
         <p>We Recruitment via our events</p>
       </div>
-      <button>Participate</button>
+   
+      <Link href="/event">
+          <label style={{cursor:"pointer"}}>   <button >Participate</button></label>
+      </Link>
     </div>
   );
 }
