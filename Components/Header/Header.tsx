@@ -1,6 +1,6 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
-import NSCCLogo from "../../assets/logo.svg";
+import NSCCLogo from "./NSCCLogo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
@@ -11,36 +11,52 @@ import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 import { useRouter } from 'next/router';
 
 function Navbar() {
-
+  const scrollThreshold = 150;
   const router = useRouter();
-  const [active, setactive] = useState(false);
+  const [active, setActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
 
         // localStorage.setItem("accessToken",`${user.accessToken}`)
-        setactive(true);
+        setActive(true);
       } else {
         // localStorage.removeItem("accessToken")
-        setactive(false);
+        setActive(false);
       }
     });
   }, []);
-   
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      const offset = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      
+      setIsScrolled(offset > scrollThreshold);
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+
+    // cleanup
+    return () => window.addEventListener("scroll", scrollHandler);
+
+  }, [isScrolled]);
+
   const handlelogout = () => {
     if (active) {
       auth.signOut();
       localStorage.removeItem("login");
-    } 
+    }
 
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
         <div className={classes.logo}>
-          <Image src={NSCCLogo} alt="NSCC PCCOE" />
+          <NSCCLogo />
         </div>
       </div>
       <div className={classes.navigators}>
@@ -50,7 +66,7 @@ function Navbar() {
               <div className={classes.icons}>
                 <AiFillHome />
               </div>
-              <label  style={{cursor:"pointer"}}>Home</label>
+              <label style={{ cursor: "pointer" }}>Home</label>
             </Link>
           </li>
           {/* <li>
@@ -64,7 +80,7 @@ function Navbar() {
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
-              <label style={{cursor:"pointer"}}>Events</label>
+              <label style={{ cursor: "pointer" }}>Events</label>
             </Link>
           </li>
           {/* <li>
@@ -73,7 +89,7 @@ function Navbar() {
           <li>
             <Link
 
-            
+
               onClick={handlelogout}
               className={classes.button}
 
@@ -82,7 +98,7 @@ function Navbar() {
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
-              <label  style={{cursor:"pointer"}} >{active ? "logout" : "login"}</label>
+              <label style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
             </Link>
           </li>
         </ul>
