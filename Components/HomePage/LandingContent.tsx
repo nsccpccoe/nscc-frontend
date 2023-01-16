@@ -2,8 +2,6 @@ import classes from "./LandingContent.module.css";
 import Link from "next/link";
 function LandingContent() {
   return (
-
-    
     <div className={classes.container}>
       <div className={classes.clubHeading}>
         <h3>Newton School</h3>
