@@ -1,202 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap");
 
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    color: white;
+.mainContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* margin: 5rem; */
+  height: 26rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
 }
 
-.about {
-    width: 80%;
-    background-color: #192656;
-    border-radius: 10px;
-    padding: 2rem;
-    z-index: -1;
-}
-
-.title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    line-height: 5.3vw;
-}
-
-.content {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5vw;
-    line-height: 2.6vw;
-    text-align: justify;
-    text-transform: capitalize;
-    margin-top: 2rem;
-}
-
-.pccoe {
-    position: absolute;
-    top: 155%;
-    left: 15%;
-    font-family: 'Raleway';
-    background-color: #7A9CE0;
-    min-height: 183px;
-    height: 25vw;
-    min-width: 183px;
-    width: 25vw;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    /* transform: scale3d(10px 10px 10px); */
-}
-
-.about_inner_div {
-    position: relative;
-    left: 50%;
-    width: 38.1vw;
+.container {
+  /* margin: 5rem 10rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background: #192656;
+  border-radius: 10px;
 }
 
 .numbers {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 20rem;
+}
+
+.numberContainer {
+  position: absolute;
+  background: #7a9ce0;
+  border-radius: 8px;
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clubInfo h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: #ffffff;
+}
+
+.clubInfo h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+
+.about {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subContainer {
+  padding: 0rem 5rem 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subContainer h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #ffffff;
+}
+
+.subContainer p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    width: 90%;
+  }
+
+  .numberContainer {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 972px) {
+  .subContainer {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 616px) {
+  .mainContainer {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .numbers {
+    height: 100%;
+    width: 100%;
+  }
+
+  .numberContainer {
     position: relative;
-    top: 5%;
-    left: -5%;
-    font-size: 1.7vw;
-}
+    height: 100%;
+    width: 100%;
+    /* padding: 2rem; */
+  }
 
-.numbers p {
-    margin-bottom: 1rem;
-}
+  .clubInfo h1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
 
-@media (min-width: 768px) and (max-width: 1410px) {
-    .pccoe {
-        width: 30vw;
-        height: 30vw;
-        top: 140%;
-    }
+  .clubInfo h3 {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
 
-    .content {
-        width: 37.5vw;
-        height: 10.5vw;
-    }
+  .about {
+    width: 100%;
+  }
+  .subContainer {
+    padding: 2rem;
+    gap: 1rem;
+    width: 100%;
+  }
 
-    .numbers {
-        font-size: 1.7vw;
-    }
-}
+  .subContainer h1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
 
-@media (min-width: 700px) and (max-width: 767px) {
-    .content {
-        font-size: 13px;
-        line-height: 27px;
-    }
-
-    .title {
-        font-size: calc(12px + 1.5vw);
-        line-height: calc(12px + 3vw);
-    }
-
-    .pccoe {
-        width: 30vw;
-        height: 35vw;
-        top: 151%;
-    }
-
-    .numbers {
-        font-size: 2vw;
-    }
-}
-
-@media (min-width: 514px) and (max-width: 699px) {
-    .content {
-        font-size: 14px;
-        line-height: 30px;
-    }
-
-    .title {
-        font-size: calc(17px + 1.5vw);
-        line-height: calc(12px + 3vw);
-    }
-
-    .pccoe {
-        width: 30vw;
-        height: 30vw;
-        top: 160%;
-        left: 4%;
-    }
-
-    .numbers {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 424px) and (max-width: 513px) {
-    .content {
-        font-size: 13px;
-        line-height: 27px;
-    }
-
-    .title {
-        font-size: calc(17px + 1.5vw);
-        line-height: calc(12px + 3vw);
-    }
-
-    .pccoe {
-        width: 30vw;
-        height: 30vw;
-        top: 159%;
-        left: 4%;
-    }
-
-    .numbers {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 423px) {
-    .content {
-        font-size: calc(10px + 1vw);
-        line-height: calc(17px + 2vw);
-    }
-
-    .title {
-        font-size: calc(17px + 1.5vw);
-        line-height: calc(12px + 3vw);
-    }
-
-    .numbers {
-        font-size: 12px;
-    }
-
-    .pccoe {
-        /* position: static; */
-        top: 156%;
-        left: 13%;
-        width: 70%;
-    }
-
-    .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        /* background-color: #192656; */
-    }
-
-    .about_inner_div {
-        width: 70%;
-        /* position: static; */
-        top: 42%;
-        left: 0%;
-        margin: 2rem;
-    }
-    .about{
-        height: 69vh;
-    }
-}
-
-@media (min-height: 1000px){
-    .pccoe{
-        top:130%
-    }
+  .subContainer p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
 }

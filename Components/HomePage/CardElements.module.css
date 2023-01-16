@@ -88,6 +88,13 @@
 }
 
 @media (max-width: 1095px) {
+  .cardcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
     width: 85%;
   }
