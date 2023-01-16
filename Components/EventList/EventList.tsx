@@ -9,14 +9,16 @@ type ElementProps = {
 }
 
 const EventList: React.FC<ElementProps> = ({ heading, events }) => {
+
   return (
     <div className={styles.main}>
 
       <p className={styles.heading}>{heading}</p>
 
       <div className={styles.tables}>
-        {
-          events.map(event => <>
+        { events.length == 0
+        ? `No ${heading} were found`
+        : events.map(event => <>
             <EventRow
               key={event.id}
               eventName={event.displayName}

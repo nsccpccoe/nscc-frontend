@@ -3,17 +3,27 @@ import EventBoxContent from "./EventBoxContent";
 import EventElement from "./EventElement";
 
 import { EventResponse, Event } from "../interfaces/event.interface";
+import { Alert, AlertTitle } from "@mui/material";
 
 const epochToString = (epoch: number) => new Date(epoch)
   .toLocaleString("en-IN")
   .toUpperCase();
 
+const ErrorAlert = (props: { errorMessage: string }) => {
+  return (
+    <Alert severity="error" >
+      <AlertTitle>Error while fetching events! </AlertTitle>
+      {props.errorMessage}
+    </Alert>
+  );
+};
+
 type ElementProps = {
   events: Event[];
+  errorMessage: string;
 }
 
-
-const EventBox: React.FC<ElementProps> = ({ events }) => {
+const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
@@ -21,11 +31,12 @@ const EventBox: React.FC<ElementProps> = ({ events }) => {
       </div>
       <div className={classes.events}>
         {
-          events.map(event => {
+          errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.map(event => {
             return <EventElement
               key={event.id}
               type={event.subtitle}
               heading={event.displayName}
+              direct={event.displayName.toLocaleLowerCase()}
               duration={epochToString(event.startAt) + " - " + epochToString(event.endAt)}
             />
           })

@@ -1,10 +1,7 @@
 import classes from "./Landing.module.css";
 import { FluidContainer } from "../FluidContainer/FluidContainer";
 import EventBox from "./EventBox";
-
 import EventList from "../EventList/EventList";
-// import UpcomingEvents from "../UpcomingEvents/UpcomingEvents";
-// import PastEvents from "../PastEvents/PastEvents";
 import { Alert, AlertTitle } from "@mui/material";
 import { useEffect, useState } from "react";
 import { EventResponse, Event } from "../interfaces/event.interface";
@@ -60,14 +57,17 @@ function Landing() {
       <FluidContainer>
         <div className={classes.container}>
           {
-            errorMessage.length != 0
-              ? <ErrorAlert errorMessage={errorMessage} />
-              : <EventBox events={events} />
+            <EventBox events={events} errorMessage={errorMessage} />
           }
         </div>
-        <EventList heading="Ongoing Events" events={events}/>
-        <EventList heading="Upcoming Events" events={events}/>
-        <EventList heading="Past Events" events={events}/>
+        {errorMessage.length != 0
+          ? <ErrorAlert errorMessage={errorMessage} />
+          : <div>
+            <EventList heading="Ongoing Events" events={getOngoingEvents(events)} />
+            <EventList heading="Upcoming Events" events={getUpcomingEvents(events)} />
+            <EventList heading="Past Events" events={getPastEvents(events)} />
+          </div>
+        }
       </FluidContainer>
     </div>
   );
