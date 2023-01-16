@@ -11,7 +11,7 @@ function CardElements() {
     description: string
     endAt: number
     startAt: number
-    displayName:string
+    displayName: string
     eventPage: {
       link: string
       type: "onsite" | "offsite",
