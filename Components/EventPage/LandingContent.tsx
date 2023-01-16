@@ -1,3 +1,4 @@
+import Link from "next/link";
 import classes from "./LandingContent.module.css";
 
 interface LandingContentProps {
@@ -24,7 +25,10 @@ function LandingContent(props: LandingContentProps) {
           competitions and placements. Curated by top competitive programmers.
         </p>
       </div>
-      <button>Register</button>
+      <Link
+        className={classes.regButton}
+        href="/event/register/codehive"
+        >Register</Link>
     </div>
   );
 }
