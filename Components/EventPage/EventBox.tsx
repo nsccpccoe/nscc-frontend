@@ -7,7 +7,7 @@ function EventBox() {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <LandingContent />
+        <LandingContent title="CodeHive"/>
       </div>
       <div className={classes.content}>
         <div className={classes.img}>

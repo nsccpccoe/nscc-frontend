@@ -1,13 +1,17 @@
 import classes from "./LandingContent.module.css";
 
-function LandingContent() {
+interface LandingContentProps {
+  title: string
+}
+
+function LandingContent(props: LandingContentProps) {
   return (
     <div className={classes.container}>
       <div className={classes.clubHeading}>
         <h3>NSCC</h3>
       </div>
       <div className={classes.title}>
-        <h1>CodeHive</h1>
+        <h1>{props.title}</h1>
       </div>
       <div className={classes.clubHeading}>
         <h3>Coding Contest</h3>

@@ -21,9 +21,11 @@ function Navbar() {
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user);
-        const temp = auth as unknown as OAuthCredential
-        const token = temp.accessToken || "";
+        // console.log(user);
+        
+     
+        const token = user.accessToken || "";
+        // console.log(token)
         localStorage.setItem("accessToken", token);
         setActive(true);
       } else {

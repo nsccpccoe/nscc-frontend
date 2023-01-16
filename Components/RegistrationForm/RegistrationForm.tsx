@@ -1,28 +1,68 @@
 import React, { useCallback, useEffect, useState } from "react";
 import classes from "./RegistrationForm.module.css";
-
+import { FluidContainer } from "../FluidContainer/FluidContainer"
+import { ToastContainer } from "react-toastify";
+import { style } from "@mui/system";
+import { eventNames } from "process";
+import { TRUE } from "sass";
+import { toast, } from "react-toastify";
 interface ElementProps {
   eventName: string;
 }
+// interface RegestrationFormRequirement {
+//   type:"text" | "options",
+//   name: string;
+//   label: string;
+//   placeholder: string;
+//   value: string;
+//   mutable: boolean
+// }
+
+export interface TextField {
+  type: "text"
+  name: string
+  label: string
+  placeholder: string
+  value: string
+  mutable: boolean
+  regex: string
+}
+export interface SelectField {
+  type: "options"
+  name: string
+  label: string
+  options: (string | number)[]
+  value: string
+  mutable: boolean
+}
+
+export type RegestrationFormRequirement = SelectField | TextField
+
 
 const RegistrationForm = (props: ElementProps) => {
   const [error, setError] = useState<string>("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Record<string, string>>({});
+  const [fields, setfields] = useState<RegestrationFormRequirement[]>([]);
+  const [token, settoken] = useState("");
 
-  let token: string = "";
+
+
   useEffect(() => {
     // Perform localStorage action
-    token = localStorage.getItem("accessToken") || "";
+    settoken(localStorage.getItem("accessToken") || "");
   }, []);
 
+  //  console.log(token,"gandu")
+
+
   const fetchDataHandler = useCallback(async () => {
-    console.log(token);
+    // console.log(token);
     try {
       const response = await fetch(
-        `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}123/fields`,
+        `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}/fields`,
         {
           headers: {
-            authorization: `bearer ${token}`,
+            authorization: `Bearer ${token}`,
           },
         }
       );
@@ -30,46 +70,130 @@ const RegistrationForm = (props: ElementProps) => {
         throw new Error("Something went wrong!!! Please try again later.");
       }
 
-      const data = await response.json();
-      console.log(data);
-      setData(data.fields);
+      const {data} = await response.json() as {
+        isError: boolean,
+        data: {
+          fields: RegestrationFormRequirement[]
+        }
+      }
+  
+      const userData: Record<string, string> = {};
+      data.fields.forEach(ele => {
+        userData[ele.name] = ele.value;
+      })
+
+      setData(userData);
+      setfields(data.fields)
     } catch (error) {
-      // console.log(error);
+
       setError
     }
-  }, []);
+  }, [props.eventName,token]);
 
   useEffect(() => {
     fetchDataHandler();
   }, [fetchDataHandler]);
+  // console.log(data);
 
-  // const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
+  const handleInputChange = (name: string, value: string) => {
+   
+      data[name]=value;
+      setData(JSON.parse(JSON.stringify(data)));
+      
+      // console.log(data)
+    }
+  
 
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   // console.log(formData);
-  //   // Use formData to send a request to your server or perform other actions
-  // };
+  const handleRegistration = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+
+    e.preventDefault();
+    console.log(data)
+    try {
+      const response = await fetch(
+        `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}`,
+        {
+
+          method: "POST",
+          headers: {
+            authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Something went wrong!!! Please try again later.");
+      }
+
+      const sendedata = await response.json();
+      setData(sendedata);
+
+    } catch (error) {
+      toast(JSON.stringify(error), {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
+    }
+  }, [props.eventName, data,token]);
+
+
+
+   console.log(fields);
+
   return (
-    <div className={classes.container}>
-      <form>
-        <h1>Registration Form</h1>
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          value="abc"
-          placeholder="Email"
-          // onChange={handleInputChange}
-        />
-        <button>Submit</button>
-      </form>
-    </div>
+    <>
+      <div className={classes.formcontainer}>
+        <FluidContainer />
+        <ToastContainer />
+        <div className={classes.regform}>
+          <form className={classes.container} onSubmit={handleRegistration}>
+            <h1>Registration Form</h1>
+            {fields.map((e) => {
+              return (
+
+                <div key={e.name} className={classes.labelcontainer}>
+                  <label className={classes.labels}>{e.label}</label>
+                  {
+                    e.type == "options" &&
+                    <select
+                      name={e.name}
+                      required
+                      value={data[e.name]}
+                      disabled={!e.mutable}
+                      onChange={(event) => handleInputChange(e.name, event.target.value)}
+                      >
+                      {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+                    </select>
+                  }
+                  {
+                    e.type == "text" && <input
+                      type="text"
+                      name={e.name}
+                      required
+                      value={data[e.name]}
+                      placeholder={e.placeholder}
+                      disabled={!e.mutable}
+                      onChange={(event) => handleInputChange(e.name, event.target.value)}
+                    />
+                  }
+
+                </div>
+              )
+            })}
+            <div className="buttonreg">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 };
 

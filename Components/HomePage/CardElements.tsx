@@ -34,7 +34,7 @@ function CardElements() {
     <div className={classes.cardcontainer}>
       {
         data ? data.map((e) => {
-          return (<>
+          return (
             <Link key={e.id} className={classes.linkcard} href={e.eventPage.link}>
               <div className={classes.container}>
                 <div className={classes.heading}>
@@ -50,7 +50,7 @@ function CardElements() {
                 </div>
               </div>
             </Link>
-          </>)
+          )
         }) : <p>loading...</p>
       }
     </div>

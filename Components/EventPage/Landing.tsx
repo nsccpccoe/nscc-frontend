@@ -7,7 +7,6 @@ function Landing() {
     <div className={classes.container}>
       <EventBox />
     </div>
-    
   );
 }
 
