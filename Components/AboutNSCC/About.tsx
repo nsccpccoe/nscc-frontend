@@ -4,7 +4,7 @@ import styles from './About.module.css'
 const About = () => {
   return (
     <div className={styles.main}>
-
+      {/* <div> */}
       <div className={styles.pccoe}>
         <div className={styles.numbers}>
 
@@ -26,8 +26,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className={styles.about}>
 
+      <div className={styles.about}>
         <div className={styles.about_inner_div}>
           <div className={styles.title}>
             <p>About NSCC PCCoE</p>
@@ -39,7 +39,7 @@ const About = () => {
         </div>
 
       </div>
-
+      {/* </div> */}
     </div>
   )
 }
