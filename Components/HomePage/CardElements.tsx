@@ -11,6 +11,7 @@ function CardElements() {
     description: string
     endAt: number
     startAt: number
+    displayName:string
     eventPage: {
       link: string
       type: "onsite" | "offsite",
@@ -34,10 +35,10 @@ function CardElements() {
       {
         data ? data.map((e) => {
           return (<>
-            <Link className={classes.linkcard} href={e.eventPage.link}>
+            <Link key={e.id} className={classes.linkcard} href={e.eventPage.link}>
               <div className={classes.container}>
                 <div className={classes.heading}>
-                  <h1>{e.id}</h1>
+                  <h1>{e.displayName}</h1>
                 </div>
                 <div className={classes.date}>
                   <p>{new Date(e.startAt).toLocaleDateString('en-IN')} {new Date(e.startAt).toLocaleTimeString('en-IN')} -  {new Date(e.endAt).toLocaleDateString('en-IN')} {new Date(e.endAt).toLocaleTimeString('en-IN')}</p>

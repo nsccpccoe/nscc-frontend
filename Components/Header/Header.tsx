@@ -11,7 +11,7 @@ import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 import { useRouter } from 'next/router';
 
 function Navbar() {
-  const scrollThreshold = 150;
+  const scrollThreshold = 40;
   const router = useRouter();
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -98,7 +98,7 @@ function Navbar() {
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
-              <label style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
+              <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
             </Link>
           </li>
         </ul>
