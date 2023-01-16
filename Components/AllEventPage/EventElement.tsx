@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import classes from "./EventElement.module.css";
 
 type ElementProps = {
@@ -9,17 +9,9 @@ type ElementProps = {
 };
 
 function EventElement(props: ElementProps) {
-  const router = useRouter();
-
-  function onClickHandler() {
-    if (props.direct == "") {
-      router.push("/event");
-    }
-    router.push(`/event/${props.direct}`);
-  }
 
   return (
-    <div className={classes.container} onClick={onClickHandler}>
+    <Link className={classes.container} href={props.direct}>
       <div className={classes.type}>
         <p>{props.type}</p>
       </div>
@@ -30,7 +22,7 @@ function EventElement(props: ElementProps) {
         <p>{props.duration}</p>
       </div>
       <button>Register</button>
-    </div>
+    </Link>
   );
 }
 

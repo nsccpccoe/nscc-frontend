@@ -11,6 +11,7 @@
   width: 100%;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .type p {

@@ -4,15 +4,19 @@ import classes from "./CardElements.module.css";
 import { useState, useEffect } from 'react'
 import Link from "next/link";
 function CardElements() {
-    
+
   interface EventStore {
     id: string
     subtitle: string
     description: string
     endAt: number
     startAt: number
+    eventPage: {
+      link: string
+      type: "onsite" | "offsite",
+    }
   }
-   useEffect(() => {
+  useEffect(() => {
     setLoading(true)
     fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/events')
       .then((res) => res.json())
@@ -29,9 +33,8 @@ function CardElements() {
     <div className={classes.cardcontainer}>
       {
         data ? data.map((e) => {
-          return (
-            <>
-            <Link className={classes.linkcard} href={`/event/${e.id}`}>
+          return (<>
+            <Link className={classes.linkcard} href={e.eventPage.link}>
               <div className={classes.container}>
                 <div className={classes.heading}>
                   <h1>{e.id}</h1>
@@ -45,9 +48,8 @@ function CardElements() {
                   </p>
                 </div>
               </div>
-      </Link>
-            </>
-          )
+            </Link>
+          </>)
         }) : <p>loading...</p>
       }
     </div>
