@@ -5,6 +5,49 @@ import { FluidContainer } from "../../Components/FluidContainer/FluidContainer";
 import Eventdescription from "../../Components/EventPage/Eventdescription";
 
 function Event() {
+  const descArray = [{
+    id: 1,
+    text: 'A hackathon is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program.    Solve real-world problems by participating in Web-explore.    Present the topic wisely and creatively to receive maximum score and bag your position on the leaderboard.'
+  },
+  {
+    id: 2,
+    text: 'Web-explore is a one week long hackathon which will help participants to enhance their technical as well as marketing skills. You are expected to make only a landing page for a website based on the theme "Coding Club of PCCOE". Register yourself and submit your landing page URL. We will then enlist your submission on our website.'
+  },
+  {
+    id: 3,
+    text: 'You will be evaluated based on two parameters:-'
+  },
+  {
+    id: 4,
+    text: '1. Lighthouse score:- We will evaluate this score based on Performance, Accessibility, Best Practices and Optimisation.'
+  },
+  {
+    id: 5,
+    text: '2. Hit likes:- You can personally promote your landing page and get likes for it. Your friends, family and relatives can help you become a winner by giving you maximum likes by visiting our website.'
+  },
+  {
+    id: 6,
+    text: 'The Combination of the above two will make you a winner !'
+  },
+  {
+    id: 7,
+    text: 'For FY and SY students:- Design and implement a simple landing page with basic functionalities.'
+  },
+  {
+    id: 8,
+    text: 'For TY and BE students:- Design and implement the landing page with multiple functionalities. Usage of animated containers will be appreciated. Make the page responsive.'
+  }]
+
+
+  const ruleArray = [{
+    id: 1,
+    text: 'Individual participation only'
+  },
+  {
+    id: 2,
+    text: ' Submission of website URL must be done before 29/01/2023'
+  }]
+
   return (
     <>
       <Head>
@@ -17,8 +60,8 @@ function Event() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FluidContainer />
-      <Landing />
-      <Eventdescription />
+      <Landing name="WebXplore" type="Hackathon" date="22/01/2023 8:00 PM - 29/01/2023 11:59 PM IST" content="Unleash your web development skills in our 8-day hackathon! Explore trending tech, build and showcase your website, win prizes and goodies." />
+      <Eventdescription propWhichIsArray={descArray} propWhichIsArray2={ruleArray} />
     </>
   );
 }
