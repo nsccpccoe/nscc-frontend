@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <Header /> */}
+        <Header />
         <Landing />
         <CardElements />
         <About />
