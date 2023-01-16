@@ -6,6 +6,7 @@ interface contestProps {
   type: string,
   date: string,
   content: string
+  regLink: string
 }
 
 function LandingContent(props: contestProps) {
@@ -28,7 +29,7 @@ function LandingContent(props: contestProps) {
       </div>
       <Link
         className={classes.regButton}
-        href="/event/register/codehive"
+        href={props.regLink}
         >Register</Link>
     </div>
   );

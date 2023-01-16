@@ -8,13 +8,14 @@ interface contestProps {
   type: string,
   date: string,
   content: string
+  regLink: string
 }
 
 function EventBox(props: contestProps) {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <LandingContent name={props.name} type={props.type} date={props.date} content={props.content} />
+        <LandingContent name={props.name} type={props.type} date={props.date} content={props.content} regLink={props.regLink} />
       </div>
       <div className={classes.content}>
         <div className={classes.img}>
