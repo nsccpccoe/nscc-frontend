@@ -1,77 +1,19 @@
-import { Alert, AlertTitle } from "@mui/material";
-import { useEffect, useState } from "react";
 import classes from "./EventBox.module.css";
 import EventBoxContent from "./EventBoxContent";
 import EventElement from "./EventElement";
 
-
-interface Organizer {
-  shortName: string;
-  displayName: string;
-}
-
-
-interface Registration {
-  link: string;
-  type: string;
-}
-
-interface Event {
-  id: string;
-  subtitle: string;
-  displayName: string;
-  description: string;
-  endAt: number;
-  startAt: number;
-  organizers: Organizer[];
-  registration: Registration;
-}
-
-interface EventResponse {
-  isError: boolean;
-  errorCode: string;
-  errorMessage: string;
-  data: Event[];
-}
-
-const ErrorAlert = (props: { errorMessage: string }) => {
-  return (
-    <Alert severity="error">
-      <AlertTitle>Error while fetching events!</AlertTitle>
-      {props.errorMessage}
-    </Alert>
-  );
-};
+import { EventResponse, Event } from "../interfaces/event.interface";
 
 const epochToString = (epoch: number) => new Date(epoch)
   .toLocaleString("en-IN")
   .toUpperCase();
 
-function EventBox() {
-  const [events, setEvents] = useState<Event[]>([]);
-  const [errorMessage, setErrorMessage] = useState<string>("");
-
-  useEffect(() => {
-    fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/events')
-      .then(res => {
-        if (!res.ok) {
-          throw res.status + " " + res.statusText;
-        }
-        return res.json();
-      })
-      .then((eventResponse: EventResponse) => {
-        if (eventResponse.isError) {
-          setErrorMessage(eventResponse.errorCode + " - " + eventResponse.errorMessage);
-        } else {
-          setEvents(eventResponse.data);
-        }
-      })
-      .catch(error => {
-        setErrorMessage(error)
-      });
-  }, []);
+type ElementProps = {
+  events: Event[];
+}
 
 
+const EventBox: React.FC<ElementProps> = ({ events }) => {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
@@ -79,7 +21,7 @@ function EventBox() {
       </div>
       <div className={classes.events}>
         {
-          (errorMessage.length != 0) ? <ErrorAlert errorMessage={errorMessage} /> : events.map(event => {
+          events.map(event => {
             return <EventElement
               key={event.id}
               type={event.subtitle}
