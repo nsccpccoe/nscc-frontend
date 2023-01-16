@@ -52,6 +52,10 @@ function Landing() {
       });
   }, []);
 
+  const ongoingEvents = getOngoingEvents(events)
+  const upcomingEvents = getUpcomingEvents(events)
+  const pastEvents = getPastEvents(events)
+
   return (
     <div className={classes.mainContainer}>
       <FluidContainer />
@@ -63,9 +67,9 @@ function Landing() {
         {errorMessage.length != 0
           ? <ErrorAlert errorMessage={errorMessage} />
           : <div>
-            <EventList heading="Ongoing Events" events={getOngoingEvents(events)} />
-            <EventList heading="Upcoming Events" events={getUpcomingEvents(events)} />
-            <EventList heading="Past Events" events={getPastEvents(events)} />
+            {ongoingEvents.length > 0 && <EventList heading="Ongoing Events" events={getOngoingEvents(events)} />}
+            {upcomingEvents.length > 0 && <EventList heading="Upcoming Events" events={getUpcomingEvents(events)} />}
+            {pastEvents.length > 0 && <EventList heading="Past Events" events={getPastEvents(events)} />}
           </div>
         }
     </div>
