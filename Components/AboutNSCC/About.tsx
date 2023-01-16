@@ -1,47 +1,38 @@
-import React from 'react'
-import styles from './About.module.css'
+import React from "react";
+import styles from "./About.module.css";
 
 const About = () => {
   return (
-    <div className={styles.main}>
-      {/* <div> */}
-      <div className={styles.pccoe}>
+    <div className={styles.mainContainer}>
+      <div className={styles.container}>
         <div className={styles.numbers}>
-
-          <div>
-            <h2>20+</h2>
-            <p>Club Members</p>
-          </div>
-
-          <div>
-            <h2>8</h2>
-            <p>Team Leads</p>
-          </div>
-
-          <div>
-            <h2>5</h2>
-            <p>Core Team Members</p>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div className={styles.about}>
-        <div className={styles.about_inner_div}>
-          <div className={styles.title}>
-            <p>About NSCC PCCoE</p>
-          </div>
-
-          <div className={styles.content}>
-            <p>An outcome-oriented coding community that aims to up skill all its members and ultimately make them have successful careers.</p>
+          <div className={styles.numberContainer}>
+            <div className={styles.clubInfo}>
+              <h1>30+</h1>
+              <h3>Club Members</h3>
+            </div>
+            <div className={styles.clubInfo}>
+              <h1>8</h1>
+              <h3>Team Leads</h3>
+            </div>
+            <div className={styles.clubInfo}>
+              <h1>5</h1>
+              <h3>Core Team Members</h3>
+            </div>
           </div>
         </div>
-
+        <div className={styles.about}>
+          <div className={styles.subContainer}>
+            <h1>About NSCC PCCOE</h1>
+            <p>
+              an outcome-oriented coding community that aims to up skill all its
+              members and ultimately make them have successful careers.
+            </p>
+          </div>
+        </div>
       </div>
-      {/* </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
