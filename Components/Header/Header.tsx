@@ -8,32 +8,30 @@ import { onAuthStateChanged } from "firebase/auth";
 import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 function Navbar() {
-
   const router = useRouter();
   const [active, setactive] = useState(false);
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
-
-        // localStorage.setItem("accessToken",`${user.accessToken}`)
+        const token = user.accessToken;
+        localStorage.setItem("accessToken", token);
         setactive(true);
       } else {
-        // localStorage.removeItem("accessToken")
+        localStorage.removeItem("accessToken");
         setactive(false);
       }
     });
   }, []);
-   
+
   const handlelogout = () => {
     if (active) {
       auth.signOut();
       localStorage.removeItem("login");
-    } 
-
+    }
   };
 
   return (
@@ -50,7 +48,7 @@ function Navbar() {
               <div className={classes.icons}>
                 <AiFillHome />
               </div>
-              <label  style={{cursor:"pointer"}}>Home</label>
+              <label style={{ cursor: "pointer" }}>Home</label>
             </Link>
           </li>
           {/* <li>
@@ -64,7 +62,7 @@ function Navbar() {
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
-              <label style={{cursor:"pointer"}}>Events</label>
+              <label style={{ cursor: "pointer" }}>Events</label>
             </Link>
           </li>
           {/* <li>
@@ -72,17 +70,16 @@ function Navbar() {
           </li> */}
           <li>
             <Link
-
-            
               onClick={handlelogout}
               className={classes.button}
-
               href="/auth"
             >
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
-              <label  style={{cursor:"pointer"}} >{active ? "logout" : "login"}</label>
+              <label style={{ cursor: "pointer" }}>
+                {active ? "logout" : "login"}
+              </label>
             </Link>
           </li>
         </ul>

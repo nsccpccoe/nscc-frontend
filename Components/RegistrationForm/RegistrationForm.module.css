@@ -1,0 +1,39 @@
+.container {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form h1 {
+    padding: 2rem 0;
+}
+
+.container form label {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem; 
+}
+
+.container form input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    outline: none;
+}
+
+.container form button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+
+} 
