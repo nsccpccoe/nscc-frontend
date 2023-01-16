@@ -38,6 +38,6 @@ const storage = getStorage(app);
 //   connectAuthEmulator(auth, "http://127.0.0.1:9099");
 //   connectFirestoreEmulator(db, "localhost", 8080);
 // }
-connectFirestoreEmulator(db, "localhost", 8080);
+// connectFirestoreEmulator(db, "localhost", 8080);
 
 export { auth, db, storage };

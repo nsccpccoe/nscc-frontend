@@ -15,12 +15,10 @@ export const FluidContainer = (props: FluidContainerProps) => {
         }
     }, [])
     
-    return (
-        <div>
-            <div className={styles.gradientCanvasContainer}>
-                <canvas className={styles.gradientCanvas} id="gradient-canvas" />
-            </div>
-            {props.children}
+    return (<>
+        <div className={styles.gradientCanvasContainer}>
+            <canvas className={styles.gradientCanvas} id="gradient-canvas" />
         </div>
-    )
+        {props.children}
+    </>)
 }

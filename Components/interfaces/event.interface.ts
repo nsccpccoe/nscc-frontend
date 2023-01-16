@@ -5,7 +5,7 @@ export interface Organizer {
 
 export interface Registration {
     link: string;
-    type: string;
+    type: "onsite" | "offsite",
 }
 
 export interface Event {
@@ -17,6 +17,10 @@ export interface Event {
     startAt: number;
     organizers: Organizer[];
     registration: Registration;
+    eventPage: {
+        link: string;
+        type: "onsite" | "offsite",
+    }
 }
 
 export interface EventResponse {
