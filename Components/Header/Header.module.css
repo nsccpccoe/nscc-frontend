@@ -116,7 +116,7 @@
   
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
   .container {
     position: fixed;
     bottom: 0;
