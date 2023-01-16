@@ -80,6 +80,12 @@ const RegistrationForm = (props: ElementProps) => {
       const userData: Record<string, string> = {};
       data.fields.forEach(ele => {
         userData[ele.name] = ele.value;
+        if(ele.type == "options") {
+          userData[ele.name] = ele.value || String(ele.options[0]);
+        }
+        else {
+          userData[ele.name] = ele.value;
+        }
       })
 
       setData(userData);
@@ -96,6 +102,8 @@ const RegistrationForm = (props: ElementProps) => {
   // console.log(data);
 
   const handleInputChange = (name: string, value: string) => {
+
+    console.log(name, value)
    
       data[name]=value;
       setData(JSON.parse(JSON.stringify(data)));
@@ -180,6 +188,7 @@ const RegistrationForm = (props: ElementProps) => {
                       value={data[e.name]}
                       placeholder={e.placeholder}
                       disabled={!e.mutable}
+                      pattern={e.regex}
                       onChange={(event) => handleInputChange(e.name, event.target.value)}
                     />
                   }

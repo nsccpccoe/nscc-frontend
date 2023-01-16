@@ -26,7 +26,7 @@ const storage = getStorage(app);
 // // eslint-disable-next-line no-restricted-globals
 // if (location.hostname === 'localhost') {
 //   connectAuthEmulator(auth, "http://127.0.0.1:9099");
-//   connectFirestoreEmulator(db, 'localhost', 8080);
+//   // connectFirestoreEmulator(db, 'localhost', 8080);
 // }
 
 // eslint-disable-next-line no-restricted-globals
