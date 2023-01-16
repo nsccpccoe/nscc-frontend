@@ -8,10 +8,12 @@ import { onAuthStateChanged } from "firebase/auth";
 import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 function Navbar() {
+
   const scrollThreshold = 40;
+
   const router = useRouter();
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,14 +23,24 @@ function Navbar() {
       if (user) {
         console.log(user);
 
+        const token = user.accessToken;
+        localStorage.setItem("accessToken", token);
+        setactive(true);
+      } else {
+        localStorage.removeItem("accessToken");
+        setactive(false);
+
+
         // localStorage.setItem("accessToken",`${user.accessToken}`)
         setActive(true);
       } else {
         // localStorage.removeItem("accessToken")
         setActive(false);
+
       }
     });
   }, []);
+
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -89,16 +101,20 @@ function Navbar() {
           <li>
             <Link
 
-
               onClick={handlelogout}
               className={classes.button}
-
               href="/auth"
             >
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
+
+              <label style={{ cursor: "pointer" }}>
+                {active ? "logout" : "login"}
+              </label>
+
               <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
+
             </Link>
           </li>
         </ul>

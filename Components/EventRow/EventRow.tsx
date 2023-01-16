@@ -5,6 +5,7 @@ type ElementProps = {
     eventName: string;
     date: string;
 }
+
 const EventRow: React.FC<ElementProps> = ({ eventName, date }) => {
     return (
         <div className={styles.row}>
