@@ -4,7 +4,7 @@ import NSCCLogo from "./NSCCLogo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, OAuthCredential } from "firebase/auth";
 import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
@@ -22,21 +22,13 @@ function Navbar() {
     return onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
-
-        const token = user.accessToken;
+        const temp = auth as unknown as OAuthCredential
+        const token = temp.accessToken || "";
         localStorage.setItem("accessToken", token);
-        setactive(true);
-      } else {
-        localStorage.removeItem("accessToken");
-        setactive(false);
-
-
-        // localStorage.setItem("accessToken",`${user.accessToken}`)
         setActive(true);
       } else {
-        // localStorage.removeItem("accessToken")
+        localStorage.removeItem("accessToken");
         setActive(false);
-
       }
     });
   }, []);
@@ -108,10 +100,6 @@ function Navbar() {
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
-
-              <label style={{ cursor: "pointer" }}>
-                {active ? "logout" : "login"}
-              </label>
 
               <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
 
