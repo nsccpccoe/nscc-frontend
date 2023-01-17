@@ -10,14 +10,6 @@ import { Event } from "../interfaces/event.interface"
 interface ElementProps {
   eventName: string;
 }
-// interface RegestrationFormRequirement {
-//   type:"text" | "options",
-//   name: string;
-//   label: string;
-//   placeholder: string;
-//   value: string;
-//   mutable: boolean
-// }
 
 export interface TextField {
   type: "text"
