@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import 'react-toastify/dist/ReactToastify.min.css'
 import Navbar from '../Components/Header/Header'
