@@ -133,9 +133,9 @@ const RegistrationForm = (props: ElementProps) => {
       })
 
       toast.promise(request, {
-        pending: "Registration in Progress",
-        error: "Registration Failed",
-        success: "Registration Successfull"
+        pending: isRegistered ? "Updating Profile" : "Registration in Progress",
+        error: isRegistered ? "Failed to Update Profile" : "Registration Failed",
+        success: isRegistered ? "Profile Updated Successfully" : "Registration Successfull"
       }, {
         position: "top-right",
         theme: "dark",
@@ -178,7 +178,9 @@ const RegistrationForm = (props: ElementProps) => {
     )
   }
 
-  console.debug(isRegistered);
+  const formLocked = isRegistered && eventData.startAt < Date.now();
+  const eventEnded = eventData.endAt < Date.now();
+
   return (
     <div className={classes.formcontainer}>
       <FluidContainer />
@@ -189,7 +191,12 @@ const RegistrationForm = (props: ElementProps) => {
           <h1 className={classes.displayName}>{eventData?.displayName}</h1>
           <p className={classes.subtitle}>{eventData?.subtitle}</p>
           <Link className={classes.eventPageLink} href={eventData.eventPage.link || "#"}>Prizes and Goodies - Learn More</Link>
-          {fields.map((e) => {
+          {
+            eventEnded &&
+            <p>{eventData.displayName} has Ended!!!</p>
+          }
+          { !eventEnded &&
+            fields.map((e) => {
             return (
               <div key={e.name} className={classes.labelcontainer}>
                 <label className={classes.labels} htmlFor={e.name}>{e.label}</label>
@@ -200,7 +207,7 @@ const RegistrationForm = (props: ElementProps) => {
                     name={e.name}
                     required
                     value={data[e.name]}
-                    disabled={!e.mutable || eventData.endAt < Date.now() || isRegistered}
+                    disabled={!e.mutable || formLocked}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   >
                     {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
@@ -214,7 +221,7 @@ const RegistrationForm = (props: ElementProps) => {
                     required
                     value={data[e.name]}
                     placeholder={e.placeholder}
-                    disabled={!e.mutable || isRegistered}
+                    disabled={!e.mutable || formLocked}
                     pattern={e.regex}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   />
@@ -223,15 +230,30 @@ const RegistrationForm = (props: ElementProps) => {
               </div>
             )
           })}
-          {!token &&
+          {!token && !eventEnded &&
             <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
           }
-          {token &&
+          {
+            fields.length == 0 &&
+            <Rings
+              height="80"
+              width="80"
+              color="#7a9ce0"
+              radius="6"
+              wrapperStyle={{ margin: "auto" }}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="rings-loading"
+            />
+          }
+          {token && fields.length > 0 && !eventEnded &&
             <div className="buttonreg">
-              <button type="submit" disabled={isRegistered}>
+              <button type="submit" disabled={formLocked}>
                 {
                   isRegistered
-                    ? 'Registered'
+                    ? eventData.startAt < Date.now()
+                      ? 'Registered'
+                      : 'Update Your Profile'
                     : `Register for ${eventData?.displayName}`
                 }
               </button>

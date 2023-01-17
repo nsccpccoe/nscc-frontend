@@ -49,7 +49,7 @@ const Auth = () => {
   const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
 
-  const redirectPath = router.query["redirect"] || "/";
+  const redirectPath = typeof router.query["redirect"] === "string" ? router.query["redirect"] : "/";
 
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
