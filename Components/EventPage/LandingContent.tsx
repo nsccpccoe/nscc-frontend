@@ -1,3 +1,4 @@
+import Link from "next/link";
 import classes from "./LandingContent.module.css";
 
 interface contestProps {
@@ -5,6 +6,7 @@ interface contestProps {
   type: string,
   date: string,
   content: string
+  regLink: string
 }
 
 function LandingContent(props: contestProps) {
@@ -25,7 +27,10 @@ function LandingContent(props: contestProps) {
           {props.content}
         </p>
       </div>
-      <button>Register</button>
+      <Link
+        className={classes.regButton}
+        href={props.regLink}
+        >Register</Link>
     </div>
   );
 }

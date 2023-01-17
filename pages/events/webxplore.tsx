@@ -60,7 +60,12 @@ function Event() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FluidContainer />
-      <Landing name="WebXplore" type="Hackathon" date="22/01/2023 8:00 PM - 29/01/2023 11:59 PM IST" content="Unleash your web development skills in our 8-day hackathon! Explore trending tech, build and showcase your website, win prizes and goodies." />
+      <Landing
+        name="WebXplore"
+        type="Hackathon"
+        date="22/01/2023 8:00 PM - 29/01/2023 11:59 PM IST"
+        content="Unleash your web development skills in our 8-day hackathon! Explore trending tech, build and showcase your website, win prizes and goodies."
+        regLink="/events/register/webxplore"/>
       <Eventdescription propWhichIsArray={descArray} propWhichIsArray2={ruleArray} />
     </>
   );

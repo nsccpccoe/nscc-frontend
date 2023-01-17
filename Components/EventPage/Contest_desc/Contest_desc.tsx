@@ -16,7 +16,7 @@ const Contest_desc = (props: descProps) => {
       <h1>Description</h1>
 
       <div className={styles.content}>
-        {array.map((item) => (<p>{item.text}</p>))}
+        {array.map((item) => (<p key={item.id}>{item.text}</p>))}
       </div>
     </div>
   );

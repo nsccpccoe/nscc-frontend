@@ -46,7 +46,7 @@ const rulesArray = [{
       <FluidContainer />
       <Landing name='CodeHive' type='Coding Contest' date='26/01/2023, 02:00 PM - 05:00 PM IST' content='Unlock your coding potential with our Coding Contest! 8 challenging
           problems tailored for all levels. Perfect opportunity to prepare for
-          competitions and placements. Curated by top competitive programmers.' />
+          competitions and placements. Curated by top competitive programmers.' regLink="/events/register/codehive" />
       <Eventdescription propWhichIsArray={descArray} propWhichIsArray2={rulesArray}/>
 
     </>

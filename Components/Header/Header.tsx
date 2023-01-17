@@ -19,11 +19,11 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
+    return onAuthStateChanged(auth, async (user) => {
       if (user) {
-        console.log(user);
-        const temp = auth as unknown as OAuthCredential
-        const token = temp.accessToken || "";
+        // console.log(user);
+        const token = await user.getIdToken();
+        // console.log(token)
         localStorage.setItem("accessToken", token);
         setActive(true);
       } else {
@@ -80,7 +80,7 @@ function Navbar() {
             <Link href="/">Resources</Link>
           </li> */}
           <li>
-            <Link href="/event">
+            <Link href="/events">
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
