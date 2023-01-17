@@ -17,15 +17,21 @@ const ErrorAlert = (props: { errorMessage: string }) => {
 
 
 const getPastEvents = (events: Event[]): Event[] => {
-  return events.filter((event: Event) => event.endAt < Date.now());
+  return events
+    .filter((event: Event) => event.endAt < Date.now())
+    .sort((a, b) => b.endAt - a.endAt)
 }
 
 const getUpcomingEvents = (events: Event[]): Event[] => {
-  return events.filter((event: Event) => event.startAt > Date.now());
+  return events
+    .filter((event: Event) => event.startAt > Date.now())
+    .sort((a, b) => a.startAt - b.startAt)
 }
 
 const getOngoingEvents = (events: Event[]): Event[] => {
-  return events.filter((event: Event) => event.startAt < Date.now() && event.endAt > Date.now());
+  return events
+    .filter((event: Event) => event.startAt < Date.now() && event.endAt > Date.now())
+    .sort((a, b) => b.endAt - a.endAt)
 }
 
 function Landing() {

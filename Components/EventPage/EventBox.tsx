@@ -3,11 +3,19 @@ import eventImage from "../../public/event.png";
 import Image from "next/image";
 import LandingContent from "./LandingContent";
 
-function EventBox() {
+interface contestProps {
+  name: string,
+  type: string,
+  date: string,
+  content: string
+  regLink: string
+}
+
+function EventBox(props: contestProps) {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <LandingContent />
+        <LandingContent name={props.name} type={props.type} date={props.date} content={props.content} regLink={props.regLink} />
       </div>
       <div className={classes.content}>
         <div className={classes.img}>

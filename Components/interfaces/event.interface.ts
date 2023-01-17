@@ -3,7 +3,7 @@ export interface Organizer {
     displayName: string;
 }
 
-export interface Registration {
+export interface LinkMap {
     link: string;
     type: "onsite" | "offsite",
 }
@@ -16,11 +16,8 @@ export interface Event {
     endAt: number;
     startAt: number;
     organizers: Organizer[];
-    registration: Registration;
-    eventPage: {
-        link: string;
-        type: "onsite" | "offsite",
-    }
+    registration: LinkMap;
+    eventPage: LinkMap;
 }
 
 export interface EventResponse {
