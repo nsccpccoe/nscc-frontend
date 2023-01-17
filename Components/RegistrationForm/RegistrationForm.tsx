@@ -133,12 +133,15 @@ const RegistrationForm = (props: ElementProps) => {
         }
       );
 
-      console.debug(await response.json());
-
       // console.log(response.text())
-      // if (!response.ok) {
-      //   throw new Error("Something went wrong!!! Please try again later.");
-      // }
+      if (!response.ok) {
+        if (response.status == 400) {
+          const data = await response.json();
+          throw new Error(data.errorMessage);
+        }else{
+          throw new Error(response.status + " " + response.statusText)
+        }
+      }
 
       const sendedata = await response.json();
       setData(sendedata);
