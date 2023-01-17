@@ -28,7 +28,7 @@ const rulesArray = [{
 },
 {
   id:2,
-  text: 'Should have an account on XYZ(mention the platform we will be using) platform.'
+  text: 'Should have an account on HackerRank platform.'
 },
 {
   id:3,

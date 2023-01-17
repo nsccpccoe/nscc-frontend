@@ -96,6 +96,7 @@ const RegistrationForm = (props: ElementProps) => {
 
         setData(userData);
         setfields(result.data.fields)
+        
       })
 
   }, [props.eventName, token]);
