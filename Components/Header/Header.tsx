@@ -21,10 +21,15 @@ function Navbar() {
   useEffect(() => {
     return onAuthStateChanged(auth, async (user) => {
       if (user) {
-        // console.log(user);
         const token = await user.getIdToken();
-        // console.log(token)
         localStorage.setItem("accessToken", token);
+
+        // refresh token after every 5 minute
+        setTimeout(async () => {
+          const token = await user.getIdToken();
+          localStorage.setItem("accessToken", token);
+        }, 5*60*1000);
+
         setActive(true);
       } else {
         localStorage.removeItem("accessToken");
@@ -53,7 +58,6 @@ function Navbar() {
       auth.signOut();
       localStorage.removeItem("login");
     }
-
   };
 
   return (
@@ -92,11 +96,10 @@ function Navbar() {
           </li> */}
           <li>
             <Link
-
               onClick={handlelogout}
               className={classes.button}
-              href="/auth"
-            >
+              href={`/auth?redirect=${router.asPath.split('?')[0]}`}
+              >
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
@@ -104,6 +107,7 @@ function Navbar() {
               <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
 
             </Link>
+            
           </li>
         </ul>
       </div>

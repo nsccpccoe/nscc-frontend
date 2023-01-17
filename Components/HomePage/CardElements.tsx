@@ -1,26 +1,14 @@
 
 import classes from "./CardElements.module.css";
+import { Event } from "../interfaces/event.interface";
 
 import { useState, useEffect } from 'react'
 import Link from "next/link";
 function CardElements() {
 
-  interface EventStore {
-    id: string
-    subtitle: string
-    description: string
-    endAt: number
-    startAt: number
-    displayName: string
-    eventPage: {
-      link: string
-      type: "onsite" | "offsite",
-    }
-    registration: {
-      type: "onsite" | "offsite",
-      link: string,
-    }
-  }
+  const [data, setData] = useState<Event[]>([])
+  const [isLoading, setLoading] = useState(false)
+
   useEffect(() => {
     setLoading(true)
     fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/events')
@@ -30,9 +18,6 @@ function CardElements() {
         setLoading(false)
       })
   }, [])
-
-  const [data, setData] = useState<EventStore[]>([])
-  const [isLoading, setLoading] = useState(false)
 
   return (
     <div className={classes.cardcontainer}>

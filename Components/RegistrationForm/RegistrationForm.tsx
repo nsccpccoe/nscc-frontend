@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import classes from "./RegistrationForm.module.css";
 import { FluidContainer } from "../FluidContainer/FluidContainer"
 import { ToastContainer } from "react-toastify";
-import { toast, } from "react-toastify";
+import { toast } from "react-toastify";
 import { Rings } from "react-loader-spinner";
 import Link from "next/link";
 import { Event } from "../interfaces/event.interface"
@@ -10,14 +10,6 @@ import { Event } from "../interfaces/event.interface"
 interface ElementProps {
   eventName: string;
 }
-// interface RegestrationFormRequirement {
-//   type:"text" | "options",
-//   name: string;
-//   label: string;
-//   placeholder: string;
-//   value: string;
-//   mutable: boolean
-// }
 
 export interface TextField {
   type: "text"
@@ -119,10 +111,9 @@ const RegistrationForm = (props: ElementProps) => {
     e.preventDefault();
     console.log(data)
     try {
-      const response = await fetch(
+      const request = fetch(
         `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}`,
         {
-
           method: "POST",
           headers: {
             authorization: `Bearer ${token}`,
@@ -131,20 +122,24 @@ const RegistrationForm = (props: ElementProps) => {
           },
           body: JSON.stringify(data),
         }
-      );
+      )
+      .then(res => res.json())
+      .then(sendedata => {
+        setData(sendedata);
+        setIsRegistered(true);
+      })
+      .catch(err => {
+        throw new Error(err.errorMessage || err.message || JSON.stringify(err))
+      })
 
-      // console.log(response.text())
-      if (!response.ok) {
-        if (response.status == 400) {
-          const data = await response.json();
-          throw new Error(data.errorMessage);
-        }else{
-          throw new Error(response.status + " " + response.statusText)
-        }
-      }
-
-      const sendedata = await response.json();
-      setData(sendedata);
+      toast.promise(request, {
+        pending: isRegistered ? "Updating Profile" : "Registration in Progress",
+        error: isRegistered ? "Failed to Update Profile" : "Registration Failed",
+        success: isRegistered ? "Profile Updated Successfully" : "Registration Successfull"
+      }, {
+        position: "top-right",
+        theme: "dark",
+      })
 
     } catch (error: any) {
       toast(error.toString(), {
@@ -183,7 +178,9 @@ const RegistrationForm = (props: ElementProps) => {
     )
   }
 
-  console.debug(isRegistered);
+  const formLocked = isRegistered && eventData.startAt < Date.now();
+  const eventEnded = eventData.endAt < Date.now();
+
   return (
     <div className={classes.formcontainer}>
       <FluidContainer />
@@ -194,7 +191,12 @@ const RegistrationForm = (props: ElementProps) => {
           <h1 className={classes.displayName}>{eventData?.displayName}</h1>
           <p className={classes.subtitle}>{eventData?.subtitle}</p>
           <Link className={classes.eventPageLink} href={eventData.eventPage.link || "#"}>Prizes and Goodies - Learn More</Link>
-          {fields.map((e) => {
+          {
+            eventEnded &&
+            <p>{eventData.displayName} has Ended!!!</p>
+          }
+          { !eventEnded &&
+            fields.map((e) => {
             return (
               <div key={e.name} className={classes.labelcontainer}>
                 <label className={classes.labels} htmlFor={e.name}>{e.label}</label>
@@ -205,7 +207,7 @@ const RegistrationForm = (props: ElementProps) => {
                     name={e.name}
                     required
                     value={data[e.name]}
-                    disabled={!e.mutable || eventData.endAt < Date.now() || isRegistered}
+                    disabled={!e.mutable || formLocked}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   >
                     {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
@@ -219,7 +221,7 @@ const RegistrationForm = (props: ElementProps) => {
                     required
                     value={data[e.name]}
                     placeholder={e.placeholder}
-                    disabled={!e.mutable || isRegistered}
+                    disabled={!e.mutable || formLocked}
                     pattern={e.regex}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   />
@@ -228,15 +230,30 @@ const RegistrationForm = (props: ElementProps) => {
               </div>
             )
           })}
-          {!token &&
+          {!token && !eventEnded &&
             <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
           }
-          {token &&
+          {
+            fields.length == 0 &&
+            <Rings
+              height="80"
+              width="80"
+              color="#7a9ce0"
+              radius="6"
+              wrapperStyle={{ margin: "auto" }}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="rings-loading"
+            />
+          }
+          {token && fields.length > 0 && !eventEnded &&
             <div className="buttonreg">
-              <button type="submit" disabled={isRegistered}>
+              <button type="submit" disabled={formLocked}>
                 {
                   isRegistered
-                    ? 'Registered'
+                    ? eventData.startAt < Date.now()
+                      ? 'Registered'
+                      : 'Update Your Profile'
                     : `Register for ${eventData?.displayName}`
                 }
               </button>

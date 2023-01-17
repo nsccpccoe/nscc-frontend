@@ -49,9 +49,7 @@ const Auth = () => {
   const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
 
-
-   
-   
+  const redirectPath = typeof router.query["redirect"] === "string" ? router.query["redirect"] : "/";
 
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
@@ -70,7 +68,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
-      router.push('/')
+      router.push(redirectPath)
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -119,7 +117,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
-      router.push('/')
+      router.push(redirectPath)
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -172,7 +170,7 @@ const Auth = () => {
           );
 
           toast.success("signin successfull");
-          router.push('/')
+          router.push(redirectPath)
     
         }
         catch (err) {
@@ -228,7 +226,7 @@ const Auth = () => {
           }
           );
           
-          router.push('/')
+          router.push(redirectPath)
         } catch (err) {
           // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
