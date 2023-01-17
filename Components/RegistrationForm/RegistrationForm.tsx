@@ -2,10 +2,11 @@ import React, { useCallback, useEffect, useState } from "react";
 import classes from "./RegistrationForm.module.css";
 import { FluidContainer } from "../FluidContainer/FluidContainer"
 import { ToastContainer } from "react-toastify";
-import { style } from "@mui/system";
-import { eventNames } from "process";
-import { TRUE } from "sass";
 import { toast, } from "react-toastify";
+import { Rings } from "react-loader-spinner";
+import Link from "next/link";
+import { Event } from "../interfaces/event.interface"
+
 interface ElementProps {
   eventName: string;
 }
@@ -41,75 +42,71 @@ export type RegestrationFormRequirement = SelectField | TextField
 const RegistrationForm = (props: ElementProps) => {
   const [error, setError] = useState<string>("");
   const [data, setData] = useState<Record<string, string>>({});
+  const [eventData, setEventData] = useState<Event>()
   const [fields, setfields] = useState<RegestrationFormRequirement[]>([]);
   const [token, settoken] = useState("");
-
-
 
   useEffect(() => {
     // Perform localStorage action
     settoken(localStorage.getItem("accessToken") || "");
   }, []);
 
-  //  console.log(token,"gandu")
-
-
   const fetchDataHandler = useCallback(async () => {
-    // console.log(token);
-    try {
-      const response = await fetch(
-        `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}/fields`,
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Something went wrong!!! Please try again later.");
-      }
 
-      const {data} = await response.json() as {
+    if (Boolean(props.eventName) === false) return
+
+    fetch(`https://asia-south1-nsccpccoe.cloudfunctions.net/events/${props.eventName}`)
+      .then(result => result.json() as Promise<{
+        isError: boolean,
+        data: Event
+      }>)
+      .then(result => {
+        setEventData(result.data)
+      })
+
+    if (Boolean(token) === false) return
+
+    fetch(
+      `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}/fields`,
+      { headers: { authorization: `Bearer ${token}` }, }
+    )
+      .then(result => result.json() as Promise<{
         isError: boolean,
         data: {
           fields: RegestrationFormRequirement[]
         }
-      }
-  
-      const userData: Record<string, string> = {};
-      data.fields.forEach(ele => {
-        userData[ele.name] = ele.value;
-        if(ele.type == "options") {
-          userData[ele.name] = ele.value || String(ele.options[0]);
-        }
-        else {
+      }>)
+      .then(result => {
+        const userData: Record<string, string> = {};
+        result.data.fields.forEach(ele => {
           userData[ele.name] = ele.value;
-        }
+          if (ele.type == "options") {
+            userData[ele.name] = ele.value || String(ele.options[0]);
+          }
+          else {
+            userData[ele.name] = ele.value;
+          }
+        })
+
+        setData(userData);
+        setfields(result.data.fields)
       })
 
-      setData(userData);
-      setfields(data.fields)
-    } catch (error) {
-
-      setError
-    }
-  }, [props.eventName,token]);
+  }, [props.eventName, token]);
 
   useEffect(() => {
     fetchDataHandler();
   }, [fetchDataHandler]);
-  // console.log(data);
 
   const handleInputChange = (name: string, value: string) => {
 
     console.log(name, value)
-   
-      data[name]=value;
-      setData(JSON.parse(JSON.stringify(data)));
-      
-      // console.log(data)
-    }
-  
+
+    data[name] = value;
+    setData(JSON.parse(JSON.stringify(data)));
+
+    // console.log(data)
+  }
 
   const handleRegistration = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
 
@@ -148,58 +145,86 @@ const RegistrationForm = (props: ElementProps) => {
         theme: "dark",
       })
     }
-  }, [props.eventName, data,token]);
+  }, [props.eventName, data, token]);
+
+  if (error) {
+    return (
+      <div className={classes.container}>{error}</div>
+    )
+  }
+
+  if (eventData === undefined) {
+    return (
+      <div className={classes.container}>
+        <Rings
+          height="80"
+          width="80"
+          color="#7a9ce0"
+          radius="6"
+          wrapperStyle={{ margin: "auto" }}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="rings-loading"
+        />
+      </div>
+    )
+  }
 
   return (
-    <>
-      <div className={classes.formcontainer}>
-        <FluidContainer />
-        <ToastContainer />
-        <div className={classes.regform}>
-          <form className={classes.container} onSubmit={handleRegistration}>
-            <h1>Registration Form</h1>
-            {fields.map((e) => {
-              return (
+    <div className={classes.formcontainer}>
+      <FluidContainer />
+      <ToastContainer />
+      <div className={classes.regform}>
+        <form className={classes.container} onSubmit={handleRegistration}>
+          <p className={classes.heading}>Registration Form</p>
+          <h1 className={classes.displayName}>{eventData?.displayName}</h1>
+          <p className={classes.subtitle}>{eventData?.subtitle}</p>
+          <Link className={classes.eventPageLink} href={eventData.eventPage.link || "#"}>Prizes and Goodies - Learn More</Link>
+          {fields.map((e) => {
+            return (
+              <div key={e.name} className={classes.labelcontainer}>
+                <label className={classes.labels} htmlFor={e.name}>{e.label}</label>
+                {
+                  e.type == "options" &&
+                  <select
+                    id={e.name}
+                    name={e.name}
+                    required
+                    value={data[e.name]}
+                    disabled={!e.mutable || eventData.endAt < Date.now()}
+                    onChange={(event) => handleInputChange(e.name, event.target.value)}
+                  >
+                    {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+                  </select>
+                }
+                {
+                  e.type == "text" && <input
+                    id={e.name}
+                    type="text"
+                    name={e.name}
+                    required
+                    value={data[e.name]}
+                    placeholder={e.placeholder}
+                    disabled={!e.mutable}
+                    pattern={e.regex}
+                    onChange={(event) => handleInputChange(e.name, event.target.value)}
+                  />
+                }
 
-                <div key={e.name} className={classes.labelcontainer}>
-                  <label className={classes.labels} htmlFor={e.name}>{e.label}</label>
-                  {
-                    e.type == "options" &&
-                    <select
-                      id={e.name}
-                      name={e.name}
-                      required
-                      value={data[e.name]}
-                      disabled={!e.mutable}
-                      onChange={(event) => handleInputChange(e.name, event.target.value)}
-                      >
-                      {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
-                    </select>
-                  }
-                  {
-                    e.type == "text" && <input
-                      id={e.name}
-                      type="text"
-                      name={e.name}
-                      required
-                      value={data[e.name]}
-                      placeholder={e.placeholder}
-                      disabled={!e.mutable}
-                      pattern={e.regex}
-                      onChange={(event) => handleInputChange(e.name, event.target.value)}
-                    />
-                  }
-
-                </div>
-              )
-            })}
+              </div>
+            )
+          })}
+          { !token &&
+            <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
+          }
+          { token &&
             <div className="buttonreg">
-              <button type="submit">Submit</button>
+              <button type="submit">Register for {eventData?.displayName}</button>
             </div>
-          </form>
-        </div>
+          }
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -40,8 +40,10 @@
   font-size: 16px;
 }
 
-.container button {
+.container button, .eventPageLink, .loginPageLink {
+  text-decoration: none;
   display: inline-block;
+  margin: 24px 0;
   padding: 0.7rem 2rem;
   justify-content: center;
   align-items: center;
@@ -52,4 +54,10 @@
   cursor: pointer;
   color: #193655;
   border: none;
+}
+
+.eventPageLink {
+  color: hsl(0, 0%, 80%);
+  background: transparent;
+  border: 2px solid currentColor;
 }
