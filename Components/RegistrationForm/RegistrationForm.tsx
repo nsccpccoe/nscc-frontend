@@ -45,6 +45,7 @@ const RegistrationForm = (props: ElementProps) => {
   const [eventData, setEventData] = useState<Event>()
   const [fields, setfields] = useState<RegestrationFormRequirement[]>([]);
   const [token, settoken] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false);
 
   useEffect(() => {
     // Perform localStorage action
@@ -65,6 +66,11 @@ const RegistrationForm = (props: ElementProps) => {
       })
 
     if (Boolean(token) === false) return
+
+    fetch(`https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}/status`,
+      { headers: { authorization: `Bearer ${token}` }, })
+      .then(result => result.json())
+      .then(status => setIsRegistered(!!status.data.registered));
 
     fetch(
       `https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.eventName}/fields`,
@@ -126,15 +132,22 @@ const RegistrationForm = (props: ElementProps) => {
           body: JSON.stringify(data),
         }
       );
+
+      // console.log(response.text())
       if (!response.ok) {
-        throw new Error("Something went wrong!!! Please try again later.");
+        if (response.status == 400) {
+          const data = await response.json();
+          throw new Error(data.errorMessage);
+        }else{
+          throw new Error(response.status + " " + response.statusText)
+        }
       }
 
       const sendedata = await response.json();
       setData(sendedata);
 
-    } catch (error) {
-      toast(JSON.stringify(error), {
+    } catch (error: any) {
+      toast(error.toString(), {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -170,6 +183,7 @@ const RegistrationForm = (props: ElementProps) => {
     )
   }
 
+  console.debug(isRegistered);
   return (
     <div className={classes.formcontainer}>
       <FluidContainer />
@@ -191,7 +205,7 @@ const RegistrationForm = (props: ElementProps) => {
                     name={e.name}
                     required
                     value={data[e.name]}
-                    disabled={!e.mutable || eventData.endAt < Date.now()}
+                    disabled={!e.mutable || eventData.endAt < Date.now() || isRegistered}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   >
                     {e.options.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
@@ -205,7 +219,7 @@ const RegistrationForm = (props: ElementProps) => {
                     required
                     value={data[e.name]}
                     placeholder={e.placeholder}
-                    disabled={!e.mutable}
+                    disabled={!e.mutable || isRegistered}
                     pattern={e.regex}
                     onChange={(event) => handleInputChange(e.name, event.target.value)}
                   />
@@ -214,12 +228,19 @@ const RegistrationForm = (props: ElementProps) => {
               </div>
             )
           })}
-          { !token &&
+          {!token &&
             <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
           }
-          { token &&
+          {token &&
             <div className="buttonreg">
-              <button type="submit">Register for {eventData?.displayName}</button>
+              <button type="submit" disabled={isRegistered}>
+                {
+                  isRegistered
+                    ? 'Registered'
+                    : `Register for ${eventData?.displayName}`
+                }
+              </button>
+
             </div>
           }
         </form>
