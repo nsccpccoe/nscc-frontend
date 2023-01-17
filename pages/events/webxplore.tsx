@@ -65,7 +65,7 @@ function Event() {
         type="Hackathon"
         date="22/01/2023 8:00 PM - 29/01/2023 11:59 PM IST"
         content="Unleash your web development skills in our 8-day hackathon! Explore trending tech, build and showcase your website, win prizes and goodies."
-        regLink="/event/register/webxplore"/>
+        regLink="/events/register/webxplore"/>
       <Eventdescription propWhichIsArray={descArray} propWhichIsArray2={ruleArray} />
     </>
   );

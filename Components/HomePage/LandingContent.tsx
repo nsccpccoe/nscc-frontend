@@ -21,7 +21,7 @@ function LandingContent() {
         <p>We Recruit via our events</p>
       </div>
    
-      <Link href="/event">
+      <Link href="/events">
           <label style={{cursor:"pointer"}}>   <button >Participate</button></label>
       </Link>
     </div>

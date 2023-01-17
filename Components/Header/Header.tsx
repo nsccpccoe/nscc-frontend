@@ -82,7 +82,7 @@ function Navbar() {
             <Link href="/">Resources</Link>
           </li> */}
           <li>
-            <Link href="/event">
+            <Link href="/events">
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
