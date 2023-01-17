@@ -231,7 +231,7 @@ const RegistrationForm = (props: ElementProps) => {
             )
           })}
           {!token && !eventEnded &&
-            <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
+            <Link className={classes.eventPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
           }
           {
             token && fields.length == 0 &&
@@ -245,6 +245,10 @@ const RegistrationForm = (props: ElementProps) => {
               visible={true}
               ariaLabel="rings-loading"
             />
+          }
+          {
+            !eventEnded && isRegistered &&
+            <Link className={classes.eventPageLink} href={eventData.community.link}>{eventData.community.displayText}</Link>
           }
           {token && fields.length > 0 && !eventEnded &&
             <div className="buttonreg">
