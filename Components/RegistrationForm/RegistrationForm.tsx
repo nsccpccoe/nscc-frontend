@@ -133,7 +133,7 @@ const RegistrationForm = (props: ElementProps) => {
       })
 
       toast.promise(request, {
-        pending: "Regesteration in Progress",
+        pending: "Registration in Progress",
         error: "Registration Failed",
         success: "Registration Successfull"
       }, {
