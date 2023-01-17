@@ -19,12 +19,10 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
+    return onAuthStateChanged(auth, async (user) => {
       if (user) {
         // console.log(user);
-        
-     
-        const token = user.accessToken || "";
+        const token = await user.getIdToken();
         // console.log(token)
         localStorage.setItem("accessToken", token);
         setActive(true);
