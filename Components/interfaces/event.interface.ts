@@ -18,6 +18,10 @@ export interface Event {
     organizers: Organizer[];
     registration: LinkMap;
     eventPage: LinkMap;
+    community: {
+        link: string
+        displayText: string
+    }
 }
 
 export interface EventResponse {
