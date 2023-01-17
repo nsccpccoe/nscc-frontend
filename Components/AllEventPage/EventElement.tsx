@@ -25,9 +25,9 @@ function EventElement(props: ElementProps) {
 
   // fetch registration status
   useEffect(() => {
-    if (props.event.registration.type != "onsite")
-      return;
-         
+    if (props.event.registration.type != "onsite") return;
+    if(Boolean(token) === false) return;
+
     fetch(`https://asia-south1-nsccpccoe.cloudfunctions.net/register/${props.event.id}/status`,
       { headers: { authorization: `Bearer ${token}` }, }
     )
@@ -40,7 +40,7 @@ function EventElement(props: ElementProps) {
       .then(res => res.json())
       .then(res => setIsRegistered(res?.data?.registered))
       .catch(e => { setError(e) })
-  }, [props.event.registration.type,props.event.id,token])
+  }, [props.event.registration.type, props.event.id, token])
 
   let buttonText = "";
 
