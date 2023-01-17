@@ -18,7 +18,7 @@ function LandingContent() {
           Hackathon + Coding Contest + Seminars + Participate to win prices &
           Goodies
         </p>
-        <p>We Recruitment via our events</p>
+        <p>We Recruit via our events</p>
       </div>
    
       <Link href="/event">
