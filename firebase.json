@@ -5,6 +5,12 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/events/register/**",
+        "destination": "/events/register/[eventName]/index.html"
+      }
     ]
   },
   "emulators": {

@@ -234,7 +234,7 @@ const RegistrationForm = (props: ElementProps) => {
             <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
           }
           {
-            fields.length == 0 &&
+            token && fields.length == 0 &&
             <Rings
               height="80"
               width="80"
