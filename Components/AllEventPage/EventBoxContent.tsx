@@ -4,7 +4,7 @@ function EventBoxContent() {
   return (
     <div className={classes.content}>
       <div className={classes.organizer}>
-        <h3>NSCCs</h3>
+        <h3>NSCC&apos;s</h3>
       </div>
       <div className={classes.heading}>
         <h1>Pandora Tech Festival</h1>

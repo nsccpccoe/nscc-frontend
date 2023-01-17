@@ -1,4 +1,5 @@
 .container {
+  color: hsl(221, 61%, 90%);
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -18,24 +19,25 @@
 }
 
 .labels {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .labelcontainer {
   display: flex;
   flex-direction: column;
   text-align: left;
-  gap: 0.6rem;
-  margin: 5vh 0vw;
+  gap: 0px;
+  margin: 24px 0;
 }
 
 .container input, .container select {
   display: block;
-  background: #eee;
+  background: #7a9ce0;
   border: none;
   padding: 10px 12px;
   outline: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 .container button {
