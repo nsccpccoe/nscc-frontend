@@ -24,6 +24,9 @@ type ElementProps = {
 }
 
 const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
+
+  events.sort((a, b) => a.startAt - b.startAt)
+
   return (
     <div className={classes.container}>
       <div className={classes.content}>
