@@ -57,6 +57,14 @@
   margin: 1rem 10rem;
 }
 
+.social {
+  cursor: pointer;
+  transition: all 250ms;
+}
+.social:active {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+
 .socialcontainerloginform div {
   border: 1px solid #ddd;
   border-radius: 50%;
