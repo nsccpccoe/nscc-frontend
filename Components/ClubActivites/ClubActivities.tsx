@@ -15,7 +15,7 @@ const ClubActivities = () => {
                     <div className={styles.title}>Club Activities</div>
                     <div className={styles.points}>
                         <ul>
-                            <li>DSA & Cometitive Programming</li>
+                            <li>DSA & Competitive Programming</li>
                             <li>UI UX Designing</li>
                             <li>Web Frontend Development Projects</li>
                             <li>Mobile App Development Projects</li>
