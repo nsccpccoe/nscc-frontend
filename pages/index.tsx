@@ -34,7 +34,6 @@ export default function Home() {
         <About />
         <TimelineF />
         <ClubActivities />
-        <Footer />
       </main>
     </>
   );
