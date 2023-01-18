@@ -42,10 +42,10 @@
   color: #b3b3b3;
 }
 
-.container button {
+.container .regButton {
   background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
   border-radius: 4px;
-
+  display: inline-block;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1rem;
@@ -54,6 +54,7 @@
   margin-top: 1rem;
   cursor: pointer;
   color: #1c1b4b;
+  text-decoration: none;
 }
 
 @media (max-width: 1060px) {

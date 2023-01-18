@@ -6,7 +6,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   margin: 4rem;
-  padding-top: 4rem;
+  margin-top: 16px;
 }
 
 .main h1 {
@@ -22,18 +22,28 @@
 
 .content {
   /* text-align: center; */
-  margin: 2rem;
+  margin: 1rem 5rem;
   text-align: left;
 }
 
-.content p {
-  margin-bottom: 1rem;
+.content li {
+  list-style-type: decimal;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 @media (max-width: 596px) {
   .main {
     margin: 2rem;
     padding-top: 2rem;
+  }
+
+  .main h1 {
+    font-size: 1.7rem;
+  }
+
+  .content {
+    margin: 1rem 1rem;
   }
 }
 
@@ -47,8 +57,9 @@
     font-size: 1.7rem;
     margin: 1rem 0;
   }
-
+  
   .content {
-    margin: 0;
+    margin: 1rem;
   }
+  
 }

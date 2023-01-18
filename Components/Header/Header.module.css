@@ -4,7 +4,6 @@
 .container {
   font-family: "Poppins";
   font-style: normal;
-  color: #ffffff;
   /* position: absolute; */
   position: fixed;
   top: 0;
@@ -17,7 +16,27 @@
   /* width: 90%; */
   z-index: 100;
   align-items: center;
+  transition:all 0.3s ease-in-out;
   font-weight: 500;
+  z-index: 1000;
+}
+
+/*don't add space between classnames!*/
+.scrolled.container {
+  background: rgba(34, 39, 100, 0.6);
+  backdrop-filter: blur(32px);
+}
+
+.scrolled svg {
+  color: white;
+}
+
+.scrolled .navigators ul li a {
+  color: white;
+}
+.scrolled .button{
+  color: #193655;
+
 }
 
 .header {
@@ -94,10 +113,11 @@
   font-size: 14px;
   line-height: 18px;
   /* identical to box height */
-  color: #ffffff;
+   color: #193655;
+  
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
   .container {
     position: fixed;
     bottom: 0;

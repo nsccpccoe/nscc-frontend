@@ -6,7 +6,7 @@
     /* align-items: center; */
     /* justify-content: center; */
     /* margin-top: 3rem; */
-    margin: 4rem 3vw 3vw 3vw;
+    margin: 128px 3vw 80px 3vw;
     padding: 2vw;
 }
 
@@ -14,8 +14,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: calc(12px + 6vw);
-    line-height: calc(12px + 11vw);
+    font-size: 32px;
+    text-align: center;
     /* identical to box height */
 
 

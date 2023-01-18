@@ -1,284 +1,687 @@
 .loginsignupform {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Loginsignupheader {
-    font-weight: bold;
-    margin: 2rem 5rem;
+  font-weight: bold;
+  margin: 2rem 5rem;
 }
 
 .overlay p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: .5px;
-    margin: 20px 0 30px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
 }
 
 .loginspan {
-    margin: 0rem 4rem;
-    font-size: 18px;
+  margin: 0rem 4rem;
+  font-size: 18px;
 }
 
 .loginsignupform a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
 }
 
 .containerloginform {
-    /* background: #fff; */
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
-    position: relative;
-    overflow: hidden;
-    width: 70vw;
-    max-width: 100%;
-    min-height: 80vh;
+
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 70vw;
+  max-width: 100%;
+  min-height: 80vh;
+
 }
 
-
 .form-containerloginform form {
-    display: flex;
-    flex-direction: column;
-    /* padding:  2rem; */
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .socialcontainerloginform {
-    margin: 1rem 10rem;
+  margin: 1rem 10rem;
+}
+
+.social {
+  cursor: pointer;
+  transition: all 250ms;
+}
+.social:active {
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 
 .socialcontainerloginform div {
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
 }
 
 .formcontainerloginform input {
-    background: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width:27vw;
-    outline: none;
-    border-radius: 0.5rem;
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 27vw;
+  outline: none;
+  border-radius: 0.5rem;
 }
 
 .loginsignupform button {
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    /* background: #ff445c; */
-    background: linear-gradient(189.19deg, #192656 42.16%, rgba(45, 71, 184, 0.1) 91.14%);
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background: linear-gradient(
+    189.19deg,
+    #192656 42.16%,
+    rgba(45, 71, 184, 0.1) 91.14%
+  );
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
 }
 
 .loginsignupform button:active {
-    transform: scale(.95);
+  transform: scale(0.95);
 }
 
 .loginsignupform button:focus {
-    outline: none;
+  outline: none;
 }
 
 .loginsignupform button.ghost {
-    background: transparent;
-    border-color: #fff;
+  background: transparent;
+  border-color: #fff;
 }
 
 .formcontainerloginform {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all .6s ease-in-out;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+
 }
 
 .signincontainerloginform {
-    left: 10%;
-    width: 50%;
-    z-index: 2;
+  left: 10%;
+  width: 50%;
+  z-index: 2;
 }
 
 .signupcontainerloginform {
-    left: 5%;
-    width: 50%;
-    z-index: 1;
-    opacity: 0;
+  left: 5%;
+  width: 50%;
+  z-index: 1;
+  opacity: 0;
 }
 
 .overlaycontainerloginform {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform .6s ease-in-out;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 }
 
 .overlay {
-
-    background: linear-gradient(189.19deg, #192656 42.16%, rgba(45, 71, 184, 0.1) 91.14%);
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateY(0);
-    transition: transform .6s ease-in-out;
+  background: linear-gradient(
+    189.19deg,
+    #192656 42.16%,
+    rgba(45, 71, 184, 0.1) 91.14%
+  );
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .overlaypanel {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
-    height: 100%;
-    width: 40%;
-    text-align: center;
-    transform: translateY(0);
-    transition: transform .6s ease-in-out;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 40%;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .overlayright {
-    right: 0;
-    transform: translateY(0);
-    margin-top:-5vh ;
+  right: 0;
+  transform: translateY(0);
+  margin-top: -5vh;
 }
 
 .overlayleft {
-    transform: translateY(-20%);
+  transform: translateY(-20%);
 }
 
 /* Move signin to right */
 .containerloginform.rightpanelactive .signincontainerloginform {
-    transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 /* Move overlay to left */
 .containerloginform.rightpanelactive .overlaycontainerloginform {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 /* Bring signup over signin */
 .containerloginform.rightpanelactive .signupcontainerloginform {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
 }
 
 /* Move overlay back to right */
 .containerloginform.rightpanelactive .overlay {
-    transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 /* Bring back the text to center */
 .containerloginform.rightpanelactive .overlayleft {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* Same effect for right */
 .containerloginform.rightpanelactive .overlayright {
-    transform: translateY(20%);
+  transform: translateY(20%);
 }
-
 
 .loginsignupform .icons {
-	display: flex;
-	width: 30px;
-	height: 30px;
-	letter-spacing: 15px;
-	align-items: center;
-    color: white;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  letter-spacing: 15px;
+  align-items: center;
+  color: white;
 }
-.adjustname{
-    display: flex;
-    gap: 1rem;
+.adjustname {
+  display: flex;
+  gap: 1rem;
+  width: 28.7vw;
 }
-.emailpass{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    /* margin-right:6vw; */
+.emailpass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
-.signinadjust{
-    display: flex;
-    flex-direction: column;
+.signinadjust {
+  display: flex;
+  flex-direction: column;
 }
 .toast-message {
-    background: darkblue;
-    color: #fff;
-    font-size: 20px;
-    width: 34vw;
-    padding: 30px 20px;
+  background: darkblue;
+  color: #fff;
+  font-size: 20px;
+  width: 34vw;
+  padding: 30px 20px;
 }
 
-.forgetcontainerloginform{
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
-    position: relative;
-    overflow: hidden;
-    /* width: 70vw; */
-    padding: 2rem;
-    width: 30vw;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
+.forgetcontainerloginform {
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  /* width: 70vw; */
+  padding: 2rem;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.forgetcard{
-    margin: 10vw 10vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.forgetcard {
+  margin: 10vw 10vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.formcontainerloginformforget input{
+.formcontainerloginformforget input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+
+  width: 20vw;
+  outline: none;
+  border-radius: 0.5rem;
+}
+.forgetupheader {
+  font-weight: bold;
+  margin: 2vh 0rem;
+}
+
+.forgetpasswordbutton {
+  /* padding: 1rem; */
+  padding: 0.6rem 3rem;
+  border-radius: 8px;
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  color: #ffffff;
+  border: none;
+  margin: 3vh 6vh;
+  cursor: pointer;
+}
+
+.lastName {
+  width: 2vw;
+}
+
+.signupsubmit {
+  width: 12vw;
+  margin: 2vh 10vw;
+}
+.signinbutton {
+
+  margin: 2vh 8vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.singinheader {
+  margin: 2vh 6.6vw;
+  margin-top: 5vh;
+}
+.adjustsocial {
+  margin: 1vh 7vw;
+}
+.adjustloginspan {
+  margin: 0rem 5vw;
+  font-size: 18px;
+}
+.adjustinputtext {
+  margin-left: -2vw;
+}
+ .signinbutton {
+    width: 10vw;
+
+}
+/* .signupcontainerloginform {
+  overflow-y: scroll;
+ 
+} */
+
+@media (max-width: 1400px) and (min-width:1000px) {
+ 
+  .socialcontainerloginform {
+
+    margin: 1rem 10vw;
+  }
+  .loginspan {
+    margin: 0rem 2vw;
+    font-size: 16px;
+  }
+  .Loginsignupheader {
+    font-weight: bold;
+    margin: 2rem 3.3vw;
+    margin-top: 0.5rem;
+  }
+  .formcontainerloginformforget input {
     background: #eee;
     border: none;
     padding: 12px 15px;
-    /* margin: 8px 0; */
-    width:20vw;
+    width: 100px;
     outline: none;
     border-radius: 0.5rem;
+  }
+  .adjustname {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    /* width: 12vw; */
+  }
+  .signupsubmit {
+    width: 20vw;
+    margin: 2vh 5vw;
+    display:flex;
+    justify-content: center;
+  }
+  .singinheader {
+    margin: 2vh 7vw;
+    margin-top: 6rem;
+  }
+  .signinbutton {
+    
+    width:20vh;
+    margin: 2vh 5vw;
+ 
+  }
+  .adjustsocial {
+    margin: 1vh 7vw;
+  }
+  .adjustloginspan{
+    margin: 0rem 5.5vw;
+    font-size: 18px;
 }
-.forgetupheader{
-    font-weight: bold;
-    margin: 2vh 0rem; 
+.adjustinputtext {
+    margin-left: -1vw;
+  }
+  .adjustinputtext >input {
+    margin-left: -2vw;
+    width: 25vw;
+  }
 }
 
-.forgetpasswordbutton{
-    /* padding: 1rem; */
-    padding: 0.6rem 3rem;
-    border-radius: 8px;
-    background: linear-gradient(270deg, #7A9CE0 7.22%, #79DFC8 100%);
-    color: #FFFFFF;
+@media (max-width: 1000px){
+  .socialcontainerloginform {
+    margin: 1rem -10vw;
+  }
+ 
+  .loginspan {
+    margin: 0rem 2vw;
+    font-size: 16px;
+    margin-left: -30vw;
+  }
+  .Loginsignupheader {
+    font-weight: bold;
+    margin: 2rem 3.3vw;
+    margin-top: -0.2rem;
+    margin-left: -15vw;
+  }
+  .formcontainerloginformforget input {
+    background: #eee;
     border: none;
-    margin: 3vh 6vh ;
-    cursor: pointer;
+    padding: 12px 15px;
+    width: 10vw;
+    outline: none;
+    border-radius: 0.5rem;
+    /* margin-left: -40vw; */
+  }
+  .adjustname {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+
+    margin-left: -30vw;
+  }
+  .adjustname input{
+    width: 64vw;
+  }
+  .emailpass{
+    margin-left: -30vw;
+  }
+  .emailpass input{
+    /* margin-left: -30vw; */
+    width: 64vw;
+  }
+
+
+  .singinheader {
+    margin: 2vh 19vw;
+    margin-top: 6rem;
+  }
+  .signinbutton {
+    width:20vw;
+    margin: 2vh 20vw;
+   
+  }
+  .adjustsocial {
+    margin: 1vh 19vw;
+  }
+  .adjustloginspan{
+    margin: 0rem 10.5vw;
+    font-size: 18px;
+    
+}
+.adjustinputtext {
+    margin-left: -1vw;
+  }
+  .overlay {
+    background: linear-gradient(
+      189.19deg,
+      #192656 42.16%,
+      rgba(45, 71, 184, 0.1) 91.14%
+    );
+    color: #fff;
+    position: relative;
+    /* left: -100%; */
+    /* height: 100%; */
+    /* width: 200%; */
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlaypanel {
+    position: absolute;
+    top: 0;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 40px;
+    /* height: 100%; */
+    /* width: 40%; */
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlayright {
+    right: 0;
+    transform: translateY(0);
+    margin-top: -5vh;
+  }
+  
+  .overlayleft {
+    transform: translateY(-20%);
+  
+  }
+
+  
+.loginsignupform button {
+  /* border-radius: 50%; */
+  border: 1px solid #ff4b2b;
+
+  /* font-weight: bold; */
+
+  /* letter-spacing: 1px; */
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+.containerloginform {
+  /* background: #fff; */
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+  /* position: relative; */
+  overflow: hidden;
+  width: 100vw;
+  /* max-width: 100%; */
+  /* min-height: 80vh; */
+}
+.loginsignupform {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.containerloginform.rightpanelactive .overlaycontainerloginform {
+  transform: translateX(-200%);
+}
+/* Bring signup over signin */
+.containerloginform.rightpanelactive .signupcontainerloginform {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Move overlay back to right */
+.containerloginform.rightpanelactive .overlay {
+  transform: translateX(70%);
+}
+
+/* Bring back the text to center */
+.containerloginform.rightpanelactive .overlayleft {
+  transform: translateY(0);
+}
+
+/* Same effect for right */
+.containerloginform.rightpanelactive .overlayright {
+  transform: translateY(20%);
+}
+
+.overlaycontainerloginform {
+  position: absolute;
+  top: 0;
+  left: 85vw;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.welcomeback{
+  opacity: 0;
+}
+.connected{
+  opacity: 0;
+}
+.overlayright {
+  /* right: -10%; */
+  transform: translateY(105);
+  /* margin-top: -5vh; */
+}
+.startjou{
+  opacity: 0;
+
+}
+.hello{
+  opacity: 0;
+}
+.signincontainerloginform {
+  left: 10%;
+  width: 80%;
+  z-index: 2;
+}
+.adjustinputtext >input {
+  margin-left: -2vw;
+  width: 65vw;
+}
+.signupsubmit {
+  width: 40vw;
+  margin: 2vh 17vw;
+}
+.signghost{
+  margin-top: -15vw;
+  margin-left: -5vw;
+  z-index: 2;
+}
+.signghost{
+  visibility: hidden;
+}
+.signghost:after {
+  visibility: visible;
+  content: "💀";
+  font-size: 28px;
+} 
+
+.signupghost{
+  margin-top:-8vw;
+  margin-left: -65vw;
+}
+.signupghost{
+  visibility: hidden;
+}
+.signupghost:after {
+  visibility: visible;
+  content: "💀";
+  font-size: 28px;
+} 
+}
+
+@media (max-width: 650px){
+  .signghost{
+    margin-top: -30vw;
+    margin-left: -12vw;
+    z-index: 4;
+  }
+  .signghost{
+    visibility: hidden;
+  }
+  .signghost:after {
+    visibility: visible;
+    content: "💀";
+    font-size: 28px;
+  } 
+  .signinbutton{
+    width: 40vw;
+    margin: 0vw  12vw;
+  }
+  .signupsubmit {
+    width: 50vw;
+    margin:3vw 9vw;
+  }
+  
+  .signupghost{
+    margin-top:-25vw;
+    margin-left: -60vw;
+    z-index: 4;
+  }
+  .signupghost{
+    visibility: hidden;
+  }
+  .signupghost:after {
+    visibility: visible;
+    content: "💀";
+    font-size: 28px;
+  } 
+  .Loginsignupheader {
+    font-weight: bold;
+    margin: 2rem 3.3vw;
+    margin-top: 3rem;
+    margin-left: -30vw;
+  }
+}
+@media (max-width: 450px){
+  .signghost{
+    margin-top: -40vw;
+    margin-left: -25vw;
+    z-index: 4;
+  }
+  .Loginsignupheader {
+    font-weight: bold;
+    /* margin: 0rem 3.3vw; */
+    margin-top: 0.5rem;
+    margin-left: -30vw;
+  }
+ 
+
 }
