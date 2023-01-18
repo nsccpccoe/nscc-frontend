@@ -13,6 +13,14 @@ interface mainProps {
     id: number,
     text: string;
   }[]
+  eventDetail?: {
+    id: number,
+    text: string;
+  }[]
+  evaluationArray?: {
+    id: number,
+    text: string;
+  }[]
 }
 
 // interface rulesProps {
@@ -26,7 +34,9 @@ const test = (props: mainProps) => {
   return (
     <div>
       <Contest_desc propWhichIsArray={props.propWhichIsArray}/>
-      <Contest_rules propWhichIsArray={props.propWhichIsArray2}/>
+      {props.eventDetail && <Contest_rules title="Detailed Description" propWhichIsArray={props.eventDetail}/>}
+      {props.evaluationArray && <Contest_rules  title="Evaluation" propWhichIsArray={props.evaluationArray}/>}
+      <Contest_rules title="Rules of participation" propWhichIsArray={props.propWhichIsArray2}/>
       <Contest_prizes />
       <ContactDetails />
     </div>

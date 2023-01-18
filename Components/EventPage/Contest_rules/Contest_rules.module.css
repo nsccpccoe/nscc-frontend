@@ -6,7 +6,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   margin: 4rem;
-  padding-top: 4rem;
+  margin-top: 16px;
 }
 
 .main h1 {
@@ -23,7 +23,7 @@
 .content {
   /* text-align: center; */
   margin: 1rem 5rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .content li {
@@ -43,7 +43,7 @@
   }
 
   .content {
-    margin: 1rem 3rem;
+    margin: 1rem 1rem;
   }
 }
 
