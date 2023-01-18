@@ -1,15 +1,14 @@
 .container {
   background: #090917;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
   position: relative;
 }
 
 @media(max-width : 650px) {
   .container {
-    margin-top: 70px;
     align-items: flex-start;
+    height: auto;
   }
 }
 
@@ -22,6 +21,13 @@
   gap: 150px;
   justify-content: center;
 }
+
+@media(max-width : 650px) {
+  .content {
+    padding: 5rem 0;
+ }
+}
+
 
 .box {
   width: 150px;

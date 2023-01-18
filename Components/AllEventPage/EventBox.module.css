@@ -9,6 +9,7 @@
   padding: 3rem 3rem 0 3rem;
 }
 
+
 .events {
   display: flex;
   flex-direction: row;
@@ -32,10 +33,11 @@
 
 @media (max-width: 1225px) {
   .container {
-    margin-top: 3rem;
+    margin-top: 5rem;
     width: 70%;
     padding: 2rem 2rem 0 2rem;
   }
+
   .events {
     flex-direction: column;
     align-items: center;
