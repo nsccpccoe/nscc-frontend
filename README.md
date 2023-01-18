@@ -14,7 +14,7 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
 
 ## Thanks to all the contributors ❤️
 <a href = "https://github.com/nsccpccoe/nscc-frontend/graphs/contributors">
