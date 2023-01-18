@@ -8,7 +8,6 @@
     position: relative;
 }
 
-
 .activities {
     width: 100%;
     margin-top: 5rem;
@@ -61,8 +60,10 @@
 @media(min-width: 767px) and (max-width: 1024px) {
     .main {
         flex-direction: column;
-        padding: 5vw;
-        margin: 5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 
     .content {

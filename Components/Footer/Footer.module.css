@@ -1,58 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap');
 
 .footer {
+    margin : 10px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 24px;
 }
-
 
 .upperfooter {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
-    gap: 24px;
-    height: 96px;
-    /* margin: 36px; */
-}
-
-.lowerfooter {
-    color: white;
-    position: absolute;
-    width: 768px;
-    height: 24px;
-    left: calc(50% - 768px/2 - 1px);
-    text-align: center;
-    padding:68px 0px;
 }
 
 .pccoelink {
-    color:white
+    color: white
 }
 
 .icons a {
-    position: relative; 
+    position: relative;
     display: block;
     width: 48px;
     height: 48px;
     text-align: center;
     line-height: 63px;
-    background: #000000;
+    background: black;
     border-radius: 50%;
     font-size: 30px;
-    color: #000000;
     transition: .5s;
 }
-  
+
 .icons a::before {
     content: '';
     position: absolute;
@@ -63,7 +54,7 @@
     border-radius: 48px;
     background: hsl(234, 50%, 35%);
     transition: .5s;
-    transform: scale(.9);
+    transform: scale(0.9);
     z-index: -1;
 }
 
@@ -78,18 +69,9 @@
     text-shadow: 0 0 5px hsl(234, 50%, 35%);
 }
 
-@media only screen and (max-width: 768px) {
-    .footer{
-        width: 100%;
+@media (max-width: 650px) {
+    .footer {
+        margin-bottom: 100px;
+        /*avoid overlapping with bottom nav*/
     }
-
-    .lowerfooter{
-        position: relative;
-        left: 0;
-        width: 90%;
-        text-align: center;
-        margin: auto;
-    }
-
-
-  }
+}
