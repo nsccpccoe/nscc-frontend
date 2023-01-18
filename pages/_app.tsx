@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import 'react-toastify/dist/ReactToastify.min.css'
 import Navbar from '../Components/Header/Header'
 import Head from "next/head";
+import Footer from "../Components/Footer/Footer"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
        <Navbar /> 
       <Component {...pageProps} />
+      <Footer/>
     </>
   ) 
 }
