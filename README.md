@@ -2,7 +2,7 @@
 
 Check This [Issue](https://github.com/nsccpccoe/nscc-frontend/issues/1) to Track Progress
 
-Design: https://www.figma.com/file/lLxOnIBTvsK6c4XfRyAjWX/Newton-School-Coding-Club
+Designs: https://www.figma.com/file/lLxOnIBTvsK6c4XfRyAjWX/Newton-School-Coding-Club
 
 Install Dependencies
 ```bash
