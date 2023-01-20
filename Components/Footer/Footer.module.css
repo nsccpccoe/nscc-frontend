@@ -1,96 +1,95 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Raleway&display=swap');
 
 .footer {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 256px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }
 
+
 .upperfooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  gap: 24px;
-  height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    height: 96px;
+    /* margin: 36px; */
 }
 
 .lowerfooter {
-  color: white;
-  position: absolute;
-  width: 768px;
-  height: 24px;
-  left: calc(50% - 768px / 2 - 1px);
-  text-align: center;
-  padding: 68px 0px;
+    color: white;
+    position: absolute;
+    width: 768px;
+    height: 24px;
+    left: calc(50% - 768px/2 - 1px);
+    text-align: center;
+    padding:68px 0px;
 }
 
 .pccoelink {
-  color: white;
+    color:white
 }
 
 .icons a {
-  position: relative;
-  display: block;
-  width: 48px;
-  height: 48px;
-  text-align: center;
-  line-height: 63px;
-  background: #000000;
-  border-radius: 50%;
-  font-size: 30px;
-  color: #000000;
-  transition: 0.5s;
+    position: relative; 
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 63px;
+    background: #000000;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #000000;
+    transition: .5s;
 }
-
+  
 .icons a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 48px;
-  background: hsl(234, 50%, 35%);
-  transition: 0.5s;
-  transform: scale(0.9);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 48px;
+    background: hsl(234, 50%, 35%);
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
 }
 
 .icons a:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px hsl(234, 50%, 35%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px hsl(234, 50%, 35%);
 }
 
 .icons a:hover {
-  color: hsl(234, 50%, 35%);
-  box-shadow: 0 0 5px hsl(234, 50%, 35%);
-  text-shadow: 0 0 5px hsl(234, 50%, 35%);
+    color: hsl(234, 50%, 35%);
+    box-shadow: 0 0 5px hsl(234, 50%, 35%);
+    text-shadow: 0 0 5px hsl(234, 50%, 35%);
 }
 
 @media only screen and (max-width: 768px) {
-  .footer {
-    width: 100%;
-  }
+    .footer{
+        width: 100%;
+    }
 
-  .lowerfooter {
-    position: relative;
-    left: 0;
-    width: 90%;
-    text-align: center;
-    margin: auto;
+    .lowerfooter{
+        position: relative;
+        left: 0;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+
+
   }
-}
