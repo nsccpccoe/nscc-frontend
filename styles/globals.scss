@@ -7,8 +7,16 @@
 body {
   background: #090917;
   color: white;
+  position: relative;
+  min-height: 100vh;
   --scrollbar-thumb: #7a9ce0;
   --scrollbar-thumb_hover: #7a9ce0;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 256px;
 }
 
 $scroll-bar-width: 12px;
@@ -35,5 +43,5 @@ $scroll-bar-width: 12px;
 }
 
 @media not screen and (hover: none) {
-    @include scrollbar
+  @include scrollbar;
 }
