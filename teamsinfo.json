@@ -1,0 +1,51 @@
+{
+    "Teams": [
+        {    
+            
+            "teamname": "Core Teams",
+            "collections": [
+                {
+                    "id": 1,
+                    "name": "Suraj Jha",
+                    "position": "President",
+                    "githublink": "https://github.com/jhasuraj01/",
+                    "twitterlink": "https://twitter.com/jhasuraj01/",
+                    "linkedinlink": "https://www.linkedin.com/in/jhasuraj01/"
+                },
+                {
+                    "id": 2,
+                    "name": "Aachal Modak",
+                    "position": "Vice President",
+                    "githublink": " https://github.com/aachal01",
+                    "twitterlink": "i am extrovert",
+                    "linkedinlink": "i am extrovert"
+                },
+                {
+                    "id": 3,
+                    "name": "Dron Rahangdale",
+                    "position": "Content and Pr head",
+                    "githublink": "https://github.com/Drontitan",
+                    "twitterlink": "",
+                    "linkedinlink": "https://www.linkedin.com/in/drontitan/"
+                },
+                {
+                    "id": 4,
+                    "name": "Pranav Masekar",
+                    "position": "Technical Head",
+                    "githublink": "https://github.com/PranavMasekar",
+                    "twitterlink": "https://twitter.com/Pranav18vk?t=RbKra21IQ-XmqjAOIQg_SQ&s=09",
+                    "linkedinlink": "https://www.linkedin.com/in/pranav-masekar-556534214"
+                },
+                {
+                    "id": 5,
+                    "name": "Sakshi Pore",
+                    "position": "Marketing Head",
+                    "githublink": "https://github.com/sakshipore",
+                    "twitterlink": "https://twitter.com/sakshii_spamm28?t=2KtWPofahkzXme5SuBL9og&s=09",
+                    "linkedinlink": "https://www.linkedin.com/in/sakshi-pore-9ab17a219/"
+                }
+            ]
+        }
+       
+    ]
+}
