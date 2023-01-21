@@ -318,7 +318,7 @@ const exportdata=[
     },
 ]
 
-const aboutme = () => {
+const team = () => {
 
 
   return (
@@ -369,4 +369,4 @@ const aboutme = () => {
   )
 }
 
-export default aboutme
+export default team
