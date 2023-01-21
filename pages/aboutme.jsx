@@ -69,21 +69,21 @@ const exportdata=[
             },
             {
                 id: 4,
-                name: "Pranav Masekar",
-                position: "Technical Head",
-                githublink: "https://github.com/PranavMasekar",
-                twitterlink: "https://twitter.com/Pranav18vk?t=RbKra21IQ-XmqjAOIQg_SQ&s=09",
-                linkedinlink: "https://www.linkedin.com/in/pranav-masekar-556534214",
-                img:pranvaimg
-            },
-            {
-                id: 5,
                 name: "Sakshi Pore",
                 position: "Marketing Head",
                 githublink: "https://github.com/sakshipore",
                 twitterlink: "https://twitter.com/sakshii_spamm28?t=2KtWPofahkzXme5SuBL9og&s=09",
                 linkedinlink: "https://www.linkedin.com/in/sakshi-pore-9ab17a219/",
                 img:sakshimg
+            },
+            {
+                id: 5,
+                name: "Pranav Masekar",
+                position: "Technical Head",
+                githublink: "https://github.com/PranavMasekar",
+                twitterlink: "https://twitter.com/Pranav18vk?t=RbKra21IQ-XmqjAOIQg_SQ&s=09",
+                linkedinlink: "https://www.linkedin.com/in/pranav-masekar-556534214",
+                img:pranvaimg
             }
         ]
     },
