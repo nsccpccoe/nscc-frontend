@@ -9,7 +9,7 @@ import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 import { useRouter } from "next/router";
-
+import PersonIcon from '@mui/icons-material/Person';
 function Navbar() {
 
   const scrollThreshold = 40;
@@ -89,6 +89,14 @@ function Navbar() {
                 <MdEmojiEvents />
               </div>
               <label style={{ cursor: "pointer" }}>Events</label>
+            </Link>
+          </li>
+          <li>
+            <Link href="/team">
+              <div className={classes.icons}>
+                <PersonIcon style={{fontSize:"36px"}} />
+              </div>
+              <label style={{ cursor: "pointer" }}>Team</label>
             </Link>
           </li>
           {/* <li>

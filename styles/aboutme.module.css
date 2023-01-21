@@ -1,0 +1,317 @@
+
+.speakerssectionthree{
+    /* margin-top: 90px; */
+}
+.speakerssectionthree  a, .speakerssectionthree  a:hover,.speakerssectionthree  a:focus,.speakerssectionthree a:active {
+  text-decoration: none;
+  outline: none;
+}
+.aboutme{
+    display: flex;
+    /* justify-content: center; */
+    text-align: center;
+    /* margin-top: 90px; */
+}
+.speakerssectionthree  a {
+  font-style: normal;
+  text-decoration: none;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+}
+
+.speakerssectionthree{
+    display: flex;
+    justify-content: space-around;
+}
+.speakerssectionthree  a, .speakerssectionthree  a:active,.speakerssectionthree  a:focus {
+  color: #333;
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+.water{
+    border: 1px solid white;
+    /* position: relative; */
+  }
+  
+ 
+.speakerssectionthree  ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.speakerssectionthree  img {
+  max-width: 100%;
+  height: auto;
+
+}
+.teamheader{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 36px;
+   margin-bottom: 30px;
+}
+
+.sectitle {
+  position: relative;
+  text-align: center;
+  font-family: popins;
+  /* margin-top: 90px; */
+}
+.sectitle > :last-child {
+    transform: rotatex(180deg) translatey(15px); 
+  }
+  .sectitle > :last-child {
+    transform: rotatex(180deg) translatey(15px); 
+    mask-image: linear-gradient(transparent 50%, white 90%);
+  }
+.sectitle .title {
+    /* margin-top: 90px; */
+ font-weight: bolder;
+  position: relative;
+  display: block;
+  font-size: 70px;
+  line-height: 1em;
+  color: #ff8a01;
+  font-weight: 500;
+  background: rgb(247, 0, 104);
+  background: -moz-linear-gradient(
+    to left,
+    rgba(247, 0, 104, 1) 0%,
+    rgba(68, 16, 102, 1) 25%,
+    rgba(247, 0, 104, 1) 75%,
+    rgba(68, 16, 102, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(247, 0, 104, 1) 0%,
+    rgba(68, 16, 102, 1) 25%,
+    rgba(247, 0, 104, 1) 75%,
+    rgba(68, 16, 102, 1) 100%
+  );
+  background: linear-gradient(
+    to left,
+    rgba(247, 0, 104) 0%,
+    rgba(68, 16, 102, 1) 25%,
+    rgba(247, 0, 104, 1) 75%,
+    rgba(68, 16, 102, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F70068',endColorstr='#441066',GradientType=1);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  /* margin-bottom: 15px; */
+}
+
+
+.sectitle.light h2,
+.sectitle.light .title {
+  color: #fff;
+  -webkit-text-fill-color: inherit;
+}
+.speakerssectionthree {
+  position: relative;
+  padding: 120px 0 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.speakerblockthree {
+  position: relative;
+  margin-bottom: 50px;
+}
+.speakerblockthree .innerbox {
+  position: relative;
+  /* background-color: rgb(163, 40, 40); */
+  background: rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+  padding-bottom: 30px;
+  width: 300px;
+  /* height: 400px; */
+  margin: 0 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+  border-radius: 20px;
+}
+.speakerblock-three .innerbox:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.speakerblockthree .imagebox {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 50px 0;
+}
+.speakerblockthree .imagebox:before {
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -4px;
+  height: 100%;
+  background-image: url(../public/Grad_2-removebg-preview.png);
+  -webkit-transform: scale(-1);
+  -moz-transform: scale(-1);
+  -ms-transform: scale(-1);
+  -o-transform: scale(-1);
+  transform: scale(-1);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  content: "";
+}
+.speakerblockthree .imagebox .image {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border: 4px solid #3f3da5;
+  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: 9;
+  margin-bottom: 0;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.speakerblockthree .innerbox:hover .imagebox .image {
+  border-radius: 12px;
+}
+.speakerblockthree .imagebox .image .img {
+  display: block;
+  width: 100%;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.speakerblockthree .innerbox:hover .image .img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.speakerblockthree .infobox {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  padding-right: 10px;
+  background: #192656;
+}
+.speakerblockthree .infobox:before {
+  position: absolute;
+  left: 0;
+  right: -30px;
+  background: #192656;
+  content: "";
+  top: 5%;
+  height: 100%;
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+  transform: skew(-30deg);
+  border-radius: 0 14px 14px 0;
+}
+.speakerblockthree .infobox .name {
+  position: relative;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #fff;
+  font-weight: 500;
+}
+.speakerblockthree .infobox .name a {
+  color: #fff;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.speakerblockthree .infobox .name a:hover {
+  color: #fff;
+}
+.speakerblockthree .infobox .designation {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+.speakerblockthree .socialbox {
+  position: absolute;
+  top: 90px;
+  transform: translateX(-50px);
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.speakerblockthree .socialbox .sociallinks li {
+  margin-bottom: 15px;
+
+}
+.speakerblockthree .innerbox:hover .socialbox {
+  transform: translateX(10px);
+}
+.speaker-block-two .social-links li {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.speakerblockthree .sociallinks li a i {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border-radius:30%;
+  /* color: black; */
+}
+.speakerblock-three .sociallinks li a:hover i {
+  color: #fff;
+  background: #ec7561;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* grid: 3rem; */
+}
