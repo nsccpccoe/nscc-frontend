@@ -75,7 +75,13 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
       </Link>
       <div>{props.submission.title}</div>
       <div className={classes.actionButtons}>
-        <button onClick={handleUpvote} className={(liked || props.liked) ? classes.highlight : ''}>Vote{(liked || props.liked) ? 'd' : ''} +{likesCount}</button>
+        <button
+          onClick={handleUpvote}
+          className={(liked || props.liked) ? classes.highlight : ''}
+          disabled={Boolean(liked) || props.liked}
+          >
+            Vote{(liked || props.liked) ? 'd' : ''} +{likesCount}
+        </button>
         <button onClick={handleCopyLink}>Copy Link</button>
         <button onClick={handleShare}>Share</button>
       </div>
