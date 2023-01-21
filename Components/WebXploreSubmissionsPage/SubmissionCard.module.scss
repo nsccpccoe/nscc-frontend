@@ -1,7 +1,7 @@
 .submissionCard {
   box-sizing: border-box;
   color: white;
-  background: hsl(235, 49%, 10%);
+  background: hsl(235, 49%, 15%);
   padding: 16px;
   display: flex;
   gap: 16px;
@@ -39,6 +39,9 @@
       }
       &:active {
         background: hsl(211, 55%, 15%);
+      }
+      &:disabled {
+        cursor: not-allowed;
       }
     }
 
