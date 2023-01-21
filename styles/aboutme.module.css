@@ -68,6 +68,7 @@
 .sectitle {
   position: relative;
   text-align: center;
+  font-family: popins;
   /* margin-top: 90px; */
 }
 .sectitle > :last-child {
@@ -82,7 +83,7 @@
  font-weight: bolder;
   position: relative;
   display: block;
-  font-size: 60px;
+  font-size: 70px;
   line-height: 1em;
   color: #ff8a01;
   font-weight: 500;

@@ -28,13 +28,14 @@ import onkarimg from  "../public/Onkar.png"
 import vaishnaviimg from "../public/vaishanvi.png"
 import rohannoobimg from "../public/Rohannoob.png"
 import manthanimg from  "../public/Manthan.png"
-import kavihsreeimg from "../public/kavihsreeimg"
+import kavihsreeimg from "../public/kavishree.png"
 import athravaimg from "../public/atharva.png"
 import ruchimg from "../public/Rucha.png"
 import darshanimg from  "../public/Darshan.png"
 import karteekimg from "../public/karteek.png"
 import ashishimg from  "../public/ashish.png"
-
+import niveditaimg from "../public/Nivedita.png"
+import shrunotiimg  from "../public/shrunoti.png"
 
 
 const exportdata=[
@@ -198,83 +199,83 @@ const exportdata=[
             {
                 id: 17,
                 name: "Gayatri Sharma",
-                position: "Dsa/Cp Content Co-lead",
-                githublink: "https://github.com/gayatri228 ",
-                twitterlink: "",
-                linkedinlink: "https://www.linkedin.com/in/gayatri-sharma-44944521b/ ",
-                img:""
-            },
-            {
-                id: 18,
-                name: "Gayatri Sharma",
                 position: "Web-Development Co-lead",
                 githublink: "https://github.com/gayatri228 ",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/gayatri-sharma-44944521b/ ",
-                img:""
+                img:gayatri
             },
             {
-                id: 20,
+                id: 18,
+                name: "Manthan Patil",
+                position: "Web-Development Co-lead",
+                githublink: "https://github.com/Mpatil12",
+                twitterlink: "",
+                linkedinlink: "https://www.linkedin.com/in/manthan-patil-15b67820b/  ",
+                img:manthanimg
+            },
+            {
+                id: 19,
                 name: "Harsh Dandge",
                 position: "Design & Social-Media Co-lead",
                 githublink: "https://github.com/Harsh-dandge",
                 twitterlink: "https://twitter.com/HarshDandge",
                 linkedinlink: "https://www.linkedin.com/in/harsh-dandge-919888214/",
-                img:""
+                img:harhimg
             },
             {
-                id: 21,
+                id: 20,
                 name: "Rucha Bachal",
                 position: "Mobile Development Co-lead",
                 githublink: "https://github.com/Ruchab25",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/rucha-bachal-34a93a223/",
-                img:""
+                img:ruchimg
             },
             {
-                id: 22,
+                id: 21,
                 name: "Raj Pate",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/rajpate77725",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/raj-pate-b54793221",
-                img:""
+                img:rajimg
             },
             {
-                id: 23,
+                id: 22,
                 name: "Vedant Patil",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/vedantpatil25",
                 twitterlink: "",
                 linkedinlink: " https://www.linkedin.com/in/vedant-patil-047194224/",
-                img:""
+                img:vedatnimg
             },
             {
-                id: 24,
+                id: 23,
                 name: "Vedang Dadape",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/Vedang12d",
                 twitterlink: "",
                 linkedinlink: "http://www.linkedin.com/in/vedangdadape",
-                img:""
+                img:vedangimg
             },
             {
-                id: 25,
+                id: 24,
                 name: "Nivedita Birajdar",
                 position: "Dsa/Cp Content Co-lead",
                 githublink: "https://github.com/niveditavb05",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/nivedita-birajdar-2a29b4219/",
-                img:""
+                img:niveditaimg
             },
             {
-                id: 26,
+                id: 25,
                 name: "Aditya Gavali",
-                position: "",
+                position: "Event Management Co-lead",
                 githublink: "https://github.com/AdityaGavali",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
-                img:""
+                img:aditya
             },
             {
                 id: 27,
@@ -283,25 +284,34 @@ const exportdata=[
                 githublink: "https://github.com/Shrunoti-Deshmukh",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/shrunoti-deshmukh-0840451b5/",
-                img:""
+                img:shrunotiimg
             },
             {
-                id: 28,
+                id: 26,
                 name: "Sarthak Gunjal",
                 position: "Full-Stack Development Co-lead",
                 githublink: "https://github.com/SarthakGunja",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/sarthak-gunjal-41368720a",
-                img:""
+                img:sarthakimg
             },
             {
-                id: 29,
+                id: 27,
                 name: "Maithili Sude",
                 position: "Event Management Co-lead",
                 githublink: "https://github.com/Maithiligithub19",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/maithili-sude-92b60023a",
-                img:""
+                img:maithilimg
+            },
+            {
+                id: 28,
+                name: "Vaishanvi Jadhav",
+                position: "Full Stack Development Co-lead",
+                githublink: "https://github.com/Vaishnavijadhav31",
+                twitterlink: "",
+                linkedinlink: " https://www.linkedin.com/in/vaishnavi-jadhav-2a8bb7227/",
+                img:vaishnaviimg
             },
            
         ]
@@ -319,8 +329,8 @@ const aboutme = () => {
     <section className={styles.speakerssectionthree}>
         <div className={styles.container}>
            <div className={`${styles.sectitle}  ${styles.textcenter} `}>
-            <span className={styles.title}> Our Team</span>
-            <span className={styles.title}> Our Team</span>
+            <h1 className={styles.title}> Our Team</h1>
+            <h1 className={styles.title}> Our Team</h1>
         </div>
         {exportdata.map((e) => 
  <div key={e.Team} className="teamsection">
@@ -340,9 +350,9 @@ const aboutme = () => {
             </div>
             <div className={styles.socialbox}>
                 <ul className={`${styles.sociallinks} ${styles.socialiconcolored}`}>
-                <li><a href={ele.linkedinlink}><i >{<LinkedInIcon style={{fontSize:"30px" ,margin:"2px -2px" }}/>}</i></a></li>
-                    <li><a href={ele.githublink}><i >{<GitHubIcon style={{fontSize:"30px" ,margin:"2px -2px" }}/>}</i></a></li>
-                    <li><a href={ele.twitterlink}><i >{<TwitterIcon style={{fontSize:"30px" ,margin:"2px -2px" }}/>}</i></a></li>
+                <li><a href={ele.linkedinlink}><i >{<LinkedInIcon style={{fontSize:"24px" ,margin:"4px -2px" }}/>}</i></a></li>
+                    <li><a href={ele.githublink}><i >{<GitHubIcon style={{fontSize:"24px" ,margin:"3px -2px" }}/>}</i></a></li>
+                    <li><a href={ele.twitterlink}><i >{<TwitterIcon style={{fontSize:"24px" ,margin:"3px -2px" }}/>}</i></a></li>
                 </ul>
             </div>
         </div>
