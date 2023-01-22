@@ -182,9 +182,9 @@ const exportdata=[
                 id: 15,
                 name: "Viraj Jadhav",
                 position: "Dsa/Cp Content Co-lead",
-                githublink: "",
-                twitterlink: "",
-                linkedinlink: "",
+                githublink: "https://github.com/virajjadhao5566",
+                twitterlink: "https://twitter.com/viraj_jadhao__",
+                linkedinlink: "https://www.linkedin.com/in/viraj-jadhao-67b222244/",
                 img:viarjimg
             },
             {
