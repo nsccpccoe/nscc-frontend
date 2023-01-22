@@ -247,7 +247,6 @@ const exportdata=[
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/vedantpatil25",
 
-                twitterlink: "https://twitter.com/vedang12d",
 
                 twitterlink: "https://twitter.com/vedantpatil2002",
 
@@ -278,7 +277,6 @@ const exportdata=[
 
                 position: "CP/DSA content Co-lead ",
 
-                position: "Dsa/Cp Content Co-lead",
 
                 githublink: "https://github.com/AdityaGavali",
                 twitterlink: "https://twitter.com/adityagavali03?t=ruboghPF5JXWGpMxBmfs7A&s=09",
