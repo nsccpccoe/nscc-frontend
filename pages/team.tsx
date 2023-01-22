@@ -346,7 +346,7 @@ const team = () => {
             <div>{ele.name}</div>
             </div>
             <div className={styles.infobox}>
-                <h4 className={styles.name}><a href="#">{ele.position}</a></h4>
+                <h4 className={styles.name}>{ele.position}</h4>
             </div>
             <div className={styles.socialbox}>
                 <ul className={`${styles.sociallinks} ${styles.socialiconcolored}`}>
