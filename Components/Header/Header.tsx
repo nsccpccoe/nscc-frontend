@@ -63,9 +63,9 @@ function Navbar() {
   return (
     <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
-        <div className={classes.logo}>
+        <Link href="/" className={classes.logo}>
           <NSCCLogo />
-        </div>
+        </Link>
       </div>
       <div className={classes.navigators}>
         <ul>

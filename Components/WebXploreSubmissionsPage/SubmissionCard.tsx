@@ -44,7 +44,7 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
 
   const handleCopyLink = () => {
     const copyPromise = navigator.clipboard.writeText(
-      `${location.origin}${router.asPath}?submission_id=${props.submission.id}`
+      `${location.origin}${router.pathname}?submission_id=${props.submission.id}`
     )
     toast.promise(copyPromise, {
       pending: `Copying Link to ${props.submission.createdBy}'s Submission`,
@@ -55,7 +55,7 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
 
   const handleShare = () => {
     const copyPromise = navigator.share( {
-      url: `${location.origin}${router.asPath}?submission_id=${props.submission.id}`,
+      text: `Hey!\nCheck out my submission for NSCC's WebXplore Hackathon at ${location.origin}${router.pathname}?submission_id=${props.submission.id}`,
       title: `Checkout ${props.submission.createdBy}'s Submission in WebXplore Hackathon`,
     })
     toast.promise(copyPromise, {
