@@ -95,7 +95,7 @@ const exportdata=[
                 name: "Karteek Ati",
                 position: "DSA/CP Content Lead",
                 githublink: "https://github.com/KarteekAti",
-                twitterlink: "",
+                twitterlink: " https://twitter.com/karteek2002",
                 linkedinlink: "https://www.linkedin.com/in/karteekati/",
                 img:karteekimg
             },
@@ -104,7 +104,7 @@ const exportdata=[
                 name: "Vyankatesh Nyati",
                 position: "DSA/CP Content Lead",
                 githublink: "https://github.com/vyankatesh-nyati",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/Vyankatesh_1405?t=8RwOCwFxhn2oIlRsFqFgiQ&s=09",
                 linkedinlink: " https://www.linkedin.com/in/vyankatesh-nyati-a1aba0202/",
                 img:vyankatesh
             },
@@ -113,7 +113,7 @@ const exportdata=[
                 name: "Ashish Dhane",
                 position: "DSA/CP Challenge Lead",
                 githublink: "https://github.com/ashishbdhane",
-                twitterlink: "",
+                twitterlink: "https://mobile.twitter.com/Dhgavali_",
                 linkedinlink: "https://www.linkedin.com/in/ashish-dhane/",
                 img:ashishimg
             },
@@ -158,7 +158,7 @@ const exportdata=[
                 name: "Rohan Chaudhari",
                 position: "Design Lead",
                 githublink: "https://github.com/rohan77988",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/RohanCh30970294",
                 linkedinlink: "https://www.linkedin.com/in/rohan-chaudhari-b81803211/",
                 img:rohannoobimg
             },
@@ -201,7 +201,7 @@ const exportdata=[
                 name: "Gayatri Sharma",
                 position: "Web-Development Co-lead",
                 githublink: "https://github.com/gayatri228 ",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/_gayatri_228",
                 linkedinlink: "https://www.linkedin.com/in/gayatri-sharma-44944521b/ ",
                 img:gayatri
             },
@@ -228,7 +228,7 @@ const exportdata=[
                 name: "Rucha Bachal",
                 position: "Mobile Development Co-lead",
                 githublink: "https://github.com/Ruchab25",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/Ruchab_25?t=M0g87JCbO220RYC-QXGZcQ&s=09",
                 linkedinlink: "https://www.linkedin.com/in/rucha-bachal-34a93a223/",
                 img:ruchimg
             },
@@ -237,7 +237,7 @@ const exportdata=[
                 name: "Raj Pate",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/rajpate77725",
-                twitterlink: "",
+                twitterlink: " https://twitter.com/rajpate77725",
                 linkedinlink: "https://www.linkedin.com/in/raj-pate-b54793221",
                 img:rajimg
             },
@@ -246,7 +246,11 @@ const exportdata=[
                 name: "Vedant Patil",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/vedantpatil25",
+
+                twitterlink: "https://twitter.com/vedang12d",
+
                 twitterlink: "https://twitter.com/vedantpatil2002",
+
                 linkedinlink: " https://www.linkedin.com/in/vedant-patil-047194224/",
                 img:vedatnimg
             },
@@ -271,7 +275,11 @@ const exportdata=[
             {
                 id: 25,
                 name: "Aditya Gavali",
+
+                position: "CP/DSA content Co-lead ",
+
                 position: "Dsa/Cp Content Co-lead",
+
                 githublink: "https://github.com/AdityaGavali",
                 twitterlink: "https://twitter.com/adityagavali03?t=ruboghPF5JXWGpMxBmfs7A&s=09",
                 linkedinlink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
@@ -300,7 +308,7 @@ const exportdata=[
                 name: "Maithili Sude",
                 position: "Event Management Co-lead",
                 githublink: "https://github.com/Maithiligithub19",
-                twitterlink: "",
+                twitterlink: "https://mobile.twitter.com/SudeMaithili",
                 linkedinlink: "https://www.linkedin.com/in/maithili-sude-92b60023a",
                 img:maithilimg
             },
@@ -309,7 +317,7 @@ const exportdata=[
                 name: "Vaishanvi Jadhav",
                 position: "Full Stack Development Co-lead",
                 githublink: "https://github.com/Vaishnavijadhav31",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/Vaishna30659064?s=09",
                 linkedinlink: " https://www.linkedin.com/in/vaishnavi-jadhav-2a8bb7227/",
                 img:vaishnaviimg
             },
