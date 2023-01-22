@@ -9,6 +9,24 @@ import { onAuthStateChanged } from "@firebase/auth";
 import Link from "next/link";
 import { Rings } from "react-loader-spinner";
 
+function shuffle<T = unknown>(array: T[]): T[] {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 function WebXploreSubmissionsPage() {
 
   const router = useRouter()
@@ -120,9 +138,11 @@ function WebXploreSubmissionsPage() {
     return submission.id === userId.value
   })[0];
 
-  const otherSubmissions: WebXploreSubmissionResult["data"][] = submissions.data.filter(submission => {
+  const otherSubmissionsRaw: WebXploreSubmissionResult["data"][] = submissions.data.filter(submission => {
     return !featuredSubmission || submission.id !== featuredSubmission.id
   });
+
+  const otherSubmissions: WebXploreSubmissionResult["data"][] = shuffle<WebXploreSubmissionResult["data"]>(otherSubmissionsRaw);
 
   const mySubmission = submissions.data.filter((submission) => submission.id === userId.value)[0];
 
