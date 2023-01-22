@@ -75,7 +75,7 @@ function Event() {
     },
     {
       id: 3,
-      text: 'It is allowd to copy paste from any online resources! Make sure your website does not got out of theme'
+      text: 'It is allowed to copy paste from any online resources! Make sure your website does not got out of theme'
     }
   ]
 
