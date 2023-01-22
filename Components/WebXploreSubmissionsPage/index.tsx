@@ -131,7 +131,7 @@ function WebXploreSubmissionsPage() {
       <div>Submissions</div>
       <h1>WebXplore Hackathon</h1>
       {
-        featuredSubmissionID && !featuredSubmission &&
+        featuredSubmissionID && submissions.loading && !featuredSubmission &&
         <div style={{color: 'red'}}>Submission with id: <i>{featuredSubmissionID}</i> Not Found!</div>
       }
       {!userId.loading && !Boolean(userId.value) &&
