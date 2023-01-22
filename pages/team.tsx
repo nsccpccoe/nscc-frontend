@@ -255,7 +255,7 @@ const exportdata=[
                 name: "Vedang Dadape",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/Vedang12d",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/vedang12d",
                 linkedinlink: "http://www.linkedin.com/in/vedangdadape",
                 img:vedangimg
             },
