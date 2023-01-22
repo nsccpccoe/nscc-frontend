@@ -271,9 +271,9 @@ const exportdata=[
             {
                 id: 25,
                 name: "Aditya Gavali",
-                position: "Event Management Co-lead",
+                position: "Dsa/Cp Content Co-lead",
                 githublink: "https://github.com/AdityaGavali",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/adityagavali03?t=ruboghPF5JXWGpMxBmfs7A&s=09",
                 linkedinlink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
                 img:aditya
             },
