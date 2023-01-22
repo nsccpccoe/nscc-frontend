@@ -15,12 +15,12 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#">
+                {/* <a href="#">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M34 16.01C33 16.5 32.02 16.699 31 17C29.879 15.735 28.217 15.665 26.62 16.263C25.023 16.861 23.977 18.323 24 20V21C20.755 21.083 17.865 19.605 16 17C16 17 11.818 24.433 20 28C18.128 29.247 16.261 30.088 14 30C17.308 31.803 20.913 32.423 24.034 31.517C27.614 30.477 30.556 27.794 31.685 23.775C32.0218 22.5527 32.189 21.2899 32.182 20.022C32.18 19.773 33.692 17.25 34 16.009V16.01Z" stroke="#E6E6E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#E6E6E6"/>
                     </svg>
-                </a>
+                </a> */}
 
                 <a href="mailto:nscc@pccoepune.org" target="_blank" rel="noreferrer">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
