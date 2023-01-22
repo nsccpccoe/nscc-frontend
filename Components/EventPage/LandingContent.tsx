@@ -27,10 +27,22 @@ function LandingContent(props: contestProps) {
           {props.content}
         </p>
       </div>
+      {
+        props.name === 'WebXplore' &&
+        <div>Website Theme: Any College Club (Ex: Coding Club, Art Circle, etc)</div>
+      }
       <Link
         className={classes.regButton}
         href={props.regLink}
-        >Register</Link>
+      >Register</Link>
+      {
+        props.name === 'WebXplore' &&
+        <Link
+          className={classes.regButton}
+          href="/events/webxplore/submissions"
+          style={{ marginLeft: '16px' }}
+        >Submissions</Link>
+      }
     </div>
   );
 }
