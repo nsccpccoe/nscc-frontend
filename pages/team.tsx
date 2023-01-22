@@ -182,9 +182,9 @@ const exportdata=[
                 id: 15,
                 name: "Viraj Jadhav",
                 position: "Dsa/Cp Content Co-lead",
-                githublink: "",
-                twitterlink: "",
-                linkedinlink: "",
+                githublink: "https://github.com/virajjadhao5566",
+                twitterlink: "https://twitter.com/viraj_jadhao__",
+                linkedinlink: "https://www.linkedin.com/in/viraj-jadhao-67b222244/",
                 img:viarjimg
             },
             {
@@ -246,7 +246,11 @@ const exportdata=[
                 name: "Vedant Patil",
                 position: "Dsa/Cp Contest Co-lead",
                 githublink: "https://github.com/vedantpatil25",
+
                 twitterlink: "https://twitter.com/vedang12d",
+
+                twitterlink: "https://twitter.com/vedantpatil2002",
+
                 linkedinlink: " https://www.linkedin.com/in/vedant-patil-047194224/",
                 img:vedatnimg
             },
@@ -271,7 +275,11 @@ const exportdata=[
             {
                 id: 25,
                 name: "Aditya Gavali",
+
                 position: "CP/DSA content Co-lead ",
+
+                position: "Dsa/Cp Content Co-lead",
+
                 githublink: "https://github.com/AdityaGavali",
                 twitterlink: "https://twitter.com/adityagavali03?t=ruboghPF5JXWGpMxBmfs7A&s=09",
                 linkedinlink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
