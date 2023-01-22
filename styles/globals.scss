@@ -45,3 +45,11 @@ $scroll-bar-width: 12px;
 @media not screen and (hover: none) {
   @include scrollbar;
 }
+
+@media only screen and (max-width: 768px) {
+  body::after {
+    content: "";
+    display: block;
+    height: 100px;
+  }
+}
