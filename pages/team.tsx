@@ -104,7 +104,7 @@ const exportdata=[
                 name: "Vyankatesh Nyati",
                 position: "DSA/CP Content Lead",
                 githublink: "https://github.com/vyankatesh-nyati",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/Vyankatesh_1405?t=8RwOCwFxhn2oIlRsFqFgiQ&s=09",
                 linkedinlink: " https://www.linkedin.com/in/vyankatesh-nyati-a1aba0202/",
                 img:vyankatesh
             },
@@ -158,7 +158,7 @@ const exportdata=[
                 name: "Rohan Chaudhari",
                 position: "Design Lead",
                 githublink: "https://github.com/rohan77988",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/RohanCh30970294",
                 linkedinlink: "https://www.linkedin.com/in/rohan-chaudhari-b81803211/",
                 img:rohannoobimg
             },
@@ -201,7 +201,7 @@ const exportdata=[
                 name: "Gayatri Sharma",
                 position: "Web-Development Co-lead",
                 githublink: "https://github.com/gayatri228 ",
-                twitterlink: "",
+                twitterlink: "https://twitter.com/_gayatri_228",
                 linkedinlink: "https://www.linkedin.com/in/gayatri-sharma-44944521b/ ",
                 img:gayatri
             },
@@ -271,7 +271,7 @@ const exportdata=[
             {
                 id: 25,
                 name: "Aditya Gavali",
-                position: "Event Management Co-lead",
+                position: "CP/DSA content Co-lead ",
                 githublink: "https://github.com/AdityaGavali",
                 twitterlink: "",
                 linkedinlink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
@@ -300,7 +300,7 @@ const exportdata=[
                 name: "Maithili Sude",
                 position: "Event Management Co-lead",
                 githublink: "https://github.com/Maithiligithub19",
-                twitterlink: "",
+                twitterlink: "https://mobile.twitter.com/SudeMaithili",
                 linkedinlink: "https://www.linkedin.com/in/maithili-sude-92b60023a",
                 img:maithilimg
             },
