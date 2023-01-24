@@ -312,7 +312,7 @@ const exportdata=[
             },
             {
                 id: 28,
-                name: "Vaishanvi Jadhav",
+                name: "Vaishnavi Jadhav",
                 position: "Full Stack Development Co-lead",
                 githublink: "https://github.com/Vaishnavijadhav31",
                 twitterlink: "https://twitter.com/Vaishna30659064?s=09",
