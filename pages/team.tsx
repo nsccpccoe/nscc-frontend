@@ -34,7 +34,7 @@ import ruchimg from "../public/Rucha.png"
 import darshanimg from  "../public/Darshan.png"
 import karteekimg from "../public/karteek.png"
 import ashishimg from  "../public/ashish.png"
-import niveditaimg from "../public/Nivedita.png"
+import niveditaimg from "../public/nivi.jpg"
 import shrunotiimg  from "../public/shrunoti.png"
 
 
