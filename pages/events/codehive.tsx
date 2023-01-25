@@ -34,7 +34,7 @@ const descArray = [{
 },
 {
   id: 2,
-  text: 'join us in celebrating Republic Day with our first ever coding contest! The 3 hours contest comprises 8 problems, 4 cake-walk problems,  2 medium-level problems, and 2 hard-level problems. You have the freedom to choose any language of your choice. Each problem will have partial marking, and the winner will be the participant who scores maximum points at the earliest.'
+  text: 'oin us in celebrating Republic Day with our first ever coding contest! The 3 hours contest comprises 8 problems, 4 cake-walk problems,  2 medium-level problems, and 2 hard-level problems. You have the freedom to choose any language of your choice. Each problem will have partial marking, and the winner will be the participant who scores maximum points at the earliest.'
 },
 {
   id: 3,
