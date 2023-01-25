@@ -34,7 +34,7 @@ import ruchimg from "../public/Rucha.png"
 import darshanimg from  "../public/Darshan.png"
 import karteekimg from "../public/karteek.png"
 import ashishimg from  "../public/ashish.png"
-import niveditaimg from "../public/nivi.jpg"
+import niveditaimg from "../public/Nivedita.png"
 import shrunotiimg  from "../public/shrunoti.png"
 
 
@@ -312,7 +312,7 @@ const exportdata=[
             },
             {
                 id: 28,
-                name: "Vaishnavi Jadhav",
+                name: "Vaishanvi Jadhav",
                 position: "Full Stack Development Co-lead",
                 githublink: "https://github.com/Vaishnavijadhav31",
                 twitterlink: "https://twitter.com/Vaishna30659064?s=09",
