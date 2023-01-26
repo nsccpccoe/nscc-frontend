@@ -22,6 +22,8 @@ import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordR
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+
+
 interface InitialState {
   firstName: string,
   lastName: string,
@@ -212,7 +214,9 @@ const Auth = () => {
             auth,
             email,
             password
-          );
+          )
+          
+               
 
           toast("signup successfull", {
             position: "top-right",
@@ -249,6 +253,8 @@ const Auth = () => {
  
 
   };
+
+  
   const handleaddclassName = () => {
     setState(initialState)
     setIsActive(current => !current);

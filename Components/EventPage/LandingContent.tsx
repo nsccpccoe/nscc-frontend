@@ -28,7 +28,15 @@ function LandingContent(props: contestProps) {
         </p>
       </div>
       {
-        props.name === 'WebXplore' &&
+        props.name === 'CodeHive' &&
+        <div>Contest Link : <Link
+        className={classes.regButton}
+        href="https://www.hackerrank.com/codehive"
+      >Enter</Link></div>
+        
+      }
+      {
+        props.name === 'Codehive' &&
         <div>Website Theme: Any College Club (Ex: Coding Club, Art Circle, etc)</div>
       }
       <Link
