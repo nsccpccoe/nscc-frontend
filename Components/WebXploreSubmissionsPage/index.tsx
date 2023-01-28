@@ -108,6 +108,11 @@ function WebXploreSubmissionsPage() {
       return
     }
 
+    if(input.value.includes("nsccpccoe.web.app")) {
+      toast.error('Invalid Website');
+      return
+    }
+
     const submissionRequest = fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/webxplore/submit', {
       method: 'POST',
       headers: {
