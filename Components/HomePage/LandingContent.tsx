@@ -10,7 +10,7 @@ function LandingContent() {
         <h1>Coding Club</h1>
       </div>
       <div className={classes.college}>
-        <h3>Pimpri Chinchwad College of Engineering</h3>
+        <h3>Pimpri Chinchwad College of Engineering, Pune</h3>
       </div>
       <div className={classes.clubInfo}>
         <h2>Unbelievable Coders for Extraordinary Apps</h2>

@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div className={styles.lowerfooter}>
             <p>
-                © 2021 Newton School Coding Club, <a className={styles.pccoelink} href="http://www.pccoepune.com/" target="_blank" rel="noreferrer">Pimpri Chinchwad College of Engineering.</a> All Right Reserved.
+                © 2021 Newton School Coding Club, <a className={styles.pccoelink} href="http://www.pccoepune.com/" target="_blank" rel="noreferrer">Pimpri Chinchwad College of Engineering, Pune.</a> All Right Reserved.
             </p>
         </div>
     </div>
