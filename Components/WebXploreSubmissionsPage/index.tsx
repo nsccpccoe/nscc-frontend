@@ -101,6 +101,12 @@ function WebXploreSubmissionsPage() {
   const handleSubmission = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
+
+    if(Date.now() >= 1674973800000) {
+      toast.error('Hackathon Ended!');
+      return
+    }
+
     const input = inputRef.current;
     if (input === null) return;
     if(Boolean(userId.value) === false) {

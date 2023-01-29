@@ -16,6 +16,11 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
     event.stopPropagation();
     if(liked) return;
 
+    if(Date.now() >= 1674973800000) {
+      toast.error('Hackathon Ended!');
+      return
+    }
+
     if(Boolean(localStorage.getItem('accessToken')) === false) {
       toast.error('Please Login to Vote!')
       return
