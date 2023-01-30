@@ -1,7 +1,6 @@
 import classes from "./SubmissionCard.module.scss";
 import Link from "next/link";
 import { CustomError, WebXploreSubmissionResult } from "../interfaces/event.interface";
-import HeartIcon from "../../assets/heart.svg";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -79,6 +78,11 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
         <img src={props.submission.screenshot} />
       </Link>
       <div>{props.submission.title}</div>
+      <div>
+        <div>Status: Eligibility Check Pending</div>
+        <div title="Number of Upvotes By Verified Account">Valid Upvotes: {props.submission.validLikes}</div>
+        <div>Total Score: Pending</div>
+      </div>
       <div className={classes.actionButtons}>
         <button
           onClick={handleUpvote}

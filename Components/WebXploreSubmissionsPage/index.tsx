@@ -149,11 +149,13 @@ function WebXploreSubmissionsPage() {
     return submission.id === userId.value
   })[0];
 
-  const otherSubmissionsRaw: WebXploreSubmissionResult["data"][] = submissions.data.filter(submission => {
-    return !featuredSubmission || submission.id !== featuredSubmission.id
-  });
+  const otherSubmissions: WebXploreSubmissionResult["data"][] = submissions.data
+    .filter(submission => {
+      return !featuredSubmission || submission.id !== featuredSubmission.id
+    })
+    .sort((a, b) => b.validLikes - a.validLikes)
 
-  const otherSubmissions: WebXploreSubmissionResult["data"][] = shuffle<WebXploreSubmissionResult["data"]>(otherSubmissionsRaw);
+  // const otherSubmissions: WebXploreSubmissionResult["data"][] = shuffle<WebXploreSubmissionResult["data"]>(otherSubmissionsRaw);
 
   const mySubmission = submissions.data.filter((submission) => submission.id === userId.value)[0];
 
