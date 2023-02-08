@@ -102,7 +102,7 @@ const exportdata=[
             {
                 id: 7,
                 name: "Vyankatesh Nyati",
-                position: "DSA/CP Content Lead",
+                position: "Full Stack Development Lead",
                 githublink: "https://github.com/vyankatesh-nyati",
                 twitterlink: "https://twitter.com/Vyankatesh_1405?t=8RwOCwFxhn2oIlRsFqFgiQ&s=09",
                 linkedinlink: " https://www.linkedin.com/in/vyankatesh-nyati-a1aba0202/",
