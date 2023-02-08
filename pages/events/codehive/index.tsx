@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
-import Landing from "../../Components/EventPage/Landing";
-import { FluidContainer } from "../../Components/FluidContainer/FluidContainer";
-import Eventdescription from "../../Components/EventPage/Eventdescription"
+import Landing from "../../../Components/EventPage/Landing";
+import { FluidContainer } from "../../../Components/FluidContainer/FluidContainer";
+import Eventdescription from "../../../Components/EventPage/Eventdescription"
 
 
 const eventDetail = [
