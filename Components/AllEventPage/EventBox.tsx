@@ -24,6 +24,9 @@ type ElementProps = {
 }
 
 const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
+
+  events.sort((a, b) => a.startAt - b.startAt)
+
   return (
     <div className={classes.container}>
       <div className={classes.content}>
@@ -33,6 +36,7 @@ const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
         {
           errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.map(event => {
             return <EventElement
+              event={event}
               key={event.id}
               type={event.subtitle}
               heading={event.displayName}

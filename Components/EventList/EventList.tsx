@@ -20,6 +20,7 @@ const EventList: React.FC<ElementProps> = ({ heading, events }) => {
         ? `No ${heading} were found`
         : events.map(event => <>
             <EventRow
+              event={event}
               key={event.id}
               eventName={event.displayName}
               date={new Date(event.startAt).toLocaleString("en-IN")}

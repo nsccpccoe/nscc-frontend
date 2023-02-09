@@ -23,7 +23,7 @@
 .content {
   /* text-align: center; */
   margin: 2rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .content p {

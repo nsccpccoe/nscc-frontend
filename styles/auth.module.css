@@ -33,7 +33,7 @@
 }
 
 .containerloginform {
-  /* background: #fff; */
+
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -41,12 +41,12 @@
   width: 70vw;
   max-width: 100%;
   min-height: 80vh;
+
 }
 
 .form-containerloginform form {
   display: flex;
   flex-direction: column;
-  /* padding:  2rem; */
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -55,6 +55,14 @@
 
 .socialcontainerloginform {
   margin: 1rem 10rem;
+}
+
+.social {
+  cursor: pointer;
+  transition: all 250ms;
+}
+.social:active {
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 
 .socialcontainerloginform div {
@@ -81,7 +89,6 @@
 .loginsignupform button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
-  /* background: #ff445c; */
   background: linear-gradient(
     189.19deg,
     #192656 42.16%,
@@ -115,6 +122,7 @@
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+
 }
 
 .signincontainerloginform {
@@ -230,8 +238,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* margin-right:6vw; */
+
 }
 .signinadjust {
   display: flex;
@@ -268,7 +275,7 @@
   background: #eee;
   border: none;
   padding: 12px 15px;
-  /* margin: 8px 0; */
+
   width: 20vw;
   outline: none;
   border-radius: 0.5rem;
@@ -294,7 +301,7 @@
 }
 
 .signupsubmit {
-  width: 10vw;
+  width: 12vw;
   margin: 2vh 10vw;
 }
 .signinbutton {
@@ -302,7 +309,7 @@
   margin: 2vh 8vw;
   display: flex;
   justify-content: center;
-  /* border-radius: 50%; */
+
 }
 
 .singinheader {
@@ -321,11 +328,17 @@
 }
  .signinbutton {
     width: 10vw;
-  /* margin: 2vh 23vw; */
+
 }
+/* .signupcontainerloginform {
+  overflow-y: scroll;
+ 
+} */
 
 @media (max-width: 1400px) and (min-width:1000px) {
+ 
   .socialcontainerloginform {
+
     margin: 1rem 10vw;
   }
   .loginspan {
@@ -335,13 +348,13 @@
   .Loginsignupheader {
     font-weight: bold;
     margin: 2rem 3.3vw;
-    margin-top: 4rem;
+    margin-top: 0.5rem;
   }
   .formcontainerloginformforget input {
     background: #eee;
     border: none;
     padding: 12px 15px;
-    width: 10vw;
+    width: 100px;
     outline: none;
     border-radius: 0.5rem;
   }
@@ -352,8 +365,8 @@
     /* width: 12vw; */
   }
   .signupsubmit {
-    /* width: 65vw; */
-    margin: 2vh 8vw;
+    width: 20vw;
+    margin: 2vh 5vw;
     display:flex;
     justify-content: center;
   }
@@ -363,7 +376,9 @@
   }
   .signinbutton {
     
+    width:20vh;
     margin: 2vh 5vw;
+ 
   }
   .adjustsocial {
     margin: 1vh 7vw;
@@ -385,6 +400,7 @@
   .socialcontainerloginform {
     margin: 1rem -10vw;
   }
+ 
   .loginspan {
     margin: 0rem 2vw;
     font-size: 16px;
@@ -393,7 +409,7 @@
   .Loginsignupheader {
     font-weight: bold;
     margin: 2rem 3.3vw;
-    margin-top: 3rem;
+    margin-top: -0.2rem;
     margin-left: -15vw;
   }
   .formcontainerloginformforget input {
@@ -429,8 +445,8 @@
     margin-top: 6rem;
   }
   .signinbutton {
-    /* width:20vw; */
-    margin: 2vh 22vw;
+    width:20vw;
+    margin: 2vh 20vw;
    
   }
   .adjustsocial {
@@ -625,6 +641,14 @@
     content: "💀";
     font-size: 28px;
   } 
+  .signinbutton{
+    width: 40vw;
+    margin: 0vw  12vw;
+  }
+  .signupsubmit {
+    width: 50vw;
+    margin:3vw 9vw;
+  }
   
   .signupghost{
     margin-top:-25vw;
@@ -652,4 +676,12 @@
     margin-left: -25vw;
     z-index: 4;
   }
+  .Loginsignupheader {
+    font-weight: bold;
+    /* margin: 0rem 3.3vw; */
+    margin-top: 0.5rem;
+    margin-left: -30vw;
+  }
+ 
+
 }

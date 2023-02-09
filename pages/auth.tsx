@@ -22,6 +22,8 @@ import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordR
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+
+
 interface InitialState {
   firstName: string,
   lastName: string,
@@ -49,9 +51,7 @@ const Auth = () => {
   const [activeuser, setActiveuser] = useState("login");
   // const [googleuser, setgoogleUser] = useState<any | null>(null);
 
-
-   
-   
+  const redirectPath = typeof router.query["redirect"] === "string" ? router.query["redirect"] : "/";
 
   const googleauth = new GoogleAuthProvider();
   const googleSignin = async () => {
@@ -70,7 +70,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
-      router.push('/')
+      router.push(redirectPath)
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -119,7 +119,7 @@ const Auth = () => {
         theme: "dark",
       }
       );
-      router.push('/')
+      router.push(redirectPath)
     } catch (err) {
       if (err instanceof FirebaseError) toast(err.code, {
         position: "top-right",
@@ -172,7 +172,7 @@ const Auth = () => {
           );
 
           toast.success("signin successfull");
-          router.push('/')
+          router.push(redirectPath)
     
         }
         catch (err) {
@@ -214,7 +214,9 @@ const Auth = () => {
             auth,
             email,
             password
-          );
+          )
+          
+               
 
           toast("signup successfull", {
             position: "top-right",
@@ -228,7 +230,7 @@ const Auth = () => {
           }
           );
           
-          router.push('/')
+          router.push(redirectPath)
         } catch (err) {
           // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
@@ -251,6 +253,8 @@ const Auth = () => {
  
 
   };
+
+  
   const handleaddclassName = () => {
     setState(initialState)
     setIsActive(current => !current);

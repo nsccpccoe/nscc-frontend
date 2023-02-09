@@ -1,0 +1,58 @@
+.submissionCard {
+  box-sizing: border-box;
+  color: white;
+  background: hsl(235, 49%, 15%);
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: left;
+  max-width: 400px;
+  border-radius: 8px;
+
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .actionButtons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 6px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      background: none;
+      border: 2px solid #79dfc8;
+      color: #79dfc8;
+      cursor: pointer;
+      &:hover {
+        background: hsl(211, 55%, 12%);
+      }
+      &:active {
+        background: hsl(211, 55%, 15%);
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    button.highlight {
+      background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+      color: #193655;
+      border: none;
+    }
+  }
+}
+
+.featured {
+  border: 2px solid #7a9ce0;
+}

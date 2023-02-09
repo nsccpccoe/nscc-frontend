@@ -5,13 +5,12 @@
     align-items: center;
     margin: 3vw;
     color: white;
-    position: relative
+    position: relative;
 }
-
 
 .activities {
     width: 100%;
-    margin: 5rem;
+    margin-top: 5rem;
     border-radius: 10px;
     padding: 4rem;
     background-color: #192656;
@@ -23,7 +22,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-    line-height: 72px;
+    margin-bottom: 16px;
 }
 
 .points {
@@ -32,10 +31,8 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    text-align: justify;
     text-transform: capitalize;
     list-style: disc;
-    margin-top: 2rem;
     position: relative;
     left: 2%;
     z-index: -1;
@@ -56,15 +53,17 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2vw;
-    line-height: 3vw;
+    line-height: 1rem;
     margin: 2vw;
 }
 
 @media(min-width: 767px) and (max-width: 1024px) {
     .main {
         flex-direction: column;
-        padding: 5vw;
-        margin: 5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 
     .content {
@@ -72,27 +71,41 @@
         height: 26vw;
     }
 
-    .content p{
+    .content p {
         font-size: 2.3vw;
         line-height: 3.3vw;
+    }
+
+    .points {
+        font-size: 2.3vw;
     }
 }
 
 @media(max-width: 767px) {
     .main {
         flex-direction: column;
-        padding: 10vw;
-        margin: 10vw;
+        /* padding-left: 0 10vw;
+        padding-right: 10vw; */
+        padding : 0 10vw;
+        margin: auto 10vw;
     }
 
     .content {
-         display: none;
+        display: none;
+    }
+
+    .points {
+        font-size: 1.3em;
+    }
+
+    .title {
+        font-size: 2em;
     }
 
 }
 
 @media (min-width: 1025px) {
-    .content p{
+    .content p {
         font-size: 32px;
         line-height: 38px;
         margin: 2rem;
