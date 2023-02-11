@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
+import { getFunctions } from "firebase/functions";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMpZaQSX1yNmPNv7nwNG45mGpbOOl1vGc",
@@ -21,18 +21,6 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 const storage = getStorage(app);
-// const analytics = getAnalytics(app);
-
-
-// for setting up the firebase emulator 
-
-// // eslint-disable-next-line no-restricted-globals
-// if (location.hostname === 'localhost') {
-//   connectAuthEmulator(auth, "http://127.0.0.1:9099");
-//   // connectFirestoreEmulator(db, 'localhost', 8080);
-// }
-
-// eslint-disable-next-line no-restricted-globals
 
 // if (
 //   typeof location !== "undefined" &&
@@ -41,6 +29,5 @@ const storage = getStorage(app);
 //   connectAuthEmulator(auth, "http://127.0.0.1:9099");
 //   connectFirestoreEmulator(db, "localhost", 8080);
 // }
-// connectFirestoreEmulator(db, "localhost", 8080);
 
-export { auth, db, storage };
+export { auth, db, storage};
