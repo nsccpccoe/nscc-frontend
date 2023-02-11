@@ -3,11 +3,11 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import {useState } from "react";
+import { useState } from "react";
 
 import { auth } from "../firebase";
 import styles from "../styles/auth.module.css"
-import { toast, } from "react-toastify";
+import { toast, ToastOptions } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css'
 
@@ -18,19 +18,20 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
 
 import "firebase/compat/auth";
-import { signInWithPopup, GoogleAuthProvider,  GithubAuthProvider ,sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider, sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 import Link from "next/link";
 
 
 interface InitialState {
-  firstName: string,
-  lastName: string,
-  email: string,
-  password: string,
-  confirmPassword: string,
+  firstName: string
+  lastName: string
+  email: string
+  password: string
+  confirmPassword: string
 }
+
 const initialState: InitialState = {
   firstName: "",
   lastName: "",
@@ -39,11 +40,19 @@ const initialState: InitialState = {
   confirmPassword: ""
 }
 
-
-
+const toastOptions: ToastOptions = {
+  position: "top-right",
+  autoClose: 2000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "dark",
+};
 
 const Auth = () => {
-  let router= useRouter()
+  let router = useRouter()
   const [state, setState] = useState<InitialState>(initialState);
   const [signUp, setSignUp] = useState(false);
   const [isActive, setIsActive] = useState(true);
@@ -59,98 +68,35 @@ const Auth = () => {
       // console.log("hello")
       const result = await signInWithPopup(auth, googleauth);
 
-      toast("login successfull", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      }
-      );
+      toast("login successfull", toastOptions);
       router.push(redirectPath)
     } catch (err) {
-      if (err instanceof FirebaseError) toast(err.code, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      }
-      )
+      if (err instanceof FirebaseError) toast(err.code, toastOptions);
     }
   }
   const googlesignOut = async () => {
     await auth.signOut();
 
-    toast("signout successfull", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    }
-    );
+    toast("signout successfull", toastOptions);
   }
 
   const githubauth = new GithubAuthProvider();
 
   const githubSignin = async () => {
     try {
-      // console.log("hello")
       const result = await signInWithPopup(auth, githubauth);
 
-      toast("login successfull", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      }
-      );
+      toast("login successfull", toastOptions);
       router.push(redirectPath)
     } catch (err) {
-      if (err instanceof FirebaseError) toast(err.code, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      }
-      );
+      if (err instanceof FirebaseError) toast(err.code, toastOptions);
     }
   }
   const githubSignout = async () => {
     await auth.signOut();
 
-    toast("signout successfull", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    }
-    );
+    toast("signout successfull", toastOptions);
   }
-
- 
 
   const { email, password, firstName, lastName, confirmPassword } = state;
 
@@ -173,36 +119,15 @@ const Auth = () => {
 
           toast.success("signin successfull");
           router.push(redirectPath)
-    
+
         }
         catch (err) {
-          if (err instanceof FirebaseError) toast(err.code, {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          }
-          )
-
+          if (err instanceof FirebaseError)
+            toast(err.code, toastOptions);
         }
 
       } else {
-        toast("All fields are mandatory to fill", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        }
-
-        );
+        toast("All fields are mandatory to fill", toastOptions);
       }
     } else {
       if (password !== confirmPassword) {
@@ -214,22 +139,14 @@ const Auth = () => {
             auth,
             email,
             password
-          )
-          
-               
-
-          toast("signup successfull", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          }
           );
-          
+
+          await updateProfile(user, {
+            displayName: firstName + " " + lastName
+          });
+
+          toast("signup successfull", toastOptions);
+
           router.push(redirectPath)
         } catch (err) {
           // console.error(err);
@@ -237,40 +154,23 @@ const Auth = () => {
         }
 
       } else {
-        toast("All fields are mandatory to fill", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        }
-        );
+        toast("All fields are mandatory to fill", toastOptions);
       }
     }
- 
-
   };
 
-  
-  const handleaddclassName = () => {
+
+  const handleAddClassName = () => {
     setState(initialState)
     setIsActive(current => !current);
   };
 
-
   return (
-
     <>
       <FluidContainer />
       <ToastContainer />
 
-
       <div className={styles.loginsignupform}>
-
-
         <div className={` ${styles.containerloginform}  ${isActive ? "" : `${styles.rightpanelactive}`}`} id="containerloginform">
           <div className={`${styles.formcontainerloginform} ${styles.signupcontainerloginform}`}>
             <form onSubmit={handleAuth}>
@@ -279,7 +179,7 @@ const Auth = () => {
                 <div className={styles.social}>
 
                   <GoogleIcon onClick={googleSignin} />
-        
+
                 </div>
                 <div className={styles.social}>
                   <GitHubIcon onClick={githubSignin} />
@@ -294,7 +194,7 @@ const Auth = () => {
                   name="firstName"
                   value={firstName}
                   onChange={handleChange}
-                  // style={{ width: "12vw" }}
+                // style={{ width: "12vw" }}
                 />
                 <input
                   type="text"
@@ -304,7 +204,7 @@ const Auth = () => {
                   value={lastName}
                   // style={{ width: "12vw" }}
                   onChange={handleChange}
-                  
+
                 />
               </div>
               <div className={styles.emailpass}>
@@ -332,7 +232,7 @@ const Auth = () => {
                   value={confirmPassword}
                   onChange={handleChange}
                 />
-                <button  className={styles.signupsubmit}  onClick={() => setSignUp(true)}>Sign Up</button>
+                <button className={styles.signupsubmit} onClick={() => setSignUp(true)}>Sign Up</button>
 
               </div>
             </form>
@@ -340,9 +240,9 @@ const Auth = () => {
           <div className={`${styles.formcontainerloginform} ${styles.signincontainerloginform}`}>
             <form onSubmit={handleAuth}>
               <h1 className={styles.singinheader}  >Sign in</h1>
-              <div className={ ` ${styles.socialcontainerloginform} ${styles.adjustsocial}  `}>
+              <div className={` ${styles.socialcontainerloginform} ${styles.adjustsocial}  `}>
 
-                <div  className={styles.social}>
+                <div className={styles.social}>
                   <GoogleIcon onClick={googleSignin} />
                 </div>
                 <div className={styles.social}>
@@ -365,9 +265,9 @@ const Auth = () => {
                   name="password"
                   value={password}
                   onChange={handleChange} />
-                    <Link href="/forgetpassword" style={{ margin: "2vh 0vw" ,cursor:"pointer", color:"white"}}>Forgot password?</Link>
-             
-                <button  className={styles.signinbutton}  onClick={() => setSignUp(false)}>Sign In</button>
+                <Link href="/forgetpassword" style={{ margin: "2vh 0vw", cursor: "pointer", color: "white" }}>Forgot password?</Link>
+
+                <button className={styles.signinbutton} onClick={() => setSignUp(false)}>Sign In</button>
               </div>
             </form>
           </div>
@@ -379,7 +279,7 @@ const Auth = () => {
                   To keep connected with us please login with your personal info
                 </p>
                 <button
-                  onClick={() => { handleaddclassName() }}
+                  onClick={() => { handleAddClassName() }}
                   className={`${styles.ghost} ${styles.signghost}`} id="signIn">
                   Sign In
                 </button>
@@ -388,7 +288,7 @@ const Auth = () => {
                 <h1 className={styles.hello}>Hello, Friend!</h1>
                 <p className={styles.startjou}>Enter your personal details and start journey with us</p>
                 <button
-                  onClick={() => { handleaddclassName() }}
+                  onClick={() => { handleAddClassName() }}
                   className={`${styles.ghost} ${styles.signupghost}`} id="signUp">
                   Sign Up
                 </button>
