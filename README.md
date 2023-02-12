@@ -22,7 +22,8 @@ Check This [Issue](https://github.com/nsccpccoe/nscc-frontend/issues/1) to Track
 Designs: https://www.figma.com/file/lLxOnIBTvsK6c4XfRyAjWX/Newton-School-Coding-Club
 
 1. Press the green <> Code button once forked and copy the link
-2. In your desired directory on your local machine using the command line: `git clone` + the copied link
+2. In your desired directory on your local machine using the command line
+```git clone``` + copied link
 3. Open the repository file in your preferred IDE
 4. Install Dependencies
 ```bash
@@ -32,8 +33,7 @@ npm i
 ```bash
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
 
 <a name = "about-us"></a>
 ## About Us 😀
@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Newton School Coding Club is a coding community who finds excitement in competitive programming, user experience design, app development, machine learning, and more. Our goal is for the members of this club to be able to cultivate crucial skills that will enable them to have successful and impactful careers. To do so, we participate in hackathons, coding contests, and seminars.
 
 <a name ="contribution-policy"></a>
-## How you can help! 🚧
+## How you can help! ✍️
 
 Raising issues to a repository is a great way to provide feedback and bring attention to potential improvements. However, if you are looking to directly suggest code suggestions, below is our preferred method for doing so.
 
