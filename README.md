@@ -22,8 +22,10 @@ Check This [Issue](https://github.com/nsccpccoe/nscc-frontend/issues/1) to Track
 Designs: https://www.figma.com/file/lLxOnIBTvsK6c4XfRyAjWX/Newton-School-Coding-Club
 
 1. Press the green <> Code button once forked and copy the link
-2. In your desired directory on your local machine using the command line
-```git clone``` + copied link
+2. In your desired directory on your local machine using the command line and the previous copied link
+```bash
+git clone copied-link
+```
 3. Open the repository file in your preferred IDE
 4. Install Dependencies
 ```bash
