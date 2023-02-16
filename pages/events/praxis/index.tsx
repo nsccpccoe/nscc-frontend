@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Content from "../../../Components/PraxisPage/content";
+import Content from "../../../Components/PraxisPage/Content";
 
 function PraxisPage() {
   return (
