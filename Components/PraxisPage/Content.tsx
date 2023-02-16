@@ -20,7 +20,7 @@ function Content() {
         </div>
         <div className={classes.partner}>
           <h2>ITSA</h2>
-          <h1>Praxis '23</h1>
+          <h1>Praxis &apos;23</h1>
         </div>
       </div>
       <div className={classes.present}>
