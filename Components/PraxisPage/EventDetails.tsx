@@ -9,14 +9,14 @@ const EventDetails = () => {
 
             <div className={styles.content}>
                 <div>
-                    <p>Registration starts on:- 27/11/2023</p>
-                    <p>Event starts on:- 27/11/2023</p>
-                    <p>Results will be declared on:- 27/11/2023</p>
+                    <p>Registration starts on:-</p>
+                    <p>Event starts on:-</p>
+                    <p>Results will be declared on:-</p>
                 </div>
                 <div>
-                    <p>Registration ends on :- 27/11/2023</p>
-                    <p>Event ends on:- 27/11/2023</p>
-                    <p>Organized by:- 27/11/2023</p>
+                    <p>Registration ends on :-</p>
+                    <p>Event ends on:-</p>
+                    <p>Organized by:-</p>
                 </div>
             </div>
         </div>
