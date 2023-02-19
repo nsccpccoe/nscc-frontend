@@ -4,7 +4,7 @@ import EventDetails from './EventDetails';
 import Prizes from './Prizes'
 import Rules from './Rules'
 
-interface rules{
+interface rules {
     id: number,
     text: string;
 }
@@ -40,14 +40,14 @@ const events = [
 ]
 
 const EventContent = () => {
-  return (
-    <div>
-        <EventDetails/>
-        <AboutEvent propWhichIsArray={events}/>
-        <Rules propWhichIsArray={rules}/>
-        <Prizes/>
-    </div>
-  )
+    return (
+        <div>
+            <EventDetails />
+            <AboutEvent propWhichIsArray={events} />
+            <Rules propWhichIsArray={rules} />
+            <Prizes />
+        </div>
+    )
 }
 
 export default EventContent

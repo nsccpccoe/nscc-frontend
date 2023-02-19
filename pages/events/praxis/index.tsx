@@ -11,8 +11,10 @@ function PraxisPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Content />
-      <EventContent/>
+      <div style={{background: 'linear-gradient(0deg, #161326 0%, rgba(22, 19, 38, 0) 100%)'}}>
+        <Content />
+        <EventContent />
+      </div>
     </>
   );
 }

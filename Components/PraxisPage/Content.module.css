@@ -4,10 +4,9 @@
   flex-direction: column;
   gap: 4rem;
   align-items: center;
-
   font-family: "Poppins";
   font-style: normal;
-  background: linear-gradient(0deg, #161326 0%, rgba(22, 19, 38, 0) 100%);
+  /* background: linear-gradient(0deg, #161326 0%, rgba(22, 19, 38, 0) 100%); */
 }
 
 .headingContent {

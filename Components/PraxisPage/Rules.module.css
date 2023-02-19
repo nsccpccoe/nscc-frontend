@@ -18,7 +18,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: 0 2rem;
+    margin: 0 2rem 2rem;
     /* text-align: center; */
 }
 
@@ -40,9 +40,9 @@
         padding-top: 2rem;
     }
 
-    .main h1 {
+    /* .main h1 {
         font-size: 1.7rem;
-    }
+    } */
 
     .content {
         margin: 1rem 1rem;
