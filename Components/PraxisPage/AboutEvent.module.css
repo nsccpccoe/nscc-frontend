@@ -14,7 +14,10 @@
     font-style: normal;
     font-size: 4rem;
     line-height: 5rem;
-    background: linear-gradient(99.81deg, #4158D0 9.89%, #C850C0 53.14%, #FFCC70 108.02%);
+    background: linear-gradient(99.81deg,
+            #4158d0 9.89%,
+            #c850c0 53.14%,
+            #ffcc70 108.02%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
