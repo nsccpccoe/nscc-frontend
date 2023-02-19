@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 4rem;
+    padding: 0 2rem;
+}
+
+.main h1 {
+    font-family: "Poppins";
+    font-size: 4rem;
+    line-height: 5rem;
+    font-style: normal;
+    background: linear-gradient(99.81deg, #4158D0 9.89%, #C850C0 53.14%, #FFCC70 108.02%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content div {
+    /* margin: 1rem; */
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content p {
+    margin: 2rem;
+}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Content from "../../../Components/PraxisPage/Content";
+import EventContent from "../../../Components/PraxisPage/EventContent";
 
 function PraxisPage() {
   return (
@@ -11,6 +12,7 @@ function PraxisPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Content />
+      <EventContent/>
     </>
   );
 }
