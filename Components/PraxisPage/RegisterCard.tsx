@@ -1,7 +1,7 @@
 import classes from "./RegisterCard.module.css";
 import computerPng from "../../public/computer.png";
 import Image from "next/image";
-
+import Link from "next/link";
 function RegisterCard() {
   return (
     <div className={classes.container}>
@@ -16,7 +16,7 @@ function RegisterCard() {
         </div>
       </div>
       <div className={classes.button}>
-        <button>Register</button>
+      <button><Link style={{textDecoration:"none" ,color:"inherit"}} href="/events/register/codewars/">Register</Link></button>
       </div>
     </div>
   );
