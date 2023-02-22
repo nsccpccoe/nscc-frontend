@@ -24,7 +24,7 @@ function Content() {
         </div>
       </div>
       <div className={classes.present}>
-        <p>presents</p>
+        <p>Presents</p>
       </div>
       <div className={classes.registerCard}>
         <RegisterCard />
