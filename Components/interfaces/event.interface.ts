@@ -28,6 +28,7 @@ export interface Event {
     organizers: Organizer[];
     registration: LinkMap;
     eventPage: LinkMap;
+    featured: boolean
     community: {
         link: string
         displayText: string

@@ -9,6 +9,8 @@ function CardElements() {
   const [data, setData] = useState<Event[]>([])
   const [isLoading, setLoading] = useState(false)
 
+  data.sort((a, b) => a.startAt - b.startAt)
+
   useEffect(() => {
     setLoading(true)
     fetch('https://asia-south1-nsccpccoe.cloudfunctions.net/events')
@@ -22,7 +24,7 @@ function CardElements() {
   return (
     <div className={classes.cardcontainer}>
       {
-        data ? data.map((e) => {
+        data ? data.filter(e => e.featured).map((e) => {
           return (
             <Link
               key={e.id}

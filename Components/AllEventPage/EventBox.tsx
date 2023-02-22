@@ -34,7 +34,7 @@ const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
       </div>
       <div className={classes.events}>
         {
-          errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.map(event => {
+          errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.filter(e => e.featured).map(event => {
             return <EventElement
               event={event}
               key={event.id}

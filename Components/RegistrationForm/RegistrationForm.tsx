@@ -188,6 +188,7 @@ const RegistrationForm = (props: ElementProps) => {
       <div className={classes.regform}>
         <form className={classes.container} onSubmit={handleRegistration}>
           <p className={classes.heading}>Registration Form</p>
+          <p className={classes.title}>Newton School Coding Club</p>
           <h1 className={classes.displayName}>{eventData?.displayName}</h1>
           <p className={classes.subtitle}>{eventData?.subtitle}</p>
           <Link className={classes.eventPageLink} href={eventData.eventPage.link || "#"}>Prizes and Goodies - Learn More</Link>

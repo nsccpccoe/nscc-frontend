@@ -4,18 +4,17 @@ function EventBoxContent() {
   return (
     <div className={classes.content}>
       <div className={classes.organizer}>
-        <h3>NSCC&apos;s</h3>
+        <h3>Department of Information Technology's</h3>
       </div>
       <div className={classes.heading}>
-        <h1>Pandora Tech Festival</h1>
+        <h1>Praxis</h1>
       </div>
       <div className={classes.date}>
-        <p>22/01/2023 - 29/01/2023</p>
+        <p>11/03/2023 - 18/03/2023</p>
       </div>
       <div className={classes.descriptiion}>
-        <p>Hackathon + Coding Contest + Inauguration </p>
-        <p>Prize Pool more than 7000 & Goodies</p>
-        <p>Club Recruitment Drive</p>
+        <p>Hackathon + Coding Contest + On Stage + Off Stage + Gaming </p>
+        <p>Prize Pool more than 80,000 & Goodies</p>
       </div>
     </div>
   );
