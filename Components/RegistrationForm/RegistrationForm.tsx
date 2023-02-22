@@ -231,7 +231,7 @@ const RegistrationForm = (props: ElementProps) => {
             )
           })}
           {!token && !eventEnded &&
-            <Link className={classes.loginPageLink} href="/auth?redirect=/events/register/webxplore/">Login to Register for Event</Link>
+            <Link className={classes.loginPageLink} href={`/auth?redirect=${eventData.registration.link}`}>Login to Register for Event</Link>
           }
           {
             token && fields.length == 0 &&
