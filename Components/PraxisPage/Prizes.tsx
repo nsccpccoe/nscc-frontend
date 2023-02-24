@@ -8,33 +8,28 @@ const Prizes = () => {
 
             <div className={styles.table}>
                 <div className={styles.row}>
-                    <p>1st Rank - First Year Student</p>
-                    <p>Rs. 500 /-</p>
+                    <p>Rank 1</p>
+                    <p>Rs. 2,100 /-</p>
                 </div>
 
                 <div className={styles.row}>
-                    <p>1st Rank - Second Year Student</p>
-                    <p>Rs. 500 /-</p>
+                    <p>Rank 2</p>
+                    <p>Rs. 1,700 /-</p>
                 </div>
 
                 <div className={styles.row}>
-                    <p>1st Rank - Third or Fourth Year Student</p>
-                    <p>Rs. 500 /-</p>
+                    <p>Rank 3</p>
+                    <p>Rs. 1,500 /-</p>
                 </div>
 
                 <div className={styles.row}>
-                    <p>1st Rank - Girl Student (from PCCOE)</p>
-                    <p>Rs. 500 /-</p>
+                    <p>Rank 4</p>
+                    <p>Rs. 1,200 /-</p>
                 </div>
 
                 <div className={styles.row}>
-                    <p>2nd Rank - Girl Student (from PCCOE)</p>
-                    <p>Rs. 500 /-</p>
-                </div>
-
-                <div className={styles.row}>
-                    <p>1st Rank - Girl Student (outside PCCOE)</p>
-                    <p>Rs. 500 /-</p>
+                    <p>Rank 5</p>
+                    <p>Rs. 1000 /-</p>
                 </div>
             </div>
         </div>
