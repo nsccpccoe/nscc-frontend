@@ -30,13 +30,13 @@ function Navbar() {
           localStorage.setItem("accessToken", token);
         }, 5*60*1000);
 
-        setActive(true);
+        if(auth.currentUser?.emailVerified)setActive(true);
       } else {
         localStorage.removeItem("accessToken");
         setActive(false);
       }
     });
-  }, []);
+  }, [auth.currentUser?.emailVerified]);
 
 
   useEffect(() => {

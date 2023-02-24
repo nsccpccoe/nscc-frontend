@@ -18,7 +18,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer"
 
 import "firebase/compat/auth";
-import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider, sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider, sendEmailVerification,sendPasswordResetEmail, confirmPasswordReset } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 import Link from "next/link";
@@ -63,11 +63,12 @@ const Auth = () => {
   const redirectPath = typeof router.query["redirect"] === "string" ? router.query["redirect"] : "/";
 
   const googleauth = new GoogleAuthProvider();
+
   const googleSignin = async () => {
     try {
       // console.log("hello")
       const result = await signInWithPopup(auth, googleauth);
-
+        
       toast("login successfull", toastOptions);
       router.push(redirectPath)
     } catch (err) {
@@ -117,8 +118,14 @@ const Auth = () => {
             password
           );
 
-          toast.success("signin successfull");
-          router.push(redirectPath)
+         
+          
+          if(auth.currentUser?.emailVerified){
+            toast.success("signin successfull");
+            router.push(redirectPath)}
+          else  toast.error("Kabhi to kam kar le bhai");
+          
+          
 
         }
         catch (err) {
@@ -145,9 +152,11 @@ const Auth = () => {
             displayName: firstName + " " + lastName
           });
 
-          toast("signup successfull", toastOptions);
-
-          router.push(redirectPath)
+          if(auth.currentUser)await sendEmailVerification(auth.currentUser);
+          toast(`Verification mail sent to ${user.email}`, toastOptions);
+          setState(initialState)      
+          
+    
         } catch (err) {
           // console.error(err);
           if (err instanceof FirebaseError) toast.error(err.code)
