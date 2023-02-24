@@ -4,7 +4,7 @@ function EventBoxContent() {
   return (
     <div className={classes.content}>
       <div className={classes.organizer}>
-        <h3>Department of Information Technology's</h3>
+        <h3>Department of Information Technology&apos;s</h3>
       </div>
       <div className={classes.heading}>
         <h1>Praxis</h1>
