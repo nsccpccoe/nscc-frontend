@@ -22,6 +22,7 @@ import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider, sendEmailVerif
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+import { signOut } from "@firebase/auth";
 
 
 interface InitialState {
@@ -123,7 +124,12 @@ const Auth = () => {
           if(auth.currentUser?.emailVerified){
             toast.success("signin successfull");
             router.push(redirectPath)}
-          else  toast.error("Kabhi to kam kar le bhai");
+          else {
+            if(auth.currentUser)await sendEmailVerification(auth.currentUser);
+            toast(`Verification mail sent to ${user.email}`, toastOptions);
+            setState(initialState) 
+             signOut(auth);
+          }
           
           
 
