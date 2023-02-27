@@ -21,6 +21,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-align: center;
   }
   
   /* 
@@ -112,11 +113,11 @@
   
   @media (max-width: 715px) {
     .round {
-      align-items: start;
+      /* align-items: start; */
     }
   
     .round table {
-      width: 38rem;
+      width: 30rem;
     }
   
     .round th,
@@ -155,3 +156,25 @@
     }
   }
   
+   
+  @media (max-width: 592px) {
+    .round table {
+      width: 23rem;
+    }
+  }
+
+  @media (max-width: 466px) {
+    .round table {
+      width: 18rem;
+    }
+  }
+
+  @media (max-width: 354px) {
+    .round {
+      align-items: start;
+    }
+
+    .round table {
+      width: 18rem;
+    }
+  }
