@@ -79,9 +79,10 @@ export function SubmissionCard(props: { submission: WebXploreSubmissionResult["d
       </Link>
       <div>{props.submission.title}</div>
       <div>
-        <div>Status: Eligibility Check Pending</div>
+        <div>Status: {props.submission.status}</div>
         <div title="Number of Upvotes By Verified Account">Valid Upvotes: {props.submission.validLikes}</div>
-        <div>Total Score: Pending</div>
+        <div title="Average Lighthouse Score">Lighthouse Score: {props.submission.lighthouse}</div>
+        <div>Total Score: {props.submission.lighthouse + props.submission.validLikes}</div>
       </div>
       <div className={classes.actionButtons}>
         <button

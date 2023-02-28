@@ -53,6 +53,9 @@ interface WebXploreSubmission {
     description: string
     likes: number
     validLikes: number
+    judge: string
+    lighthouse: number
+    status: string
   }
 
 export type WebXploreSubmissionResult = CustomResult<WebXploreSubmission>
