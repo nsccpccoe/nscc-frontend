@@ -44,7 +44,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 640px) {
     .main {
         margin: 0;
     }

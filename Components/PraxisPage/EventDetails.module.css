@@ -47,7 +47,7 @@
   
   @media (max-width: 596px) {
     .main {
-      margin: 2rem;
+      /* margin: 2rem; */
       padding-top: 2rem;
     }
   }
@@ -112,10 +112,6 @@
   }
   
   @media (max-width: 715px) {
-    .round {
-      /* align-items: start; */
-    }
-  
     .round table {
       width: 30rem;
     }
@@ -172,7 +168,7 @@
   @media (max-width: 354px) {
     .round {
       align-items: start;
-    }
+    }w
 
     .round table {
       width: 18rem;
