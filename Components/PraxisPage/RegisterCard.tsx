@@ -7,9 +7,9 @@ function RegisterCard() {
     <div className={classes.container}>
       <div className={classes.contentImg}>
         <div className={classes.content}>
-          <p>Coding Contest</p>
-          <h1>Coding Wars</h1>
-          <p>29/01/2023 11:59 PM IST</p>
+          <p >Coding Contest</p>
+          <h1>CodeWars</h1>
+          <p>14/03/2023 09:30 PM - 15/03/2023 12:05 PM </p>
         </div>
         <div className={classes.img}>
           <Image src={computerPng} alt="" />
