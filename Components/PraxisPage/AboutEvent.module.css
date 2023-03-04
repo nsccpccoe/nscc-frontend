@@ -6,14 +6,14 @@
     /* justify-content: center; */
     /* align-items: center; */
     margin: 4rem;
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
 }
 
 .main h1 {
     font-family: "Poppins";
     font-style: normal;
     font-size: 4rem;
-    line-height: 5rem;
+    /* line-height: 5rem; */
     background: linear-gradient(99.81deg,
             #4158d0 9.89%,
             #c850c0 53.14%,
@@ -37,12 +37,12 @@
 
 @media (max-width: 596px) {
     .main {
-        margin: 2rem;
+        /* margin: 2rem; */
         padding-top: 2rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 640px) {
     /* .main {
         margin: 2rem;
         padding-top: 2rem;
