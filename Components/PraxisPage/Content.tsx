@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Content() {
   return (
-    <div className={classes.container}>
+    <div  className={classes.container}>
       <div className={classes.headingContent}>
         <h1>Pimpri Chinchwad College of Engineering, Pune</h1>
         <p>brings to you the best collaboration of 2023</p>
@@ -24,12 +24,12 @@ function Content() {
         </div>
       </div>
       <div className={classes.present}>
-        <p>presents</p>
+        <p>Presents</p>
       </div>
       <div className={classes.registerCard}>
         <RegisterCard />
       </div>
-      <div className={classes.sponser}>
+      <div style={{display:"none"}}  className={classes.sponser}>
         <p>Sponsored by</p>
         <div className={classes.images}>
           <Image src={aachal} alt="" />

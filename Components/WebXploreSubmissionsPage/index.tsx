@@ -153,7 +153,7 @@ function WebXploreSubmissionsPage() {
     .filter(submission => {
       return !featuredSubmission || submission.id !== featuredSubmission.id
     })
-    .sort((a, b) => b.validLikes - a.validLikes)
+    .sort((a, b) => (Number(b.validLikes) + Number(b.lighthouse))- (Number(a.validLikes) + Number(a.lighthouse)))
 
   // const otherSubmissions: WebXploreSubmissionResult["data"][] = shuffle<WebXploreSubmissionResult["data"]>(otherSubmissionsRaw);
 

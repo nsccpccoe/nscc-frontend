@@ -10,8 +10,19 @@ import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 import { useRouter } from "next/router";
 import PersonIcon from '@mui/icons-material/Person';
+import { signOut ,sendEmailVerification} from "@firebase/auth";
+import { toast, ToastOptions } from "react-toastify";
 function Navbar() {
-
+  const toastOptions: ToastOptions = {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  };
   const scrollThreshold = 40;
 
   const router = useRouter();
@@ -29,14 +40,16 @@ function Navbar() {
           const token = await user.getIdToken();
           localStorage.setItem("accessToken", token);
         }, 5*60*1000);
+        if(!auth.currentUser)signOut(auth);
+         
+        if(auth.currentUser?.emailVerified)setActive(true);
 
-        setActive(true);
       } else {
         localStorage.removeItem("accessToken");
         setActive(false);
       }
     });
-  }, []);
+  }, [auth.currentUser?.emailVerified]);
 
 
   useEffect(() => {
