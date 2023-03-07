@@ -65,11 +65,11 @@ const EventDetails = () => {
             </tr>
             <tr>
               <td>Reporting Time </td>
-              <td>17/03/2023 9:00 AM</td>
+              <td>17/03/2023 07:30 AM</td>
             </tr>
             <tr>
               <td>Start </td>
-              <td>17/03/2023 10:05 AM</td>
+              <td>17/03/2023 08:05 AM</td>
             </tr>
             <tr>
               <td>Duration </td>
