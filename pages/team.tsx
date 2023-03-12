@@ -36,6 +36,7 @@ import karteekimg from "../public/karteek.png"
 import ashishimg from "../public/ashish.png"
 import niveditaimg from "../public/nivi.png"
 import shrunotiimg from "../public/shrunoti.png"
+import atharvagimg from "../public/atharvag.png"
 
 interface Member {
   id: number
@@ -223,12 +224,12 @@ const teams: Team[] = [
       },
       {
         id: 19,
-        name: "Harsh Dandge",
+        name: "Atharva Garud",
         position: "Design & Social-Media Co-lead",
-        githubLink: "https://github.com/Harsh-dandge",
-        twitterLink: "https://twitter.com/HarshDandge",
-        linkedinLink: "https://www.linkedin.com/in/harsh-dandge-919888214/",
-        img: harhimg
+        githubLink: "https://github.com/Atharvagarud137",
+        twitterLink: "https://twitter.com/AtharvaGarud3",
+        linkedinLink: "https://www.linkedin.com/in/atharva-garud-bba8b2214/",
+        img: atharvagimg
       },
       {
         id: 20,
