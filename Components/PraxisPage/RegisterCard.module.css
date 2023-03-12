@@ -1,0 +1,171 @@
+.container {
+  width: 60%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.contentImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.content p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #cccccc;
+}
+.condingcontest{
+  font-size: 1.5rem;
+}
+.content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4rem;
+  /* identical to box height */
+
+  background: linear-gradient(
+    99.81deg,
+    #4158d0 9.89%,
+    #c850c0 53.14%,
+    #ffcc70 108.02%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.img {
+  width: 22rem;
+  height: auto;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.button button {
+  background: linear-gradient(
+    99.81deg,
+    #4158d0 9.89%,
+    #c850c0 53.14%,
+    #ffcc70 108.02%
+  );
+  border-radius: 6px;
+  width: 35%;
+  border: none;
+  padding: 0.2rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1234px) {
+  .img {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 912px) {
+  .container {
+    width: 70%;
+  }
+  .content {
+    gap: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .content p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .button button {
+    width: 35%;
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .img {
+    width: 15rem;
+  }
+}
+
+@media(max-width: 808px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media(max-width: 720px) {
+  .content p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .img {
+    padding-right: 0.3rem;
+  }
+}
+
+@media(max-width: 622px) {
+  .contentImg {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .content {
+    gap: 1rem;
+    padding-top: 0rem;
+    padding-left: 0rem;
+  }
+  
+  .img {
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+
+@media(max-width: 420px) {
+  .container {
+    width: 95%;
+  }
+}

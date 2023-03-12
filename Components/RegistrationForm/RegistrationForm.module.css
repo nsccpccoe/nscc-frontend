@@ -1,0 +1,67 @@
+.container {
+  color: hsl(221, 61%, 90%);
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 2rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  width: 600px;
+  max-width: 90%;
+}
+
+.regform {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.labels {
+  font-size: 16px;
+}
+
+.labelcontainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0px;
+  margin: 24px 0;
+}
+
+.container input, .container select {
+  display: block;
+  background: #babecd;
+  border: none;
+  padding: 10px 12px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.container button, .eventPageLink, .loginPageLink {
+  text-decoration: none;
+  display: inline-block;
+  margin: 24px 0;
+  padding: 0.7rem 2rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #7a9ce0 7.22%, #79dfc8 100%);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  color: #193655;
+  border: none;
+}
+
+.eventPageLink {
+  color: hsl(0, 0%, 80%);
+  background: transparent;
+  border: 2px solid currentColor;
+}
+
+.title {
+  font-size: 20px;
+}

@@ -1,0 +1,186 @@
+.container {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  /* background: linear-gradient(0deg, #161326 0%, rgba(22, 19, 38, 0) 100%); */
+}
+
+.headingContent {
+  text-align: center;
+  color: #d9d9d9;
+  padding: 0 0.5rem;
+}
+
+.headingContent h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 60px;
+}
+
+.headingContent p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 36px;
+}
+
+.collab {
+  display: flex;
+  width: 70%;
+  margin-top: 1rem;
+  justify-content: space-between;
+  /* align-items: end; */
+}
+
+.partner h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.partner h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 5rem;
+  background: linear-gradient(
+    99.81deg,
+    #4158d0 9.89%,
+    #c850c0 53.14%,
+    #ffcc70 108.02%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.add {
+  /* height: 80%; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.add h1 {
+  font-size: 2.5rem;
+}
+
+.present {
+  text-align: center;
+}
+
+.present p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #d9d9d9;
+}
+
+.registerCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sponser {
+  text-align: center;
+  width: 70%;
+}
+
+.images {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.images img {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 1160px) {
+  .collab {
+    width: 90%;
+  }
+}
+
+@media (max-width: 848px) {
+  .headingContent h1 {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+
+  .headingContent p {
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .partner h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .partner h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .add h1 {
+    font-size: 2.5rem;
+  }
+
+  .sponser {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    margin-top: 4rem;
+    gap: 3rem;
+  }
+
+  .collab {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.3rem;
+  }
+
+  .images img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (max-width: 406px) {
+  .container {
+    gap: 2rem;
+  }
+  
+  .partner h2 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .partner h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .add h1 {
+    font-size: 2rem;
+  }
+
+  .images img {
+    width: 3rem;
+    height: 3rem;
+  }
+}

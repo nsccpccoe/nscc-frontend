@@ -2,31 +2,49 @@ import classes from "./EventBox.module.css";
 import EventBoxContent from "./EventBoxContent";
 import EventElement from "./EventElement";
 
-function EventBox() {
+import { EventResponse, Event } from "../interfaces/event.interface";
+import { Alert, AlertTitle } from "@mui/material";
+
+const epochToString = (epoch: number) => new Date(epoch)
+  .toLocaleString("en-IN")
+  .toUpperCase();
+
+const ErrorAlert = (props: { errorMessage: string }) => {
+  return (
+    <Alert severity="error" >
+      <AlertTitle>Error while fetching events! </AlertTitle>
+      {props.errorMessage}
+    </Alert>
+  );
+};
+
+type ElementProps = {
+  events: Event[];
+  errorMessage: string;
+}
+
+const EventBox: React.FC<ElementProps> = ({ events, errorMessage }) => {
+
+  events.sort((a, b) => a.startAt - b.startAt)
+
   return (
     <div className={classes.container}>
       <div className={classes.content}>
         <EventBoxContent />
       </div>
       <div className={classes.events}>
-        <EventElement
-          type="Web Development + Marketing Hackathon"
-          direct="webxplore"
-          heading="WebXplore"
-          duration="22/01/2023 8:00 PM - 29/01/2023 11:59 PM IST"
-        />
-        <EventElement
-          type="Competitive Programming Contest"
-          direct="codehive"
-          heading="CodeHive"
-          duration="26/01/2023, 02:00 PM - 05:00 PM IST"
-        />
-        <EventElement
-          type="Competitive Programming + Hiring Contest"
-          direct=""
-          heading="CodeRush-X"
-          duration="29/01/2023, 09:00 PM - 12:00 AM IST"
-        />
+        {
+          errorMessage.length != 0 ? <ErrorAlert errorMessage={errorMessage} /> : events.filter(e => e.featured).map(event => {
+            return <EventElement
+              event={event}
+              key={event.id}
+              type={event.subtitle}
+              heading={event.displayName}
+              direct={event.eventPage.link}
+              duration={epochToString(event.startAt) + " - " + epochToString(event.endAt)}
+            />
+          })
+        }
       </div>
     </div>
   );

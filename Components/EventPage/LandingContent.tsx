@@ -1,26 +1,56 @@
+import Link from "next/link";
 import classes from "./LandingContent.module.css";
 
-function LandingContent() {
+interface contestProps {
+  name: string,
+  type: string,
+  date: string,
+  content: string
+  regLink: string
+}
+
+function LandingContent(props: contestProps) {
   return (
     <div className={classes.container}>
       <div className={classes.clubHeading}>
         <h3>NSCC</h3>
       </div>
       <div className={classes.title}>
-        <h1>CodeHive</h1>
+        <h1>{props.name}</h1>
       </div>
       <div className={classes.clubHeading}>
-        <h3>Coding Contest</h3>
+        <h3>{props.type}</h3>
       </div>
       <div className={classes.clubInfo}>
-        <h2>26/01/2023, 02:00 PM - 05:00 PM IST</h2>
+        <h2>{props.date}</h2>
         <p>
-          Unlock your coding potential with our Coding Contest! 8 challenging
-          problems tailored for all levels. Perfect opportunity to prepare for
-          competitions and placements. Curated by top competitive programmers.
+          {props.content}
         </p>
       </div>
-      <button>Register</button>
+      {
+        props.name === 'CodeHive' &&
+        <div>Contest Link : <Link
+        className={classes.regButton}
+        href="https://www.hackerrank.com/codehive"
+      >Enter</Link></div>
+        
+      }
+      {
+        props.name === 'Codehive' &&
+        <div>Website Theme: Any College Club (Ex: Coding Club, Art Circle, etc)</div>
+      }
+      <Link
+        className={classes.regButton}
+        href={props.regLink}
+      >Register</Link>
+      {
+        props.name === 'WebXplore' &&
+        <Link
+          className={classes.regButton}
+          href="/events/webxplore/submissions"
+          style={{ marginLeft: '16px' }}
+        >Submissions</Link>
+      }
     </div>
   );
 }

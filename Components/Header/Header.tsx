@@ -1,29 +1,70 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
-import NSCCLogo from "../../assets/logo.svg";
+import NSCCLogo from "./NSCCLogo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, OAuthCredential } from "firebase/auth";
 import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
-
+import { useRouter } from "next/router";
+import PersonIcon from '@mui/icons-material/Person';
+import { signOut ,sendEmailVerification} from "@firebase/auth";
+import { toast, ToastOptions } from "react-toastify";
 function Navbar() {
-  const [active, setactive] = useState(false);
-  useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
-      if (user) {
-        console.log(user);
+  const toastOptions: ToastOptions = {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  };
+  const scrollThreshold = 40;
 
-        // localStorage.setItem("accessToken",`${user.accessToken}`)
-        setactive(true);
+  const router = useRouter();
+  const [active, setActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    return onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const token = await user.getIdToken();
+        localStorage.setItem("accessToken", token);
+
+        // refresh token after every 5 minute
+        setTimeout(async () => {
+          const token = await user.getIdToken();
+          localStorage.setItem("accessToken", token);
+        }, 5*60*1000);
+        if(!auth.currentUser)signOut(auth);
+         
+        if(auth.currentUser?.emailVerified)setActive(true);
+
       } else {
-        // localStorage.removeItem("accessToken")
-        setactive(false);
+        localStorage.removeItem("accessToken");
+        setActive(false);
       }
     });
-  }, []);
+  }, [auth.currentUser?.emailVerified]);
+
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      const offset = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      
+      setIsScrolled(offset > scrollThreshold);
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+
+    // cleanup
+    return () => window.addEventListener("scroll", scrollHandler);
+
+  }, [isScrolled]);
 
   const handlelogout = () => {
     if (active) {
@@ -33,11 +74,11 @@ function Navbar() {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
-        <div className={classes.logo}>
-          <Image src={NSCCLogo} alt="NSCC PCCOE" />
-        </div>
+        <Link href="/" className={classes.logo}>
+          <NSCCLogo />
+        </Link>
       </div>
       <div className={classes.navigators}>
         <ul>
@@ -46,7 +87,7 @@ function Navbar() {
               <div className={classes.icons}>
                 <AiFillHome />
               </div>
-              <label>Home</label>
+              <label style={{ cursor: "pointer" }}>Home</label>
             </Link>
           </li>
           {/* <li>
@@ -56,11 +97,19 @@ function Navbar() {
             <Link href="/">Resources</Link>
           </li> */}
           <li>
-            <Link href="/event">
+            <Link href="/events">
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
-              <label>Events</label>
+              <label style={{ cursor: "pointer" }}>Events</label>
+            </Link>
+          </li>
+          <li>
+            <Link href="/team">
+              <div className={classes.icons}>
+                <PersonIcon style={{fontSize:"36px"}} />
+              </div>
+              <label style={{ cursor: "pointer" }}>Team</label>
             </Link>
           </li>
           {/* <li>
@@ -70,13 +119,16 @@ function Navbar() {
             <Link
               onClick={handlelogout}
               className={classes.button}
-              href="/auth"
-            >
+              href={`/auth?redirect=${router.asPath.split('?')[0]}`}
+              >
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
-              <label>{active ? "logout" : "login"}</label>
+
+              <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
+
             </Link>
+            
           </li>
         </ul>
       </div>

@@ -1,0 +1,176 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 4rem;
+    padding: 0 2rem; */
+    padding-top: 2rem;
+  }
+  
+  .main h1 {
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 5rem;
+    background: linear-gradient(
+      99.81deg,
+      #4158d0 9.89%,
+      #c850c0 53.14%,
+      #ffcc70 108.02%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+  }
+  
+  /* 
+  .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+  } */
+  /* 
+  .content div {
+      margin: 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  } */
+  /* 
+  .content p {
+      margin: 2rem;
+  } */
+  
+  @media (max-width: 596px) {
+    .main {
+      /* margin: 2rem; */
+      padding-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    /* .main {
+          margin: 2rem;
+          padding-top: 2rem;
+      } */
+  
+    .main h1 {
+      font-size: 1.7rem;
+      margin: 1rem 0;
+    }
+  
+    .content {
+      margin: 0;
+    }
+  }
+  
+  .content {
+    padding: 1rem;
+    width: 90%;
+    overflow: auto;
+  }
+  
+  .round {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  
+  .subRound h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+  
+  .subRound {
+    width: 100%;
+  }
+  
+  .round table {
+    width: auto;
+  }
+  
+  .round table,
+  .round td {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-collapse: collapse;
+  }
+  
+  .round th,
+  .round td {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    text-align: left;
+  }
+  
+  @media (max-width: 715px) {
+    .round table {
+      width: 30rem;
+    }
+  
+    .round th,
+    .round td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 848px) {
+    .subRound h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  
+    .main h1 {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+  
+  @media (max-width: 406px) {
+      
+    .round table {
+      width: 28rem;
+    }
+  
+    .subRound h2 {
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+    }
+  
+    .main h1 {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+  
+   
+  @media (max-width: 592px) {
+    .round table {
+      width: 23rem;
+    }
+  }
+
+  @media (max-width: 466px) {
+    .round table {
+      width: 18rem;
+    }
+  }
+
+  @media (max-width: 354px) {
+    .round {
+      align-items: start;
+    }w
+
+    .round table {
+      width: 18rem;
+    }
+  }
