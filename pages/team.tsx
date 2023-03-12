@@ -190,7 +190,7 @@ const teams: Team[] = [
       {
         id: 15,
         name: "Viraj Jadhav",
-        position: "Dsa/Cp Content Co-lead",
+        position: "DSA/CP Content Co-lead",
         githubLink: "https://github.com/virajjadhao5566",
         twitterLink: "https://twitter.com/viraj_jadhao__",
         linkedinLink: "https://www.linkedin.com/in/viraj-jadhao-67b222244/",
@@ -199,7 +199,7 @@ const teams: Team[] = [
       {
         id: 16,
         name: "Sarvesh Powar",
-        position: "Dsa/Cp Content Co-lead",
+        position: "DSA/CP Contest Co-lead",
         githubLink: "https://github.com/SA365-B?tab=repositories",
         twitterLink: "https://twitter.com/SarveshPowar7",
         linkedinLink: "https://www.linkedin.com/in/sarvesh-powar-a97a12209/",
@@ -217,7 +217,7 @@ const teams: Team[] = [
       {
         id: 18,
         name: "Manthan Patil",
-        position: "Web-Development Co-lead",
+        position: "Event Management Co-lead",
         githubLink: "https://github.com/Mpatil12",
         linkedinLink: "https://www.linkedin.com/in/manthan-patil-15b67820b/  ",
         img: manthanimg
@@ -252,7 +252,7 @@ const teams: Team[] = [
       {
         id: 22,
         name: "Vedant Patil",
-        position: "Dsa/Cp Contest Co-lead",
+        position: "DSA/CP Contest Co-lead",
         githubLink: "https://github.com/vedantpatil25",
         twitterLink: "https://twitter.com/vedantpatil2002",
         linkedinLink: " https://www.linkedin.com/in/vedant-patil-047194224/",
@@ -261,7 +261,7 @@ const teams: Team[] = [
       {
         id: 23,
         name: "Vedang Dadape",
-        position: "Dsa/Cp Contest Co-lead",
+        position: "DSA/CP Contest Co-lead",
         githubLink: "https://github.com/Vedang12d",
         twitterLink: "https://twitter.com/vedang12d",
         linkedinLink: "http://www.linkedin.com/in/vedangdadape",
@@ -270,7 +270,7 @@ const teams: Team[] = [
       {
         id: 24,
         name: "Nivedita Birajdar",
-        position: "Dsa/Cp Content Co-lead",
+        position: "DSA/CP Content Co-lead",
         githubLink: "https://github.com/niveditavb05",
         linkedinLink: "https://www.linkedin.com/in/nivedita-birajdar-2a29b4219/",
         img: niveditaimg
@@ -278,7 +278,7 @@ const teams: Team[] = [
       {
         id: 25,
         name: "Aditya Gavali",
-        position: "CP/DSA content Co-lead ",
+        position: "CP/DSA Content Co-lead ",
         githubLink: "https://github.com/AdityaGavali",
         twitterLink: "https://twitter.com/adityagavali03?t=ruboghPF5JXWGpMxBmfs7A&s=09",
         linkedinLink: "https://www.linkedin.com/in/aditya-gavali-893931206/",
