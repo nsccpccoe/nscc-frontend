@@ -21,7 +21,6 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 const storage = getStorage(app);
-// const analytics = getAnalytics(app);
 
 // if (
 //   typeof location !== "undefined" &&
