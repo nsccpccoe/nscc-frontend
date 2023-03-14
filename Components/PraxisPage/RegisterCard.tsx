@@ -9,7 +9,7 @@ function RegisterCard() {
         <div className={classes.content}>
           <p >Coding Contest</p>
           <h1>CodeWars</h1>
-          <p>14/03/2023 09:30 PM - 15/03/2023 12:05 PM </p>
+          <p>14/03/2023 09:30 PM - 15/03/2023 12:05 AM </p>
         </div>
         <div className={classes.img}>
           <Image src={computerPng} alt="" />
