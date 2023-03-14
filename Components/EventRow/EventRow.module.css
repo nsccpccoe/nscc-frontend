@@ -12,8 +12,10 @@
     width: 800px;
     max-width: 90%;
     margin: 12px auto;
+    z-index: 1;
 }
 
 .row p {
     font-size: 16px;
+  
 }
