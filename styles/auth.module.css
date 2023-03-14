@@ -192,7 +192,8 @@
 }
 
 .containerloginform.rightpanelactive .signghost:after {
-  content: "login"
+  content: "login";
+  transform: rotateZ(-90deg)
 }
 
 /* Move overlay to left */
