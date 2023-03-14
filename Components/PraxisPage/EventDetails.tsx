@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./EventDetails.module.css";
+import React from 'react'
+import styles from './EventDetails.module.css'
 
 const EventDetails = () => {
   return (
@@ -65,7 +65,7 @@ const EventDetails = () => {
             </tr>
             <tr>
               <td>Reporting Time </td>
-              <td>17/03/2023 07:30 AM</td>
+              <td>17/03/2023 07:00 AM</td>
             </tr>
             <tr>
               <td>Start </td>
@@ -87,7 +87,7 @@ const EventDetails = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EventDetails;
+export default EventDetails
