@@ -178,7 +178,7 @@ const RegistrationForm = (props: ElementProps) => {
     )
   }
 
-  const formLocked = isRegistered // && eventData.startAt < Date.now();
+  const formLocked = isRegistered && eventData.startAt < Date.now();
   const eventEnded = eventData.endAt < Date.now();
 
   return (
