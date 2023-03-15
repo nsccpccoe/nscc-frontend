@@ -1,6 +1,6 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
-import NSCCLogo from "./NSCCLogo";
+import NSCCLogo from "../../assets/logo.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
@@ -77,7 +77,7 @@ function Navbar() {
     <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
         <Link href="/" className={classes.logo}>
-          <NSCCLogo />
+          <Image src={NSCCLogo} alt="NSCC Logo" width={250}/>
         </Link>
       </div>
       <div className={classes.navigators}>
